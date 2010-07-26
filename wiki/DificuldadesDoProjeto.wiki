@@ -1,4 +1,4 @@
-#summary Percalços encontrados e como circumventá-los.
+#summary Percalços encontrados e como contorná-los.
 #labels problemas,solucoes
 
 = Organização do projeto =
