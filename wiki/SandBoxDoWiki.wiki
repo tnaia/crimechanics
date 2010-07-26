@@ -9,4 +9,4 @@ int main()
 }
 }}}
 
-Que é diferente de usar 'return 0'.
+Que é diferente de usar `return 0`.
