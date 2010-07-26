@@ -25,6 +25,6 @@ A saída foi recorrer às funções
    * zero para o processo-filho, 
    * um valor negativo se não foi possível executar o fork, e
    * 1 para o processo pai; e 
- - `execl` que substitui a imagem do processo pela de um outro processo, dado o nome do executável cuja imagem substituirá a do processo atual, seu caminho para invocação e uma lista de parâmetros (terminada por `NULL` cast to `char *`).
+ - `execl` que substitui a imagem do processo pela de um outro processo, dado o nome do executável cuja imagem substituirá a do processo atual, seu caminho para invocação e uma lista de parâmetros (terminada por `NULL` cast to `(char *)`).
 
 == Java ==
