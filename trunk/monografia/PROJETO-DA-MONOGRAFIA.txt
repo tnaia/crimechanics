@@ -1,0 +1,11 @@
+Anotações sobre a estrutura da monografia
+-----------------------------------------
+
+Estamos avaliando o uso do pacote svn-multi, que permite incorporar ao
+documento informações das revisões do svn.
+
+Documentação do svn-multi:
+http://tug.ctan.org/tex-archive/macros/latex/contrib/svn-multi/
+
+Texto sobre svn-multi
+http://www.tug.org/pracjourn/2007-3/kalderon-svnmulti/
