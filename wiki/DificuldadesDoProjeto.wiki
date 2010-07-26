@@ -5,4 +5,5 @@
 
 == Senha para commit ==
 
-Uma utilidade de centralização de senhas do GNOME estava se intrometendo na hora de `checkout` o projeto. A solução foi desabilitar o GNOME_KEYRING, em Aplicativos > Acessórios > Senhas e chaves de criptografia.
+Uma utilidade de centralização de senhas do GNOME estava se intrometendo na hora de `checkout` o projeto. 
+A solução foi desabilitar o GNOME_KEYRING, em Aplicativos > Acessórios > Senhas e chaves de criptografia.
