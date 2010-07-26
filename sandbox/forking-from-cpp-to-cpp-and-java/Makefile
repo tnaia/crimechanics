@@ -1,17 +1,17 @@
 BDI=Bdi
 MANIF=manifest.txt
 FLAGS=-Wall -ansi -pedantic
-FILES=Bdi.jar manifest.txt jogo fork
+FILES=$(BDI).jar $(MANIF) jogo fork
 
 all: $(FILES)
 
-Bdi.jar: $(BDI).java $(MANIF)
+$(BDI).jar: $(BDI).java $(MANIF)
 	javac $(BDI).java
 	jar cvfm $(BDI).jar $(MANIF) *.class
 	chmod u+x $(BDI).jar
 
-manifest.txt:
-	echo Main-Class: Bdi>$(MANIF)
+$(MANIF):
+	echo Main-Class: $(BDI) > $(MANIF)
 	echo
 
 jogo: jogo.cpp
