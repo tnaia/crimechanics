@@ -25,18 +25,27 @@ Thinking in Java, 3rd ed. Revision 4.0
 
  C++
 
+ Svn
+
+Ben Collins-Sussman, Brian F. Fitzpatrick, C. Michael Pilato. Version Control with Subversion
 
  Game Programming
 
+John P. Flynt, Omar Salem. Software Engineering for Game
+Developers. Thomson Press.
+
+Andrew Rollings, Davie Morris. Game Architecture and Design: A New
+Edition. Person Education Press.
+
+Loki Software Inc., John R. Hall. Programming Linux Games. Linux
+Journal Press.
 
  Jason
-Rafael H. Bordini, Jomi F. Hübner, Michael Wooldridge. Programming multi-agent systems in AgentSpeak using Jason
+
+Rafael H. Bordini, Jomi F. Hübner, Michael Wooldridge. Programming
+multi-agent systems in AgentSpeak using Jason
 
  GENÉRICOS
-
-Engenharia de Software
- John P. Flynt, Omar Salem. Software Engineering for Game
- Developers. Thomson Press.
 
 Dicionário Português
  http://www.priberam.pt/DLPO/
