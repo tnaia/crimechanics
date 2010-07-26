@@ -1,1 +1,12 @@
 #summary Página para testes de coisas que queremos usar no wiki do projeto.
+
+Texto _itálico_, *negrito* 
+
+{{{
+int main()
+{
+  return 0;
+}
+}}}
+
+Que é diferente de usar 'return 0'.
