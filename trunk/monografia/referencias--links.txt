@@ -1,0 +1,41 @@
+ SOCKETS
+
+24 julho
+http://beej.us/guide/bgnet/output/html/multipage/index.html
+
+
+ SDL_net
+
+24 julho
+http://www.libsdl.org/projects/docs/SDL_net/SDL_net.html
+http://www.sdltutorials.com/sdl-net-part-2-user-tutorial/
+
+
+ SDL genéricos
+
+24 julho
+http://gameprogrammingtutorials.blogspot.com/
+http://lazyfoo.net/SDL_tutorials/
+http://www.sintef.no/time/elb40/html/elb/sdl/sdl_t01.htm
+
+
+ Java
+
+Thinking in Java, 3rd ed. Revision 4.0
+
+ C++
+
+
+ Game Programming
+
+
+ Jason
+Rafael H. Bordini, Jomi F. Hübner, Michael Wooldridge. Programming multi-agent systems in AgentSpeak using Jason
+
+ GENÉRICOS
+
+Dicionário Português
+ http://www.priberam.pt/DLPO/
+
+LaTeX
+ http://www.ime.usp.br/~tassio/latex/recursos-melhores.php
