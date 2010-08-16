@@ -9,7 +9,7 @@ int main (int argc, char ** argv)
     std::cout << "forking failed!\n";
   else
     {
-      execl ("Bdi.jar", "./Bdi.jar", (char *) NULL);
+      execl ("/bin/sh", "sh", "-c", "java -jar Bdi.jar", (char *) NULL);
       std::cout << "não consegui ir pro java.\n";
     }
 
