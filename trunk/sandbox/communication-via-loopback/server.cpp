@@ -35,12 +35,14 @@ int main (int argc, char **argv)
   while (!new_tcpsock);
 
   // Once connected, I try to send some data                                                                                                             
-  long data = 114;
-  SDLNet_TCP_Send(new_tcpsock, &data, sizeof(long));
+  unsigned long data = 114;
+  std::cout << "(C++): sending 114";
+  printf (" (%lX).\n", data);
+  SDLNet_TCP_Send(new_tcpsock, &data, sizeof(unsigned long));
   // Then I wait for a long int in response                                                                                                              
-  SDLNet_TCP_Recv(new_tcpsock, &data, sizeof(long));
+  SDLNet_TCP_Recv(new_tcpsock, &data, sizeof(unsigned long));
   // And I print the response:                                                                                                                           
-  printf("(C++): Got a response: %ld\n", data);
+  printf("(C++): Got a response: %lX\n", data);
 
   SDLNet_TCP_Close(tcpsock);
   SDLNet_TCP_Close(new_tcpsock);

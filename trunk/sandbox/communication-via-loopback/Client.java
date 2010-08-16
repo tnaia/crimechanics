@@ -22,9 +22,8 @@ public class Client {
 		r += inp.read(data, r, 4-r);
 	    }
 	    while (r < 4);
-	    System.out.print("(Java): Received data: ");
-	    System.out.print(buffer.getInt());
-	    System.out.print(" = ");
+	    System.out.print("(Java): Received data: " + Integer.toHexString(buffer.getInt()) );
+	    //	    System.out.println (buffer.getInt());
 	    /*
 	      Isto
 	      System.out.println(Integer.toString(data, 16).toUpperCase());
@@ -38,6 +37,7 @@ public class Client {
 	    */
 	    // Then return the same long int (32 bits)
 	    buffer.clear();
+	    System.out.println ("(Java): sending 42 (" + Integer.toHexString(42) + ").");
 	    buffer.putInt(42);
 	    OutputStream out = s.getOutputStream();
 	    out.write(data);
