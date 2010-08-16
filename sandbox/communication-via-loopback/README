@@ -1,0 +1,16 @@
+Para gerar executáveis, faça
+
+make
+
+no terminal.
+
+Para testar a comunicação entre cliente (Java) e servidor (C++)
+basta iniciar os dois processos (o servidor primeiro).
+
+Para iniciar o servidor:
+
+./server
+
+Para iniciar o cliente:
+
+java -jar Cliente.jar

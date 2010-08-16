@@ -1,0 +1,10 @@
+Teste para que um programa C++ dê origem a dois processos, 
+um C++ e o outro Java.
+
+Para gerar os programas, basta dar make.
+
+Para rodar o teste, execute o programa fork.
+
+Ele deverá se transformar em dois programas
+- um programa em C++ que escreve "jogo!" na tela, e
+- um programa Java que escreve "Bdi!!" na tela.
