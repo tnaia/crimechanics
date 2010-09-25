@@ -1,0 +1,16 @@
+Aqui estou colocamos sites com material sobre SDL, juntamente com data
+de acesso e uma descrição curta do tipo de material que pode ser
+encontrado na página.
+
+
+http://www.lazyfoo.net
+
+O Lazy Foo' Production tem uma série de tutoriais sobre uso de SDL em
+C++. Cobre diversos tópicos importantes para o projeto, como , e é bem
+completo. Tem uma seção sobre ``setting up SDL'' para as três
+plataformas mais usadas: GNU/Linux, MS Windows e Mac.
+
+
+http://wiki.libsdl.org/moin.cgi/FAQs
+
+É o FAQ oficial da biblioteca SDL.
