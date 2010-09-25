@@ -77,7 +77,7 @@ bool init()
 bool load_files() 
 {
   //Load the image 
-  image = load_image( "x.png" ); 
+  image = load_image( "../../media/x.png" ); 
   
   //If there was an error in loading the image 
   if( image == NULL ) 
