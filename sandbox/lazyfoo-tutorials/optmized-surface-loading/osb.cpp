@@ -70,8 +70,8 @@ int main( int argc, char** argv )
   SDL_WM_SetCaption( "Hello World", NULL ); 
 
   //Load the images 
-  message = load_image( "hello.bmp" ); 
-  background = load_image( "background.bmp" ); 
+  message = load_image( "../../media/hello1.bmp" ); 
+  background = load_image( "../../media/background.bmp" ); 
 
   //Apply the background to the screen 
   apply_surface( 0, 0, background, screen ); 
