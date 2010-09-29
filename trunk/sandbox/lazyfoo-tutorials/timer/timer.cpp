@@ -106,7 +106,8 @@ bool load_files()
   //Open the font
   //  font = TTF_OpenFont( "../../lazy.ttf", 36 );
   //  font = TTF_OpenFont( "../../../media/fonts/MADV2.TTF", 20 );
-  font = TTF_OpenFont( "../../../media/fonts/MIDNSBRG.TTF", 25 );
+  //  font = TTF_OpenFont( "../../../media/fonts/MIDNSBRG.TTF", 25 );
+  font = TTF_OpenFont( "../../../media/fonts/Cash_Font_by_despicablehero.ttf", 30 );
 
   //If there was a problem in loading the background
   if( background == NULL )
