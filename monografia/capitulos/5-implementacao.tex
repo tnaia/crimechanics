@@ -1,0 +1,45 @@
+\chapter{Implementação}
+
+\section{Arquivos auxiliares}
+
+Uma série de arquivos de texto auxiliares são usados pelo
+jogo. Eles especificam
+\begin{itemize}
+\item diálogos,
+\item agentes,
+\item estados de agentes,
+\item tipos de estímulos a agentes,
+\item nomes de funções disponíveis para interface com o BDI.
+\end{itemize}
+
+Explicamos a seguir a função de cada um dos tipos de arquivo.
+
+Os \emph{diálogos} são scripts que codificam possíveis dizeres que
+\npc{}s ou o jogador podem optar por dizer. Carregam informação sobre
+o sentimento que expressam ou a impressão que causam. Seguem a
+gramática descrita no apêndice~\ref{ap:gram-script-dialogo}.
+
+\emph{Agentes} são especificados em \emph{AgentSpeak}, a linguagem
+interpretada pela ferramenta \emph{Jason}. Cada arquivo contém a
+modelagem de um tipo de agente.
+
+Os três últimos itens são arquivos de interface, usados para
+leitura pelos processos de renderização e de interpretação do sistema
+BDI. Optou-se por essa solução porque a comunicação se dá pelo envio de
+números, que, nesse caso, indicam qual a linha do arquivo de interface
+em que a mensagem está contida. Obviamente, essa abordagem só é
+possível porque as mensagens são conhecidas \emph{a priori}.
+
+Para comunicar o estímulo que uma determinada fala no diálogo provoca
+no agente, a lógica do jogo envia ao sistema BDI um inteiro indicando
+a linha em que está escrita a string que define o estado. Na prática,
+a lógica do jogo faz uma chamada para enviar o inteiro correspondente
+ao estímulo que se deseja comunicar, e uma busca é feita no arquivo
+que contém os estímulos possíveis para encontrar o número da linha
+correspondente. Esse número é, por fim, enviado ao sistema BDI, que
+fará a sua própria busca para identificar qual o estímulo recebido.
+
+No caso de funções, o arquivo de interface deve ser gerado
+automaticamente pelo código Java, para que seja consultado durante a
+execução pela lógica do jogo.
+
