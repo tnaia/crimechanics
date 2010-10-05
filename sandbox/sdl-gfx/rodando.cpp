@@ -154,7 +154,7 @@ int main( int argc, char* argv[] )
 
       //Assemble the caption
       std::stringstream caption;
-      caption << "clique com qualquer botão do mouse. speed: " << degreesIncrement << " degrees/frame";
+      caption << "Clique com qualquer botão do mouse. speed: " << degreesIncrement << " degrees/frame";
       //Set the window caption
       SDL_WM_SetCaption( caption.str().c_str(), NULL );
 
