@@ -1,0 +1,32 @@
+TIPOS DE AÇÕES QUE A POLÍCIA PODE TOMAR (QUE INTERFEREM NO LADO C++ DO JOGO)
+
+mudar segurança de algum lugar
+prender ou soltar pessoas
+colocar tarja de "suspeito" em alguém (faz ser mais observado)
+
+ESPECIALISTAS
+
+inspetor (interface com o jogo, dá voz aos especialistas)
+analista de suspeita por compras
+analista de suspeita por bisbilhotar
+analista de suspeita por conversas
+analista de suspeita por mercadonegro
+entradas para o blackboard vêm dos policiais e civis
+
+INFORMAÇÕES QUE PODEM IR PARA O BLACKBOARD
+
+vi P em tal lugar (P é uma pessoa)
+P comprou tal coisa
+P tentou subornar P2
+P observou segurança (bisbilhotou)
+P teve conversa esquisita
+L foi roubado (L é um lugar)
+tentaram (sem sucesso) roubar L
+X é suspeito por pista encontrada na análise de local de roubo
+
+O QUE FAZ ALGUÉM SUSPEITO
+
+compras esquisitas
+observar ambiente (câmeras, sensores de movimento, ...)
+conversas estranhas (com civis ou policiais)
+mercado negro
