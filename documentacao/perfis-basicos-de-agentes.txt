@@ -1,0 +1,24 @@
+PERFIS DOS AGENTES
+
+Capangas
+Engenheiros Elétrico, Mecâmocp. Civil, Químico, da Computação.
+
+Polícia Patrulha (que fica nos estabelecimentos)
+Corruptível, Incorruptível.
+
+Polícia
+Inspetor
+PolicialRecepcionista
+
+Civis
+Comerciante, funcionárioCartório, Médico, Advogado, Civil (planos e
+crenças aglutinados aleatoriamnte)
+
+Características dos Agentes
+
+Capangas
+satisfação: infeliz, feliz, satisfeito
+estado familiar: solteiro, com família
+nível de suspeita (invisível para o jogador)
+expectativa financeira
+
