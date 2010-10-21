@@ -1,3 +1,4 @@
+
  SOCKETS
 
 24 julho
@@ -30,6 +31,12 @@ Thinking in Java, 3rd ed. Revision 4.0
 Ben Collins-Sussman, Brian F. Fitzpatrick, C. Michael Pilato. Version Control with Subversion
 
  Game Programming
+
+Object-Oriented Scene Management
+21 outubro
+http://www.gamedev.net/reference/articles/article1812.asp
+
+RenPy
 
 John P. Flynt, Omar Salem. Software Engineering for Game
 Developers. Thomson Press.
