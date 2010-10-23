@@ -161,7 +161,7 @@ int main( int argc, char* args[] )
 
     //Render the text
     //message = TTF_RenderText_Solid( font, "The quick brown fox jumps over the lazy dog", textColor );
-        message = TTF_RenderUTF8_Solid( font, "Olê yayá!", textColor );// não funciona utf8!
+        message = TTF_RenderUTF8_Solid( font, "Olê yayá!", textColor );
 
     //If there was an error in rendering the text
     if( message == NULL )

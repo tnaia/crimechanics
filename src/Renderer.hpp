@@ -6,4 +6,18 @@
 
 #ifndef RENDERER_HPP
 #define RENDERER_HPP
+
+#include <vector>
+#include <string>
+#include "SDL/SDL.h"
+#include "SDL/SDL_ttf.h"
+
+
+  std::vector<std::string> 
+  shape_to_fit_rectangle( std::vector<std::string> lines, 
+			  const TTF_Font * f, 
+			  int w, 
+			  int h,
+			  int interline_space = 0 );
+
 #endif /* not RENDERER_HPP */
