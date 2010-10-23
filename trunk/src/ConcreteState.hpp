@@ -5,8 +5,11 @@
  */
 
 /*
- * Client-domain concrete class derived from State.
+ * Template for a client-domain concrete class 
+ * derived from State.
  *
+ * Pobable concrete classes from this template:
+ * cutScene, MenuHierarchy, MainGame, Paused...
  */
 
 #ifndef CONCRETESTATE_HPP
