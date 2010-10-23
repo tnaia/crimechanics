@@ -9,7 +9,8 @@
  * what the game is doing at any one time.
  *
  * Note
- * It is worth considering making a derived State a singleton.
+ * It is worth considering making a derived State a 
+ * singleton.
  */
 
 
