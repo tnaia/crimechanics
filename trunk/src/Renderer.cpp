@@ -78,7 +78,7 @@ shape_to_fit_rectangle( std::vector<std::string> & lines,
 	{
 	  //Let me cut this line in two for ya!
 	  string remainder_of_line = 
-	    lines[ i ].substr( reduced_line.size() );
+	    lines[ i ].substr( reduced_line.size() + 1 );
 	  if( i < lines.size() - 1 )
 	    {
 	      lines.insert( lines.begin() + i + 1, remainder_of_line ); // tirei um +1
@@ -109,7 +109,7 @@ shape_to_fit_rectangle( std::vector<std::string> & lines,
 	{
 	  lines_to_return->push_back( lines[ place_to_cut_vertically ] );
 	  lines.erase( lines.begin() + place_to_cut_vertically );
-      std::cout<<"ouch"<<std::endl;
+
 	}
     }
     return lines_to_return;
