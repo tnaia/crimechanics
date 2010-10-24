@@ -13,6 +13,7 @@
 #include <vector>
 #include <string>
 #include <algorithm>
+#include <fstream>
 
 #include "Renderer.hpp"
 #include "SDLManager.hpp"
@@ -24,9 +25,14 @@ int main( int argc, char ** argv )
 {
   using std::vector;
   using std::string;
+  using std::ifstream;
   SDLManager sdlman = SDLManager::getInstance();
 
   vector<string> texto;
+  ifstream ifs( "texto-teste-Renderer.txt" );
+  string s;
+  while( getline( ifs, s ) )
+    texto.push_back( s );
   texto.push_back( string( "a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a." ) );
   texto.push_back( string( "Olê yayá!" ) );
   texto.push_back( string( "Um autor emblemático, que por sua atuação política, retrata bem a fusão etre os campos histórico e político, é o franês François G. Guisot, para quem as invações bárbaras teriam causado a decadência da civilização romana." ) );
@@ -72,7 +78,8 @@ int main( int argc, char ** argv )
 		SDL_MapRGB( screen->format, 0xF0, 0xF0, 0xF0 ) );
   write_on_surface( screen, font, color, *copia_texto, rect );
   SDL_Flip( screen );
-  SDL_Delay( 2000 );
+  Uint32 timeToWait = 3500;
+  SDL_Delay( timeToWait );
   while( next_texto != NULL )
     {
       //      SDL_Rect rect = { 10, 10, 250, 100 };
@@ -89,7 +96,7 @@ int main( int argc, char ** argv )
 		    SDL_MapRGB( screen->format, 0xF0, 0xF0, 0xF0 ) );
       write_on_surface( screen, font, color, *copia_texto, rect );
       SDL_Flip( screen );
-      SDL_Delay( 2000 );
+      SDL_Delay( timeToWait );
     }
   return 0;
 }
