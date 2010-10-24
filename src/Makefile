@@ -11,4 +11,4 @@ SDLManager.o: SDLManager.cpp SDLManager.hpp
 	g++ -Wall -ansi -O2 -pedantic -lSDL -lSDL_ttf -lSDL_image -lSDL_mixer SDLManager.cpp -c
 
 teste-renderer: Renderer.o SDLManager.o main-Renderer.cpp
-	g++ -Wall -ansi -O2 -pedantic -lSDL -lSDL_ttf -lSDL_image -lSDL_mixer Renderer.o main-Renderer.cpp -o Main
+	g++ -Wall -ansi -O2 -pedantic -lSDL -lSDL_ttf -lSDL_image -lSDL_mixer Renderer.o SDLManager.o main-Renderer.cpp -o Main

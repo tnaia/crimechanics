@@ -9,15 +9,17 @@
 class SDLManager
 {
 public:
-  static SDLManager & getInstance() { return me; };
-  static bool valid; // Can the manager be used?
+  ~SDLManager();  
+  static SDLManager & getInstance();
+  bool isValid() const { return valid; };
+  SDL_Surface * getScreen() const;
 private:
-  static SDLManager me;
+  static SDLManager * me;
   SDLManager();
-  bool init();
-  int SCREEN_WIDTH;
-  int SCREEN_HEIGHT;
-  int SCREEN_BPP;
-  SDL_Surface *screen;
-  SDL_Event event;
+  bool valid; // Can the manager be used?
+   int SCREEN_WIDTH;
+   int SCREEN_HEIGHT;
+   int SCREEN_BPP;
+   SDL_Surface *screen;
+   SDL_Event event;
 };
