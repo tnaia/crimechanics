@@ -92,7 +92,8 @@ shape_to_fit_rectangle( std::vector<std::string> & lines,
       accumulated_height += TTF_FontLineSkip( f ) + interline_space;
       if( !found_place_to_cut_vertically 
 	  && ( accumulated_height > h 
-	       || accumulated_height + interline_space + TTF_FontLineSkip( f ) > h ) )
+	    // || accumulated_height + interline_space + TTF_FontLineSkip( f ) > h 
+	       ) )
 	{
 	  found_place_to_cut_vertically = true;
 	  place_to_cut_vertically = i;
