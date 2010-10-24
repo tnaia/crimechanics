@@ -58,7 +58,7 @@ int main( int argc, char ** argv )
 
   std::cout << "o texto tem " << copia_texto->size() << " linhas" << std::endl;//return 0;
   vector<string> * next_texto = NULL;
-  SDL_Rect rect = { 50, 100, 350, 6.5 * TTF_FontLineSkip( font ) };
+  SDL_Rect rect = { 50, 100, 350, 6 * TTF_FontLineSkip( font ) };
   SDL_Rect fundo = rect;
   fundo.x = rect.x - 10;
   fundo.y = rect.y - 10;
