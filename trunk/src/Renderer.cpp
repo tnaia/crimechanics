@@ -18,15 +18,15 @@
  * without exceeding height h. The remainin lines are returned by the funcion,
  * which returns NULL in case.
 */
-using std::vector; using std::string;
-vector<string> 
-shape_to_fit_rectangle( vector<string> lines, 
-					  TTF_Font * f, 
-					  int w, 
-					  int h,
-					  int interline_space )
-{
 
+std::vector<std::string> 
+shape_to_fit_rectangle( std::vector<std::string> & lines, 
+			TTF_Font * f, 
+			int w, 
+			int h,
+			int interline_space )
+{
+  using std::vector; using std::string;
   assert( f != NULL );
 
 
@@ -37,27 +37,29 @@ shape_to_fit_rectangle( vector<string> lines,
   // For each line
   for( vector<string>::size_type i = 0; i < lines.size(); ++i )
     {
-      const string space = " ";
+      std::cout<< "chopping line " << i << std::endl;
+      string space = " ";
       /* I do a reverse search lines[ i ] for spaces (the only character 
        * a which I break lines.
        */
-      string::size_type pos = string::npos; 
+      string::size_type pos = (lines[ i ]).size() - 1; 
       int line_w;
       int line_h;
       string reduced_line = lines[ i ].substr( 0, pos );
-      if( ! TTF_SizeUTF8( f, reduced_line.c_str(), & line_w, & line_h ) )
+      if( TTF_SizeUTF8( f, reduced_line.c_str(), & line_w, & line_h ) )
 	{
 	  std::cerr << "! Couldn't calculate the size of text:" 
 		    << lines[ i ] << std::endl;
 	}
       while( line_w > w )
 	{
-	  pos = lines[ i ].find_last_of( space, pos );
-	  if( pos == string::npos )
+	  string::size_type new_pos = lines[ i ].find_last_of( space, pos );
+	  std::cout << "posição "<< pos << std::endl;
+	  if( new_pos == pos )
 	    break;
-
+	  pos = new_pos;
 	  reduced_line = lines[ i ].substr( 0, pos );
-	  if( ! TTF_SizeUTF8( f, reduced_line.c_str(), & line_w, &line_h ) )
+	  if( TTF_SizeUTF8( f, reduced_line.c_str(), & line_w, &line_h ) )
 	    {
 	      std::cerr << "! Couldn't calculate the size of text:" 
 			<< lines[ i ] << std::endl;
@@ -68,14 +70,17 @@ shape_to_fit_rectangle( vector<string> lines,
        * rendering is smaller than w, or the longest substring of
        * lines[ i ] without spaces.
        */
-      if( reduced_line.size() < lines[ i ].size() )
+      
+      if( reduced_line.size() < lines[ i ].size() && reduced_line.size() > 0 )
 	{
 	  //Let me cut this line in two for ya!
 	  string remainder_of_line = 
 	    lines[ i ].substr( reduced_line.size() );
-	  lines.insert( lines.begin() + i + 1, remainder_of_line );
+	  if( i < 
+	  lines.insert( lines.begin() + i + 1, remainder_of_line ); // tirei um +1
 	  lines[ i ] = reduced_line;
-	}
+	  }
+      lines[ i ] = reduced_line;
 
       accumulated_height += line_h;
       if( !found_place_to_cut_vertically 
@@ -89,17 +94,20 @@ shape_to_fit_rectangle( vector<string> lines,
 
   //Splits vector lines in two.
   vector<string> lines_to_return;
-  copy( lines.begin() + place_to_cut_vertically, 
-	lines.end(), 
-	lines_to_return.begin() );
+  if( found_place_to_cut_vertically )
+    {
+      copy( lines.begin() + place_to_cut_vertically, 
+	    lines.end(), 
+	    lines_to_return.begin() );
 
-  lines.erase( lines.begin() + place_to_cut_vertically,
-	 lines.end() );
+      lines.erase( lines.begin() + place_to_cut_vertically,
+		   lines.end() );
+    }
 
     return lines_to_return;
 }
 
-bool write_on_rectangle( const string texto, 
+bool write_on_rectangle( const std::string texto, 
 			 SDL_Surface * s, 
 			 TTF_Font * f, 
 			 SDL_Color textColor )
@@ -113,4 +121,31 @@ bool write_on_rectangle( const string texto,
 
 
   return true;
+}
+
+bool write_on_surface( SDL_Surface * s,
+		       TTF_Font * f,
+		       SDL_Color c,
+		       const std::vector<std::string> lines, 
+		       SDL_Rect rect, 
+		       int interline_space )
+{
+  using std::vector; using std::string;
+  assert( s != NULL );
+  assert( f != NULL );
+
+  bool ret = true; // Success or failuire of writing
+
+  SDL_Surface * message = NULL;
+  for( vector<string>::size_type i = 0; i < lines.size(); ++i )
+    {
+      message = TTF_RenderUTF8_Solid( f, lines[ i ].c_str(), c );
+      SDL_BlitSurface( message, NULL, s, & rect );
+      int line_h;
+      if( TTF_SizeUTF8( f, lines[ i ].c_str(), NULL, & line_h ) )
+	ret = false;
+      rect.y += interline_space + line_h;
+    }
+
+  return ret;
 }
