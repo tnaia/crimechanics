@@ -64,21 +64,23 @@ int main( int argc, char ** argv )
 
   std::cout << "o texto tem " << copia_texto->size() << " linhas" << std::endl;//return 0;
   vector<string> * next_texto = NULL;
+  // Text and wrapping boxes dimensions
   SDL_Rect rect = { 50, 100, 350, 6 * TTF_FontLineSkip( font ) };
-  SDL_Rect fundo = rect;
-  fundo.x = rect.x - 10;
-  fundo.y = rect.y - 10;
-  fundo.w = rect.w + 20;
-  fundo.h = rect.h + 20;
+  SDL_Rect back = rect;
+  back.x = rect.x - 10;
+  back.y = rect.y - 10;
+  back.w = rect.w + 20;
+  back.h = rect.h + 20;
 
   next_texto = shape_to_fit_rectangle( *copia_texto, font, rect.w, rect.h );
   SDL_Color color = { 89, 89, 109 }; 
   SDL_FillRect( screen, 
-		&fundo, 
+		&back, 
 		SDL_MapRGB( screen->format, 0xF0, 0xF0, 0xF0 ) );
   write_on_surface( screen, font, color, *copia_texto, rect );
+
   SDL_Flip( screen );
-  Uint32 timeToWait = 3500;
+  Uint32 timeToWait = 4500;
   SDL_Delay( timeToWait );
   while( next_texto != NULL )
     {
@@ -92,7 +94,7 @@ int main( int argc, char ** argv )
 		    &screen->clip_rect, 
 		    SDL_MapRGB( screen->format, 0xFF, 0xFF, 0xFF ) );
       SDL_FillRect( screen, 
-		    &fundo, 
+		    &back, 
 		    SDL_MapRGB( screen->format, 0xF0, 0xF0, 0xF0 ) );
       write_on_surface( screen, font, color, *copia_texto, rect );
       SDL_Flip( screen );
