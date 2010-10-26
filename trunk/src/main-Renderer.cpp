@@ -52,10 +52,10 @@ int main( int argc, char ** argv )
 		SDL_MapRGB( screen->format, 0xFF, 0xFF, 0xFF ) );
 
   SDL_Flip( screen );
-  TTF_Font * font = 
-    TTF_OpenFont( "../media/fonts/Cash_Font_by_despicablehero.ttf", 20 );
-  //  TTF_Font * font = 
-  //  TTF_OpenFont( "../media/fonts/newathu.ttf", 15 );
+    TTF_Font * font = 
+      TTF_OpenFont( "../media/fonts/Cash_Font_by_despicablehero.ttf", 20 );
+    //TTF_Font * font = 
+    //TTF_OpenFont( "../media/fonts/newathu.ttf", 25 );
   if( font == NULL )
     {
       std::cerr << "! Couldn't open font." << std::endl;
