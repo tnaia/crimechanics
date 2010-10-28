@@ -3,6 +3,7 @@
 Texto _itálico_, *negrito* 
 
 {{{
+class a;
 int main()
 {
   return 0;
