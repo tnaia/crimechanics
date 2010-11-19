@@ -4,7 +4,6 @@ import java.nio.ByteBuffer;
 
 public class Client {
     public static void main(String[] args) {
-
 	System.out.println ("This is the client (Java).\n");
 	try {
 	    InetSocketAddress addr = new InetSocketAddress("localhost", 9999);
@@ -22,23 +21,25 @@ public class Client {
 		r += inp.read(data, r, 4-r);
 	    }
 	    while (r < 4);
-	    System.out.print("(Java): Received data: " + Integer.toHexString(buffer.getInt()) );
-	    //	    System.out.println (buffer.getInt());
-	    /*
-	      Isto
-	      System.out.println(Integer.toString(data, 16).toUpperCase());
-	      deveria imprimir os bytes, mas a compilação diz
-	      javac Client.java
-	      Client.java:28: cannot find symbol
-	      symbol  : method toString(byte[],int)
-	      location: class java.lang.Integer
-	      System.out.println(Integer.toString(data, 16).toUpperCase());
-	                                        ^
-	    */
+
+	    for( r = 0; r < 2; r++ )
+		{
+		    byte aux = data[ r ];
+		    data[ r ] = data [ 4 -r -1 ];
+		    data[ 4 -r -1 ] = aux;
+		}
+	    System.out.println("(Java): Received data (hex): " + Integer.toHexString(buffer.getInt()) );
+
 	    // Then return the same long int (32 bits)
 	    buffer.clear();
-	    System.out.println ("(Java): sending 42 (" + Integer.toHexString(42) + ").");
-	    buffer.putInt(42);
+	    Integer i;
+	    if( args.length > 0 )
+		i = new Integer( args[0] );
+	    else
+		i = 42; // Default value
+
+	    System.out.println ("(Java): sending " + i + " (" + Integer.toHexString(i) + ").");
+	    buffer.putInt(i);
 	    OutputStream out = s.getOutputStream();
 	    out.write(data);
 	    s.close();

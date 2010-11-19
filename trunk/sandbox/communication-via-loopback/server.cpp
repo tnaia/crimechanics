@@ -12,8 +12,6 @@ int main (int argc, char **argv)
       exit (1);
     }
 
-  std::cout << "Hello from SDLNet.\n";
-
   IPaddress ip;
   TCPsocket tcpsock, new_tcpsock;
 
@@ -36,13 +34,24 @@ int main (int argc, char **argv)
 
   // Once connected, I try to send some data                                                                                                             
   unsigned long data = 114;
-  std::cout << "(C++): sending 114";
-  printf (" (%lX).\n", data);
+  std::cout << "(C++): sending "<< data;
+  printf (" (hexa: %lX).\n", data);
   SDLNet_TCP_Send(new_tcpsock, &data, sizeof(unsigned long));
   // Then I wait for a long int in response                                                                                                              
   SDLNet_TCP_Recv(new_tcpsock, &data, sizeof(unsigned long));
   // And I print the response:                                                                                                                           
-  printf("(C++): Got a response: %lX\n", data);
+  /* Reflecting byte sequence */
+  unsigned long ndata = 0;
+  int aux = sizeof( unsigned long );
+  unsigned long mask = 0xFF;
+  while( aux > 0 )
+    {
+      ndata |=  ( ( mask & ( data >> ( 8 * ( aux -1 ) ) ) ) << (8 * ( sizeof( unsigned long) -aux ) ) );
+      --aux;
+    }
+  data = ndata;
+  printf("(C++): Got a response: %lu (hexa %lX)\n", data, data );
+
 
   SDLNet_TCP_Close(tcpsock);
   SDLNet_TCP_Close(new_tcpsock);
