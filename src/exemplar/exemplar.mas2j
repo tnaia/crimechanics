@@ -1,0 +1,18 @@
+/*
+    Jason Project
+
+    -- created on Novembro 06, 2010
+*/
+
+MAS exemplar {
+   infrastructure: Centralised
+
+   environment: Ambiente
+
+   agents:
+       sample;
+       murilo;
+       tassio;
+
+   aslSourcePath: "src/asl"; 
+}
