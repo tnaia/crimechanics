@@ -1,5 +1,31 @@
 \chapter{Implementação}
 
+\section{Visão global}
+
+Como as coisas funcionam. O que faz o quê (macroscopicamente).
+
+Uma explicação sucinta da estrutura do programa, como ele inicia
+(forking) e como age em regime (responsabilidades java vs C++, e o
+protocolo).
+
+\section{Arquitetura}
+
+\section{Protocolo de comunicação}
+
+\section{Estrutura de pastas}
+
+O projeto foi desenvolvido com vistas a se prestar à experimentação no
+design. Assim, algumas ferramentas para a escrita de \emph{scripts} de
+diálogos ou pequenas cenas foram desenvolvidas. 
+
+Descrevemos a seguir a organização dos arquivos do projeto. É
+importante que essa estrutura seja clara e intuitiva, já que é nossa
+intenção que alguns desses arquivos (que configuram o comportamento
+do jogo) sejam alterados primariamente por designers do jogo. Assim, é
+preciso que haja critério na complexidade que se expõe a esses
+``usuários''.
+
+
 \section{Arquivos auxiliares}
 
 Uma série de arquivos de texto auxiliares são usados pelo
@@ -9,7 +35,6 @@ jogo. Eles especificam
 \item agentes,
 \item estados de agentes,
 \item tipos de estímulos a agentes,
-\item nomes de funções disponíveis para interface com o BDI.
 \end{itemize}
 
 Explicamos a seguir a função de cada um dos tipos de arquivo.
