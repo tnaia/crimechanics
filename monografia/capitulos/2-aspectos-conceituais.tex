@@ -7,17 +7,71 @@ comuns, estado da arte.
 
 \section{Jogos digitais}
 
+
 Uma curta evolução histórica, tendências atuais (puxando um pouco para
 os problemas de IA --- a questão da imprevisibilidade e adaptabilidade
 dos jogos). Referências.
 
 \section{Inteligência em jogos}
 
+O principal objetivo do uso de técnicas de inteligência artificial em jogos eletrônicos é a diversão.
+
+\textbf{Vou falar que aqui não interessa muito o como a coisa é feita mas sim o resultado, ou seja, não interessa ao desenvolvedor se preocupar com a teoria de IA mas sim em criar uma situação que forneça ao jogo mais diversão.
+Um exemplo interessante para deixar claro a diferença entre IA acadêmica e IA em jogos são os shooters. Em jogos de tiros poderíamos fazer (através de técnicas de IA) os NPCs acertarem todos os tiros que disparam na cabeça do inimigo, no entanto, isso passa longe da realidade humana, fato que poderia tirar toda a diversão de um jogo!}
+
 Um pouco de história, motivação do uso, desafios e problemas comuns.
 
 \subsection{Crença, desejo e intenção --- a arquitetura BDI}
 
+O modelo BDI (\textit{Beliefs Desires Intentions}) foi originalmente proposto por Bratman como uma teoria filosófica do raciocínio prático, propondo uma análise do comportamento humano que seria baseado em crenças, desejos e intenções.
+Basicamente supõe-se que as ações são derivadas a partir de um processo chamado raciocínio prático. Este processo é constituído por duas etapas, na primeira, deliberação, o agente seleciona um conjunto de desejos que devem ser alcançados, de acordo com a situação atual das crenças do mesmo. Na segunda etapa ocorre a determinação de como os desejos produzidos no passo anterior podem ser atingidos através do uso dos meios disponíveis ao agente \textbf{[4] Michael Wooldridge, Reasoning about Rational Agents. Cambridge, MA: The M. I. T. Presss 2000.}.
+A seguir explicaremos melhor o que são crenças, desejos e intenções.
+\begin{itemize}
+\item \textbf{Crenças (Beliefs)}: Representam as características do ambiente e são atualizadas constantemente. Podem ser vistas como a componente informativa do sistema.
+\item \textbf{Desejos (Desires)}: Representam os objetivos a serem alcançados. Podem ser vistos como motivações do sistema.
+\item \textbf{Intenções (Intentions)}: Representam o atual plano de ações escolhido. 
+\end{itemize}
+
+A partir deste modelo nasceu a arquitetura BDI para agentes. Agentes BDI são sistemas localizados em um ambiente (em nosso caso o ambiente será virtual) sujeito a variações, além disso, percebem o estado deste ambiente constantemente e podem atuar sobre o mesmo para tentar alterar o estado atual.
+Abaixo vemos o processo de raciocínio prático de um agente BDI.
+ 
+\textbf{Figura 2 - Diagrama de uma arquitetura BDI genérica [4]}
+
+Como se pode observar existe sete elementos básicos que compõem um agente BDI, são eles \textbf{[5] Ingrid Oliveira de Nunes, Implementação do modelo e da arquitetura BDI}:
+\begin{itemize}
+\item Um conjunto de crenças (\textit{Desires}) atuais que representam as informações que o agente tem do ambiente.
+\item Uma função de revisão de crenças (\textit{Belief Revision Function}), a qual determina um novo conjunto de crenças a partir da percepção da entrada e das crenças do agente.
+\item Uma função de geração de opções (\textit{Option Generation Function}), a qual determina as opções disponíveis ao agente (seus desejos), com base nas suas crenças sobre seu ambiente e nas suas intenções.
+\item Um conjunto de opções (\textit{desires}) corrente que representa os possíveis planos de ações disponíveis ao agente.
+\item Uma função de filtro (\textit{filter}), a qual representa o processo de deliberação do agente, que determina as intenções do agente com base nas suas crenças, desejos e intenções atuais.
+\item Um conjunto de intenções (\textit{Intentions}) atual, que representa o foco atual do agente, isto é, aqueles estados que o agente está determinado a alcançar.
+\item Uma função de seleção de ação (\textit{Action Selection Function}), a qual determina uma ação a ser executada com base nas suas intenções atuais. 
+\end{itemize}
+
 \subsection{Quadro-negro --- blackboard}
+
+	A forma mais simples de apresentar o conceito de sistemas blackboard é através de uma metáfora que propõem a seguinte situação \textbf{(Daniel D. Corkill, Blackboard Systems. Blackboard Technology Group, Inc.)}:
+ “Imagine um grupo de cientistas reunidos em uma sala trabalhando de forma cooperativa para resolver um problema. Para chegar a uma solução é utilizado um quadro negro (\textit{blackboard}).
+A resolução do problema começa quando o mesmo é escrito no quadro negro juntamente com informações iniciais. Os cientistas verificam o conteúdo do quadro e aguardam uma oportunidade para aplicar seus conhecimentos visando solucionar o problema. Quando um cientista encontra informações suficientes para fazer uma contribuição, o mesmo coloca sua contribuição no quadro negro, e com sorte, este processo ativará outro cientista e assim por diante até chegarem à solução do problema.”
+	Da metáfora acima se pode concluir que um sistema blackboard possui uma base de dados comum a diversos outros sistemas que estão tentando solucionar um problema e utilizam e atualizam as informações existentes nesta base de dados.
+	 A seguir apresentaremos algumas características deste tipo de sistema:
+	 \begin{itemize}
+	 \item \textbf{Independência de conhecimento}: No exemplo acima, supomos que cada cientista adquiriu seus conhecimentos de maneira independente dos outros, ou seja, num sistema blackboard cada sistema que participa da solução de um problema tem seus próprios níveis de conhecimento, independentemente dos outros sistemas.
+	 \item \textbf{Diversidade nas técnicas de solução de problemas}: Uma das grandes vantagens do sistema blackboard é que não interessa como os sistemas que estão trabalhando na resolução do problema funcionam, ou seja, um sistema pode utilizar redes neurais outro pode utilizar estar utilizando simulações que para o sistema blackboard estas “fontes de conhecimento” são caixas pretas que fazem suas contribuições.
+	 \item \textbf{Representação da informação é flexível}: Em sistemas blackboard não existe nenhuma definição de como deve ser a informação, dando liberdade a quem faz o sistema de definir como representar os dados.
+	 \item \textbf{Linguagem comum entre os sistemas}: Ao mesmo tempo em que existe a flexibilidade na representação da informação, é necessário, por outro lado, que todos os sistemas envolvidos sejam capazes de entender tais informações.
+	 \item \textbf{Liberdade de organização dos dados}: A organização dos dados é livre, porém, deve ser feita de forma eficiente de tal forma que, no caso da base de dados possuir muita informação, seja simples para um sistema encontrar informações específicas de forma rápida e simples.
+	 \item \textbf{Ativações baseadas em eventos}: Neste tipo de sistema, os sistemas que estão trabalhando na solução do problema não se comunicam diretamente, ao invés disto, todos “observam” a base de dados comum e utilizando as informações da mesma buscam gerar novos dados que são colocados na mesma base, tais dados podem ativar outro sistema que fará a mesma coisa até que o problema seja completamente resolvido.
+	 \item \textbf{Necessidade de controle}: É preciso haver um “órgão” para controlar todos os sistemas e decidir quem deve e quem não deve poder alterar os dados do quadro negro, assim não existe o risco de mais de um sistema alterar uma mesma área de dados simultaneamente.
+	 \item \textbf{Geração de solução incremental}: É evidente que a solução de um problema neste tipo de sistema acontece de passo em passo, ou seja, um sistema faz uma contribuição com novos dados, a seguir, outro sistema utiliza tais dados e faz uma nova contribuição e de ciclo em ciclo o problema tende a ser resolvido. 
+	 \end{itemize}
+
+Abaixo temos uma visão geral de como funciona o sistema blackboard. Basicamente existem fontes de conhecimento (sistemas que estão trabalhando na resolução do problema) um sistema de controle que concede permissões às fontes de conhecimento para alterarem os dados do quadro negro, este por sua vez, é uma base de dados que contem informações que ficam disponíveis a todas as fontes de conhecimento.
+
+\textbf{Figura 1- Visão geral de um sistema blackboard}
+	
+Neste projeto utilizaremos este tipo de sistema como parte de um jogo computacional que será desenvolvido.
+
 
 \subsection{O que avaliar}
 
