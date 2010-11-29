@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2010.10.5)  28 NOV 2010 16:16
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2010.10.5)  29 NOV 2010 19:21
 entering extended mode
 **principal.tex
 ("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\principal.tex"
@@ -739,16 +739,26 @@ LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
 
 ] ("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\principal.toc"
 LaTeX Font Info:    Font shape `OT1/phv/bx/it' in size <12> not available
-(Font)              Font shape `OT1/phv/b/it' tried instead on input line 31.
+(Font)              Font shape `OT1/phv/b/it' tried instead on input line 33.
 LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <12> not available
-(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 31.
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 33.
 LaTeX Font Info:    Font shape `OT1/phv/b/sl' will be
-(Font)              scaled to size 11.39996pt on input line 31.
-)
-\tf@toc=\write5
- [2
+(Font)              scaled to size 11.39996pt on input line 33.
 
-]
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 33.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[2
+
+])
+\tf@toc=\write5
+ [3]
 ("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/1-introduca
 o.tex"
 Cap\'{\i }tulo 1.
@@ -763,7 +773,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[3
+[4
 
 
 ]
@@ -776,7 +786,7 @@ LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
 (Font)              scaled to size 13.67995pt on input line 3.
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 29.
+less on input line 25.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -784,36 +794,36 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[4
+[5
 
 
 
-]
-LaTeX Font Info:    Try loading font information for OMS+phv on input line 30.
+] [6]
+LaTeX Font Info:    Try loading font information for OMS+phv on input line 47.
  ("C:\Program Files\MiKTeX 2.8\tex\latex\psnfss\omsphv.fd"
 File: omsphv.fd 
 )
 LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 30.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 47.
 
-Overfull \hbox (10.07455pt too wide) in paragraph at lines 46--47
+Overfull \hbox (16.97972pt too wide) in paragraph at lines 47--48
+[]\OT1/phv/m/n/12 Planejamento au-tom-a-ti-zado e escalon-a-mento: a uma cen-te
+na de milh[]oes de quil[]ometros
+ []
+
+[7]
+Overfull \hbox (5.29807pt too wide) in paragraph at lines 69--70
+[]\OT1/phv/m/n/12 Diferentemente da IA acad[]emica que busca solu-cionar pro-bl
+e-mas ex-tra-ma-mente dif[]ceis,
+ []
+
+[8] [9]
+Overfull \hbox (10.07455pt too wide) in paragraph at lines 100--101
 \OT1/phv/m/n/12 que de-ter-mina as inten[][]oes do agente com base nas suas cre
 n[]as, de-se-jos e inten[][]oes
  []
 
-[5] [6]
-Overfull \hbox (7.20393pt too wide) in paragraph at lines 66--67
-\OT1/phv/m/n/12 tipo de sis-tema acon-tece de passo em passo, ou seja, um sis-t
-ema faz uma contribui[][]ao
- []
-
-
-Overfull \hbox (6.00696pt too wide) in paragraph at lines 66--67
-\OT1/phv/m/n/12 com novos da-dos, a seguir, outro sis-tema uti-liza tais da-dos
- e faz uma nova contribui[][]ao
- []
-
-) [7]
+[10] [11]) [12]
 ("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/3-especific
 acao.tex"
 Cap\'{\i }tulo 3.
@@ -830,7 +840,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[8
+[13
 
 
 
@@ -854,11 +864,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[9
+[14
 
 
 
-]) [10]
+]) [15]
 ("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/5-implement
 acao.tex"
 Cap\'{\i }tulo 5.
@@ -872,11 +882,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[11
+[16
 
 
 
-]) [12]
+]) [17]
 ("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/6-testes.te
 x"
 Cap\'{\i }tulo 6.
@@ -891,7 +901,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[13
+[18
 
 
 
@@ -916,7 +926,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[14
+[19
 
 
 
@@ -941,7 +951,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[15
+[20
 
 
 ] ("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\principal.aux"
@@ -970,22 +980,22 @@ x")
 ("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/7-conclusoe
 s.aux")) ) 
 Here is how much of TeX's memory you used:
- 5223 strings out of 495285
- 76261 string characters out of 3180391
- 131738 words of memory out of 3000000
- 8182 multiletter control sequences out of 15000+200000
+ 5224 strings out of 495285
+ 76269 string characters out of 3180391
+ 132740 words of memory out of 3000000
+ 8183 multiletter control sequences out of 15000+200000
  41866 words of font info for 84 fonts, out of 3000000 for 9000
  19 hyphenation exceptions out of 8191
- 33i,11n,45p,646b,289s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 33i,11n,44p,1002b,370s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.8/fonts/enc/dvips/fontname/8r.enc}<C:/Prog
 ram Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program File
 s/MiKTeX 2.8/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.8/f
 onts/type1/urw/helvetic/uhvbo8a.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/ur
 w/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/urw/helvetic/uhv
 ro8a.pfb>
-Output written on principal.pdf (22 pages, 83846 bytes).
+Output written on principal.pdf (27 pages, 98330 bytes).
 PDF statistics:
- 94 PDF objects out of 1000 (max. 8388607)
+ 110 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
