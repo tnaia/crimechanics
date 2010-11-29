@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2010.10.5)  29 NOV 2010 19:21
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2010.10.5)  29 NOV 2010 21:25
 entering extended mode
 **principal.tex
 ("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\principal.tex"
@@ -812,18 +812,24 @@ na de milh[]oes de quil[]ometros
  []
 
 [7]
-Overfull \hbox (5.29807pt too wide) in paragraph at lines 69--70
+Overfull \hbox (7.40996pt too wide) in paragraph at lines 60--64
+\OT1/phv/m/n/12 Ap[]os pe-sa-dos in-ves-ti-men-tos em no-vas tec-nolo-gias, os 
+jo-gos dig-i-tais at-u-ais pos-suem gr[]aficos
+ []
+
+[8]
+Overfull \hbox (5.29807pt too wide) in paragraph at lines 71--72
 []\OT1/phv/m/n/12 Diferentemente da IA acad[]emica que busca solu-cionar pro-bl
 e-mas ex-tra-ma-mente dif[]ceis,
  []
 
-[8] [9]
-Overfull \hbox (10.07455pt too wide) in paragraph at lines 100--101
+[9] [10]
+Overfull \hbox (10.07455pt too wide) in paragraph at lines 102--103
 \OT1/phv/m/n/12 que de-ter-mina as inten[][]oes do agente com base nas suas cre
 n[]as, de-se-jos e inten[][]oes
  []
 
-[10] [11]) [12]
+[11] [12]) [13]
 ("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/3-especific
 acao.tex"
 Cap\'{\i }tulo 3.
@@ -840,7 +846,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[13
+[14
 
 
 
@@ -864,11 +870,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[14
+[15
 
 
 
-]) [15]
+]) [16]
 ("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/5-implement
 acao.tex"
 Cap\'{\i }tulo 5.
@@ -882,11 +888,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[16
+[17
 
 
 
-]) [17]
+]) [18]
 ("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/6-testes.te
 x"
 Cap\'{\i }tulo 6.
@@ -901,7 +907,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[18
+[19
 
 
 
@@ -926,7 +932,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[19
+[20
 
 
 
@@ -951,7 +957,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[20
+[21
 
 
 ] ("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\principal.aux"
@@ -978,24 +984,28 @@ acao.aux")
 ("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/6-testes.au
 x")
 ("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/7-conclusoe
-s.aux")) ) 
+s.aux"))
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 5224 strings out of 495285
- 76269 string characters out of 3180391
+ 5223 strings out of 495285
+ 76261 string characters out of 3180391
  132740 words of memory out of 3000000
- 8183 multiletter control sequences out of 15000+200000
+ 8182 multiletter control sequences out of 15000+200000
  41866 words of font info for 84 fonts, out of 3000000 for 9000
  19 hyphenation exceptions out of 8191
  33i,11n,44p,1002b,370s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.8/fonts/enc/dvips/fontname/8r.enc}<C:/Prog
-ram Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program File
-s/MiKTeX 2.8/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.8/f
-onts/type1/urw/helvetic/uhvbo8a.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/ur
-w/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/urw/helvetic/uhv
-ro8a.pfb>
-Output written on principal.pdf (27 pages, 98330 bytes).
+{C:/Program Files/MiKTeX 2.8/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
+s/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX
+ 2.8/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.8/fonts/typ
+e1/urw/helvetic/uhvbo8a.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/urw/helvet
+ic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/urw/helvetic/uhvro8a.pfb
+>
+Output written on principal.pdf (28 pages, 100655 bytes).
 PDF statistics:
- 110 PDF objects out of 1000 (max. 8388607)
+ 113 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
