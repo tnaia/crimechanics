@@ -2,32 +2,32 @@
 \select@language {brazilian}
 \select@language {english}
 \select@language {brazilian}
-\contentsline {chapter}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{iv}
-\contentsline {chapter}{\numberline {2}Aspectos Conceituais}{v}
-\contentsline {section}{\numberline {2.1}Intelig\IeC {\^e}ncia Artificial}{v}
-\contentsline {subsection}{\numberline {2.1.1}Hist\IeC {\'o}ria}{v}
-\contentsline {subsection}{\numberline {2.1.2}\IeC {\'A}reas de aplica\IeC {\c c}\IeC {\~a}o}{vii}
-\contentsline {section}{\numberline {2.2}Jogos digitais}{viii}
-\contentsline {section}{\numberline {2.3}Intelig\IeC {\^e}ncia em jogos}{ix}
-\contentsline {subsection}{\numberline {2.3.1}Cren\IeC {\c c}a, desejo e inten\IeC {\c c}\IeC {\~a}o --- a arquitetura BDI}{x}
-\contentsline {subsection}{\numberline {2.3.2}Quadro-negro --- blackboard}{xi}
-\contentsline {subsection}{\numberline {2.3.3}O que avaliar}{xiii}
-\contentsline {chapter}{\numberline {3}Especifica\IeC {\c c}\IeC {\~a}o}{xiv}
-\contentsline {chapter}{\numberline {4}Metodologia}{xv}
-\contentsline {section}{\numberline {4.1}Evolu\IeC {\c c}\IeC {\~a}o}{xv}
-\contentsline {subsection}{\numberline {4.1.1}Percal\IeC {\c c}os e reajustes}{xvi}
-\contentsline {chapter}{\numberline {5}Implementa\IeC {\c c}\IeC {\~a}o}{xvii}
-\contentsline {section}{\numberline {5.1}Vis\IeC {\~a}o global}{xvii}
-\contentsline {section}{\numberline {5.2}Arquitetura}{xvii}
-\contentsline {section}{\numberline {5.3}Protocolo de comunica\IeC {\c c}\IeC {\~a}o}{xvii}
-\contentsline {section}{\numberline {5.4}Estrutura de pastas}{xvii}
-\contentsline {section}{\numberline {5.5}Arquivos auxiliares}{xvii}
-\contentsline {chapter}{\numberline {6}Testes}{xix}
-\contentsline {chapter}{\numberline {7}Conclus\IeC {\~a}o}{xx}
-\contentsline {section}{\numberline {7.1}Trabalhos futuros}{xx}
-\contentsline {section}{\numberline {7.2}\emph {Post Mortem}}{xx}
-\contentsline {subsection}{\numberline {7.2.1}\emph {``Lessons learned''}}{xx}
-\contentsline {chapter}{Refer\IeC {\^e}ncias Bibliogr\IeC {\'a}ficas}{xxi}
-\contentsline {chapter}{Gloss\IeC {\'a}rio}{xxi}
-\contentsline {chapter}{Ap\^endice}{xxi}
-\contentsline {chapter}{\numberline {A}Gram\IeC {\'a}tica dos \emph {scripts} de di\IeC {\'a}logo}{xxi}
+\contentsline {chapter}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{1}
+\contentsline {chapter}{\numberline {2}Aspectos Conceituais}{2}
+\contentsline {section}{\numberline {2.1}Intelig\IeC {\^e}ncia Artificial}{2}
+\contentsline {subsection}{\numberline {2.1.1}Hist\IeC {\'o}ria}{2}
+\contentsline {subsection}{\numberline {2.1.2}\IeC {\'A}reas de aplica\IeC {\c c}\IeC {\~a}o}{4}
+\contentsline {section}{\numberline {2.2}Jogos digitais}{5}
+\contentsline {section}{\numberline {2.3}Intelig\IeC {\^e}ncia em jogos}{6}
+\contentsline {subsection}{\numberline {2.3.1}Cren\IeC {\c c}a, desejo e inten\IeC {\c c}\IeC {\~a}o --- a arquitetura BDI}{7}
+\contentsline {subsection}{\numberline {2.3.2}Quadro-negro --- blackboard}{8}
+\contentsline {subsection}{\numberline {2.3.3}O que avaliar}{10}
+\contentsline {chapter}{\numberline {3}Especifica\IeC {\c c}\IeC {\~a}o}{11}
+\contentsline {chapter}{\numberline {4}Metodologia}{12}
+\contentsline {section}{\numberline {4.1}Evolu\IeC {\c c}\IeC {\~a}o}{12}
+\contentsline {subsection}{\numberline {4.1.1}Percal\IeC {\c c}os e reajustes}{13}
+\contentsline {chapter}{\numberline {5}Implementa\IeC {\c c}\IeC {\~a}o}{14}
+\contentsline {section}{\numberline {5.1}Vis\IeC {\~a}o global}{14}
+\contentsline {section}{\numberline {5.2}Arquitetura}{14}
+\contentsline {section}{\numberline {5.3}Protocolo de comunica\IeC {\c c}\IeC {\~a}o}{14}
+\contentsline {section}{\numberline {5.4}Estrutura de pastas}{14}
+\contentsline {section}{\numberline {5.5}Arquivos auxiliares}{14}
+\contentsline {chapter}{\numberline {6}Testes}{16}
+\contentsline {chapter}{\numberline {7}Conclus\IeC {\~a}o}{17}
+\contentsline {section}{\numberline {7.1}Trabalhos futuros}{17}
+\contentsline {section}{\numberline {7.2}\emph {Post Mortem}}{17}
+\contentsline {subsection}{\numberline {7.2.1}\emph {``Lessons learned''}}{17}
+\contentsline {chapter}{Refer\IeC {\^e}ncias Bibliogr\IeC {\'a}ficas}{18}
+\contentsline {chapter}{Gloss\IeC {\'a}rio}{18}
+\contentsline {chapter}{Ap\^endice}{18}
+\contentsline {chapter}{\numberline {A}Gram\IeC {\'a}tica dos \emph {scripts} de di\IeC {\'a}logo}{18}
