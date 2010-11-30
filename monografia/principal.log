@@ -1,13 +1,21 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2010.10.5)  29 NOV 2010 21:25
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.8.26)  30 NOV 2010 19:00
 entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
 **principal.tex
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\principal.tex"
+(./principal.tex
 LaTeX2e <2009/09/24>
-Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
-rman, ngerman, german-x-2009-06-19, ngerman-x-2009-06-19, french, loaded.
-("C:\Program Files\MiKTeX 2.8\tex\latex\base\report.cls"
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, farsi, arabic, croatian, bulgarian, ukrainian, russian, czech, slov
+ak, danish, dutch, finnish, french, basque, ngerman, german, german-x-2009-06-1
+9, ngerman-x-2009-06-19, ibycus, monogreek, greek, ancientgreek, hungarian, san
+skrit, italian, latin, latvian, lithuanian, mongolian2a, mongolian, bokmal, nyn
+orsk, romanian, irish, coptic, serbian, turkish, welsh, esperanto, uppersorbian
+, estonian, indonesian, interlingua, icelandic, kurmanji, slovenian, polish, po
+rtuguese, spanish, galician, catalan, swedish, ukenglish, pinyin, loaded.
+(/usr/share/texmf-texlive/tex/latex/base/report.cls
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
-("C:\Program Files\MiKTeX 2.8\tex\latex\base\size12.clo"
+(/usr/share/texmf-texlive/tex/latex/base/size12.clo
 File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -23,54 +31,42 @@ File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Program Files\MiKTeX 2.8\tex\latex\comment\comment.sty"
+(/usr/share/texmf-texlive/tex/latex/comment/comment.sty
 \CommentStream=\write3
 
-Excluding comment 'comment')
-("C:\Program Files\MiKTeX 2.8\tex\generic\babel\babel.sty"
+Excluding comment 'comment') (/var/lib/texmf/tex/generic/babel/babel.sty
 Package: babel 2008/07/06 v3.8l The Babel package
 
-*************************************
-* Local config file bblopts.cfg used
-*
-("C:\Program Files\MiKTeX 2.8\tex\latex\00miktex\bblopts.cfg"
-File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
-)
-("C:\Program Files\MiKTeX 2.8\tex\generic\babel\portuges.ldf"
+(/usr/share/texmf-texlive/tex/generic/babel/portuges.ldf
 Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
 
-("C:\Program Files\MiKTeX 2.8\tex\generic\babel\babel.def"
+(/usr/share/texmf-texlive/tex/generic/babel/babel.def
 File: babel.def 2008/07/06 v3.8l Babel common definitions
 \babel@savecnt=\count88
 \U@D=\dimen103
 )
-
-Package babel Warning: No hyphenation patterns were loaded for
-(babel)                the language `Portuguese'
-(babel)                I will use the patterns loaded for \language=0 instead.
-
-\l@portuges = a dialect from \language0
 \l@brazilian = a dialect from \language\l@portuges 
 Package babel Info: Making " an active character on input line 145.
-) ("C:\Program Files\MiKTeX 2.8\tex\generic\babel\english.ldf"
+)
+(/usr/share/texmf-texlive/tex/generic/babel/english.ldf
 Language: english 2005/03/30 v3.3o English support from the babel system
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
-("C:\Program Files\MiKTeX 2.8\tex\latex\base\inputenc.sty"
+(/usr/share/texmf-texlive/tex/latex/base/inputenc.sty
 Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 
-("C:\Program Files\MiKTeX 2.8\tex\latex\base\utf8.def"
+(/usr/share/texmf-texlive/tex/latex/base/utf8.def
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-("C:\Program Files\MiKTeX 2.8\tex\latex\base\t1enc.dfu"
+(/usr/share/texmf-texlive/tex/latex/base/t1enc.dfu
 File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -220,7 +216,7 @@ File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-("C:\Program Files\MiKTeX 2.8\tex\latex\base\ot1enc.dfu"
+(/usr/share/texmf-texlive/tex/latex/base/ot1enc.dfu
 File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -251,7 +247,7 @@ File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-("C:\Program Files\MiKTeX 2.8\tex\latex\base\omsenc.dfu"
+(/usr/share/texmf-texlive/tex/latex/base/omsenc.dfu
 File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
@@ -275,16 +271,16 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-("C:\Program Files\MiKTeX 2.8\tex\latex\a4wide\a4wide.sty"
+(/usr/share/texmf-texlive/tex/latex/ltxmisc/a4wide.sty
 Package: a4wide 1994/08/30
 
-("C:\Program Files\MiKTeX 2.8\tex\latex\ntgclass\a4.sty"
+(/usr/share/texmf-texlive/tex/latex/ntgclass/a4.sty
 Package: a4 2004/04/15 v1.2g A4 based page layout
 ))
-("C:\Program Files\MiKTeX 2.8\tex\latex\placeins\placeins.sty"
+(/usr/share/texmf-texlive/tex/latex/placeins/placeins.sty
 Package: placeins 2005/04/18  v 2.2
 )
-("C:\Program Files\MiKTeX 2.8\tex\latex\txfonts\txfonts.sty"
+(/usr/share/texmf-texlive/tex/latex/txfonts/txfonts.sty
 Package: txfonts 2008/01/22 v3.2.1
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 21.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
@@ -360,28 +356,27 @@ LaTeX Font Info:    Overwriting symbol font `largesymbolsA' in version `bold'
 (Font)                  U/txexa/m/n --> U/txexa/bx/n on input line 129.
 LaTeX Info: Redefining \not on input line 1043.
 )
-("C:\Program Files\MiKTeX 2.8\tex\latex\type1cm\type1cm.sty"
+(/usr/share/texmf-texlive/tex/latex/type1cm/type1cm.sty
 Package: type1cm 2002/09/05 v0.04 BlueSky/Y&Y Type1 CM font definitions (DPC, p
 atched RF)
 )
-("C:\Program Files\MiKTeX 2.8\tex\latex\psnfss\courier.sty"
+(/usr/share/texmf-texlive/tex/latex/psnfss/courier.sty
 Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
 )
-("C:\Program Files\MiKTeX 2.8\tex\latex\psnfss\helvet.sty"
+(/usr/share/texmf-texlive/tex/latex/psnfss/helvet.sty
 Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS) 
 
-("C:\Program Files\MiKTeX 2.8\tex\latex\graphics\keyval.sty"
+(/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks16
-))
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\epigraph.sty"
+)) (./epigraph.sty
 Package: epigraph 2002/10/22 v1.5a typesetting epigraphs
 \beforeepigraphskip=\skip43
 \afterepigraphskip=\skip44
 \epigraphwidth=\skip45
 \epigraphrule=\skip46
 )
-("C:\Program Files\MiKTeX 2.8\tex\latex\footmisc\footmisc.sty"
+(/usr/share/texmf-texlive/tex/latex/footmisc/footmisc.sty
 Package: footmisc 2009/09/15 v5.5a a miscellany of footnote facilities
 \FN@temptoken=\toks17
 \footnotemargin=\dimen104
@@ -395,19 +390,19 @@ Package footmisc Info: Declaring symbol style lamport* on input line 903.
 Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
 .
 )
-("C:\Program Files\MiKTeX 2.8\tex\latex\ltxmisc\url.sty"
+(/usr/share/texmf-texlive/tex/latex/ltxmisc/url.sty
 \Urlmuskip=\muskip10
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
-("C:\Program Files\MiKTeX 2.8\tex\latex\geometry\geometry.sty"
-Package: geometry 2010/03/13 v5.3 Page Geometry
+(/usr/share/texmf-texlive/tex/latex/geometry/geometry.sty
+Package: geometry 2008/12/21 v4.2 Page Geometry
 
-("C:\Program Files\MiKTeX 2.8\tex\generic\oberdiek\ifpdf.sty"
-Package: ifpdf 2010/01/28 v2.1 Provides the ifpdf switch (HO)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2009/04/10 v2.0 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in pdf mode detected.
 )
-("C:\Program Files\MiKTeX 2.8\tex\generic\oberdiek\ifvtex.sty"
-Package: ifvtex 2010/03/01 v1.5 Switches for detecting VTeX and its modes (HO)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2008/11/04 v1.4 Switches for detecting VTeX and its modes (HO)
 Package ifvtex Info: VTeX not detected.
 )
 \Gm@cnth=\count90
@@ -417,26 +412,22 @@ Package ifvtex Info: VTeX not detected.
 \Gm@wd@mp=\dimen106
 \Gm@odd@mp=\dimen107
 \Gm@even@mp=\dimen108
-\Gm@layoutwidth=\dimen109
-\Gm@layoutheight=\dimen110
-\Gm@layouthoffset=\dimen111
-\Gm@layoutvoffset=\dimen112
 \Gm@dimlist=\toks18
 
-("C:\Program Files\MiKTeX 2.8\tex\latex\geometry\geometry.cfg"))
-("C:\Program Files\MiKTeX 2.8\tex\latex\titlesec\titlesec.sty"
+(/usr/share/texmf-texlive/tex/xelatex/xetexconfig/geometry.cfg))
+(/usr/share/texmf-texlive/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2007/08/12 v2.8 Sectioning titles
 \ttl@box=\box26
 \beforetitleunit=\skip47
 \aftertitleunit=\skip48
-\ttl@plus=\dimen113
-\ttl@minus=\dimen114
+\ttl@plus=\dimen109
+\ttl@minus=\dimen110
 \ttl@toksa=\toks19
-\titlewidth=\dimen115
-\titlewidthlast=\dimen116
-\titlewidthfirst=\dimen117
+\titlewidth=\dimen111
+\titlewidthlast=\dimen112
+\titlewidthfirst=\dimen113
 )
-("C:\Program Files\MiKTeX 2.8\tex\latex\fancyhdr\fancyhdr.sty"
+(/usr/share/texmf-texlive/tex/latex/fancyhdr/fancyhdr.sty
 \fancy@headwidth=\skip49
 \f@ncyO@elh=\skip50
 \f@ncyO@erh=\skip51
@@ -447,12 +438,12 @@ Package: titlesec 2007/08/12 v2.8 Sectioning titles
 \f@ncyO@olf=\skip56
 \f@ncyO@orf=\skip57
 )
-("C:\Program Files\MiKTeX 2.8\tex\latex\tools\calc.sty"
+(/usr/share/texmf-texlive/tex/latex/tools/calc.sty
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count93
 \calc@Bcount=\count94
-\calc@Adimen=\dimen118
-\calc@Bdimen=\dimen119
+\calc@Adimen=\dimen114
+\calc@Bdimen=\dimen115
 \calc@Askip=\skip58
 \calc@Bskip=\skip59
 LaTeX Info: Redefining \setlength on input line 76.
@@ -460,103 +451,87 @@ LaTeX Info: Redefining \addtolength on input line 77.
 \calc@Ccount=\count95
 \calc@Cskip=\skip60
 )
-("C:\Program Files\MiKTeX 2.8\tex\latex\boxedminipage\boxedminipage.sty")
-("C:\Program Files\MiKTeX 2.8\tex\latex\listings\listings.sty"
+(/usr/share/texmf-texlive/tex/latex/ltxmisc/boxedminipage.sty)
+(/usr/share/texmf-texlive/tex/latex/listings/listings.sty
 \lst@mode=\count96
 \lst@gtempboxa=\box27
 \lst@token=\toks20
 \lst@length=\count97
-\lst@currlwidth=\dimen120
+\lst@currlwidth=\dimen116
 \lst@column=\count98
 \lst@pos=\count99
-\lst@lostspace=\dimen121
-\lst@width=\dimen122
+\lst@lostspace=\dimen117
+\lst@width=\dimen118
 \lst@newlines=\count100
 \lst@lineno=\count101
-\lst@maxwidth=\dimen123
+\lst@maxwidth=\dimen119
 
-("C:\Program Files\MiKTeX 2.8\tex\latex\listings\lstmisc.sty"
+(/usr/share/texmf-texlive/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 \c@lstnumber=\count102
 \lst@skipnumbers=\count103
 \lst@framebox=\box28
 )
-("C:\Program Files\MiKTeX 2.8\tex\latex\listings\listings.cfg"
+(/usr/share/texmf-texlive/tex/latex/listings/listings.cfg
 File: listings.cfg 2007/02/22 1.4 listings configuration
 ))
 Package: listings 2007/02/22 1.4 (Carsten Heinz)
 
-("C:\Program Files\MiKTeX 2.8\tex\latex\graphics\graphicx.sty"
+(/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.8\tex\latex\graphics\graphics.sty"
+(/usr/share/texmf-texlive/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.8\tex\latex\graphics\trig.sty"
+(/usr/share/texmf-texlive/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Program Files\MiKTeX 2.8\tex\latex\00miktex\graphics.cfg"
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+(/etc/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-("C:\Program Files\MiKTeX 2.8\tex\latex\pdftex-def\pdftex.def"
-File: pdftex.def 2010/02/14 v0.04n Graphics/color for pdfTeX
+(/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2009/08/25 v0.04m Graphics/color for pdfTeX
 \Gread@gobject=\count104
 ))
-\Gin@req@height=\dimen124
-\Gin@req@width=\dimen125
+\Gin@req@height=\dimen120
+\Gin@req@width=\dimen121
 )
-("C:\Program Files\MiKTeX 2.8\tex\latex\textpos\textpos.sty"
-Package: textpos 2010/09/30 v1.7g
+(/usr/share/texmf-texlive/tex/latex/textpos/textpos.sty
+Package: textpos 2009/05/28 v1.7f
 
-Package: `textpos' 1.7g <2010 September 30>
-("C:\Program Files\MiKTeX 2.8\tex\latex\ms\everyshi.sty"
+Package: `textpos' 1.7f <2009 May 28>
+(/usr/share/texmf-texlive/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 )
 \TP@textbox=\box29
 \TP@holdbox=\box30
-\TPHorizModule=\dimen126
-\TPVertModule=\dimen127
-\TP@margin=\dimen128
-\TP@absmargin=\dimen129
+\TPHorizModule=\dimen122
+\TPVertModule=\dimen123
+\TP@margin=\dimen124
+\TP@absmargin=\dimen125
 
 Grid set 16 x 16 = 37.34424pt x 52.81541pt
-\TPboxrulesize=\dimen130
-\TP@ox=\dimen131
-\TP@oy=\dimen132
+\TPboxrulesize=\dimen126
+\TP@ox=\dimen127
+\TP@oy=\dimen128
 \TP@tbargs=\toks21
-\TP@prevdepth=\dimen133
+\TP@prevdepth=\dimen129
 TextBlockOrigin set to 0pt x 0pt
-) ("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\principal.aux"
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/00-capa.aux
-")
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/01-falso-ro
-sto.aux")
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/02-rosto.au
-x")
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/03-dedicato
-ria.aux")
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/05-epigrafe
-.aux")
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/1-introduca
-o.aux")
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/2-aspectos-
-conceituais.aux")
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/3-especific
-acao.aux")
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/4-metodolog
-ia.aux")
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/5-implement
-acao.aux")
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/6-testes.au
-x")
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/7-conclusoe
-s.aux"))
+) (./principal.aux (./capitulos/00-capa.aux) (./capitulos/01-falso-rosto.aux)
+(./capitulos/02-rosto.aux) (./capitulos/03-dedicatoria.aux)
+(./capitulos/05-epigrafe.aux) (./capitulos/1-introducao.aux)
+(./capitulos/2-aspectos-conceituais.aux) (./capitulos/3-especificacao.aux)
+(./capitulos/4-metodologia.aux) (./capitulos/5-implementacao.aux)
+(./capitulos/6-testes.aux) (./capitulos/7-conclusoes.aux))
+\openout1 = `principal.aux'.
+
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 126.
 LaTeX Font Info:    Try loading font information for OML+txmi on input line 126
 .
- ("C:\Program Files\MiKTeX 2.8\tex\latex\txfonts\omltxmi.fd"
+
+(/usr/share/texmf-texlive/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 126.
@@ -568,7 +543,7 @@ LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 126.
 LaTeX Font Info:    Try loading font information for OMS+txsy on input line 126
 .
 
-("C:\Program Files\MiKTeX 2.8\tex\latex\txfonts\omstxsy.fd"
+(/usr/share/texmf-texlive/tex/latex/txfonts/omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 126.
@@ -576,7 +551,7 @@ LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 126.
 LaTeX Font Info:    Try loading font information for OMX+txex on input line 126
 .
 
-("C:\Program Files\MiKTeX 2.8\tex\latex\txfonts\omxtxex.fd"
+(/usr/share/texmf-texlive/tex/latex/txfonts/omxtxex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 126.
@@ -584,67 +559,77 @@ LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 126.
 LaTeX Font Info:    Try loading font information for U+txexa on input line 126.
 
 
-("C:\Program Files\MiKTeX 2.8\tex\latex\txfonts\utxexa.fd"
+(/usr/share/texmf-texlive/tex/latex/txfonts/utxexa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 126.
 LaTeX Font Info:    Try loading font information for OT1+phv on input line 126.
 
 
-("C:\Program Files\MiKTeX 2.8\tex\latex\psnfss\ot1phv.fd"
+(/usr/share/texmf-texlive/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
 (Font)              scaled to size 11.39996pt on input line 126.
 
-*geometry* driver: auto-detecting
-*geometry* detected driver: pdftex
-*geometry* verbose mode - [ preamble ] result:
-* driver: pdftex
-* paper: a4paper
-* layout: a4paper
-* switch(es): includehead 
-* h-part:(L,W,R)=(85.35826pt, 455.24411pt, 56.9055pt)
-* v-part:(T,H,B)=(85.35826pt, 702.78308pt, 56.9055pt)
-* \paperwidth=597.50787pt
-* \paperheight=845.04684pt
-* \textwidth=455.24411pt
-* \textheight=665.78308pt
-* \oddsidemargin=13.08827pt
-* \evensidemargin=13.08827pt
-* \topmargin=13.08827pt
-* \headheight=12.0pt
-* \headsep=25.0pt
-* \footskip=30.0pt
-* \marginparwidth=54.2025pt
-* \marginparsep=10.0pt
-* \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
-* \@reversemarginfalse
-* (1in=72.27pt, 1cm=28.453pt)
+*geometry auto-detecting driver*
+*geometry detected driver: pdftex*
+-------------------- Geometry parameters
+paper: a4paper
+landscape: --
+twocolumn: --
+twoside: --
+asymmetric: --
+h-parts: 85.35826pt, 455.24411pt, 56.9055pt
+v-parts: 85.35826pt, 702.78308pt, 56.9055pt
+hmarginratio: --
+vmarginratio: --
+lines: --
+heightrounded: --
+bindingoffset: 0.0pt
+truedimen: --
+includehead: true
+includefoot: --
+includemp: --
+driver: pdftex
+-------------------- Page layout dimensions and switches
+\paperwidth  597.50787pt
+\paperheight 845.04684pt
+\textwidth  455.24411pt
+\textheight 665.78308pt
+\oddsidemargin  13.08827pt
+\evensidemargin 13.08827pt
+\topmargin  13.08827pt
+\headheight 12.0pt
+\headsep    25.0pt
+\footskip   30.0pt
+\marginparwidth 54.2025pt
+\marginparsep   10.0pt
+\columnsep  10.0pt
+\skip\footins  10.8pt plus 4.0pt minus 2.0pt
+\hoffset 0.0pt
+\voffset 0.0pt
+\mag 1000
 
+(1in=72.27pt, 1cm=28.45pt)
+-----------------------
 \c@lstlisting=\count105
-("C:\Program Files\MiKTeX 2.8\tex\context\base\supp-pdf.tex"
+(/usr/share/texmf/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count106
-\scratchdimen=\dimen134
+\scratchdimen=\dimen130
 \scratchbox=\box31
 \nofMPsegments=\count107
 \nofMParguments=\count108
 \everyMPshowfont=\toks22
 \MPscratchCnt=\count109
-\MPscratchDim=\dimen135
+\MPscratchDim=\dimen131
 \MPnumerator=\count110
 \everyMPtoPDFconversion=\toks23
 ) ABD: EveryShipout initializing macros
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/00-capa.tex
-"
+\openout2 = `capitulos/00-capa.aux'.
+
+ (./capitulos/00-capa.tex
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
 (Font)              scaled to size 13.67995pt on input line 2.
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
@@ -653,28 +638,28 @@ LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <20.74> not available
 (Font)              Font shape `OT1/phv/m/sl' tried instead on input line 8.
 LaTeX Font Info:    Font shape `OT1/phv/m/sl' will be
 (Font)              scaled to size 19.70294pt on input line 8.
-) [1{C:/ProgramData/MiKTeX/2.8/pdftex/config/pdftex.map}
+) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/01-falso-ro
-sto.tex"
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/00-capa.tex
-") ("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/sobre.te
-x")) [2
+\openout2 = `capitulos/01-falso-rosto.aux'.
+
+ (./capitulos/01-falso-rosto.tex
+(./capitulos/00-capa.tex) (./capitulos/sobre.tex)) [2
 
 
 ]
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/02-rosto.te
-x"
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/00-capa.tex
-") ("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/sobre.te
-x")) [3
+\openout2 = `capitulos/02-rosto.aux'.
+
+
+(./capitulos/02-rosto.tex (./capitulos/00-capa.tex) (./capitulos/sobre.tex))
+[3
 
 
 ]
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/03-dedicato
-ria.tex"
+\openout2 = `capitulos/03-dedicatoria.aux'.
+
+ (./capitulos/03-dedicatoria.tex
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
 (Font)              Font shape `OT1/phv/m/sl' tried instead on input line 4.
 LaTeX Font Info:    Font shape `OT1/phv/m/sl' will be
@@ -683,32 +668,34 @@ LaTeX Font Info:    Font shape `OT1/phv/m/sl' will be
 
 
 ])
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/05-epigrafe
-.tex"
+\openout2 = `capitulos/05-epigrafe.aux'.
+
+ (./capitulos/05-epigrafe.tex
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
 (Font)              scaled to size 10.40245pt on input line 5.
 LaTeX Font Info:    Try loading font information for OT1+txr on input line 5.
- ("C:\Program Files\MiKTeX 2.8\tex\latex\txfonts\ot1txr.fd"
+
+(/usr/share/texmf-texlive/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Try loading font information for U+txmia on input line 5.
 
-("C:\Program Files\MiKTeX 2.8\tex\latex\txfonts\utxmia.fd"
+(/usr/share/texmf-texlive/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Try loading font information for U+txsya on input line 5.
 
-("C:\Program Files\MiKTeX 2.8\tex\latex\txfonts\utxsya.fd"
+(/usr/share/texmf-texlive/tex/latex/txfonts/utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Try loading font information for U+txsyb on input line 5.
 
-("C:\Program Files\MiKTeX 2.8\tex\latex\txfonts\utxsyb.fd"
+(/usr/share/texmf-texlive/tex/latex/txfonts/utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Try loading font information for U+txsyc on input line 5.
 
-("C:\Program Files\MiKTeX 2.8\tex\latex\txfonts\utxsyc.fd"
+(/usr/share/texmf-texlive/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )) [5
 
@@ -719,12 +706,9 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
 (Font)              scaled to size 11.39996pt on input line 149.
 
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/resumo.tex"
-) [1
+(./capitulos/resumo.tex) [1
 
-]
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/abstract.te
-x") [1]
+] (./capitulos/abstract.tex) [1]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <17.28> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 158.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
@@ -733,17 +717,21 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <20.74> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 158.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
 (Font)              scaled to size 19.70294pt on input line 158.
- ("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\principal.lof")
+ (./principal.lof)
 \tf@lof=\write4
- [1
+\openout4 = `principal.lof'.
 
-] ("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\principal.toc"
+
+[1
+
+] (./principal.toc
 LaTeX Font Info:    Font shape `OT1/phv/bx/it' in size <12> not available
 (Font)              Font shape `OT1/phv/b/it' tried instead on input line 33.
 LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <12> not available
 (Font)              Font shape `OT1/phv/b/sl' tried instead on input line 33.
 LaTeX Font Info:    Font shape `OT1/phv/b/sl' will be
 (Font)              scaled to size 11.39996pt on input line 33.
+
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 33.
@@ -758,9 +746,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 ])
 \tf@toc=\write5
+\openout5 = `principal.toc'.
+
  [3]
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/1-introduca
-o.tex"
+\openout2 = `capitulos/1-introducao.aux'.
+
+ (./capitulos/1-introducao.tex
 Cap\'{\i }tulo 1.
 )
 
@@ -773,12 +764,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[4
+[1
+
 
 
 ]
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/2-aspectos-
-conceituais.tex"
+\openout2 = `capitulos/2-aspectos-conceituais.aux'.
+
+ (./capitulos/2-aspectos-conceituais.tex
 Cap\'{\i }tulo 2.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 3.
@@ -794,44 +787,45 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[5
+[2
 
 
 
-] [6]
+] [3]
 LaTeX Font Info:    Try loading font information for OMS+phv on input line 47.
- ("C:\Program Files\MiKTeX 2.8\tex\latex\psnfss\omsphv.fd"
+ (/usr/share/texmf-texlive/tex/latex/psnfss/omsphv.fd
 File: omsphv.fd 
 )
 LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 47.
 
 Overfull \hbox (16.97972pt too wide) in paragraph at lines 47--48
-[]\OT1/phv/m/n/12 Planejamento au-tom-a-ti-zado e escalon-a-mento: a uma cen-te
-na de milh[]oes de quil[]ometros
+[]\OT1/phv/m/n/12 Planejamento au-to-ma-ti-zado e es-ca-lo-na-mento: a uma cen-
+tena de milh[]oes de quil[]ometros
  []
 
-[7]
+[4]
 Overfull \hbox (7.40996pt too wide) in paragraph at lines 60--64
-\OT1/phv/m/n/12 Ap[]os pe-sa-dos in-ves-ti-men-tos em no-vas tec-nolo-gias, os 
-jo-gos dig-i-tais at-u-ais pos-suem gr[]aficos
+\OT1/phv/m/n/12 Ap[]os pe-sa-dos in-ves-ti-men-tos em no-vas tec-no-lo-gias, os
+ jo-gos di-gi-tais atu-ais pos-suem gr[]aficos
  []
 
-[8]
+[5]
 Overfull \hbox (5.29807pt too wide) in paragraph at lines 71--72
-[]\OT1/phv/m/n/12 Diferentemente da IA acad[]emica que busca solu-cionar pro-bl
-e-mas ex-tra-ma-mente dif[]ceis,
+[]\OT1/phv/m/n/12 Diferentemente da IA acad[]emica que busca so-lu-ci-o-nar pro
+-ble-mas ex-tra-ma-mente dif[]^^Pceis,
  []
 
-[9] [10]
+[6] [7]
 Overfull \hbox (10.07455pt too wide) in paragraph at lines 102--103
 \OT1/phv/m/n/12 que de-ter-mina as inten[][]oes do agente com base nas suas cre
 n[]as, de-se-jos e inten[][]oes
  []
 
-[11] [12]) [13]
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/3-especific
-acao.tex"
+[8] [9]) [10]
+\openout2 = `capitulos/3-especificacao.aux'.
+
+ (./capitulos/3-especificacao.tex
 Cap\'{\i }tulo 3.
 LaTeX Font Info:    Font shape `OT1/phv/m/sc' will be
 (Font)              scaled to size 11.39996pt on input line 7.
@@ -846,20 +840,15 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[14
+[11
 
 
 
 ]
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/4-metodolog
-ia.tex"
+\openout2 = `capitulos/4-metodologia.aux'.
+
+ (./capitulos/4-metodologia.tex
 Cap\'{\i }tulo 4.
-
-Overfull \hbox (29.76172pt too wide) in paragraph at lines 12--14
-[]\OT1/phv/m/n/12 Levantamento de ativi-dades e as-sun-tos a pesquisar, crono-g
-rama pre-lim-i-nar (de pesquisas),
- []
-
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 47.
@@ -870,13 +859,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[15
+[12
 
 
 
-]) [16]
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/5-implement
-acao.tex"
+]) [13]
+\openout2 = `capitulos/5-implementacao.aux'.
+
+ (./capitulos/5-implementacao.tex
 Cap\'{\i }tulo 5.
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
@@ -888,13 +878,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[17
+[14
 
 
 
-]) [18]
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/6-testes.te
-x"
+]) [15]
+\openout2 = `capitulos/6-testes.aux'.
+
+ (./capitulos/6-testes.tex
 Cap\'{\i }tulo 6.
 )
 
@@ -907,13 +898,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[19
+[16
 
 
 
 ]
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/7-conclusoe
-s.tex"
+\openout2 = `capitulos/7-conclusoes.aux'.
+
+ (./capitulos/7-conclusoes.tex
 Cap\'{\i }tulo 7.
 LaTeX Font Info:    Font shape `OT1/phv/bx/it' in size <14.4> not available
 (Font)              Font shape `OT1/phv/b/it' tried instead on input line 9.
@@ -932,13 +924,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[20
+[17
 
 
 
-]
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\apendices/gramatica-s
-cript-dialogo.tex"
+] (./apendices/gramatica-script-dialogo.tex
 Ap\^endice A.
 LaTeX Font Info:    Font shape `OT1/phv/bx/it' in size <20.74> not available
 (Font)              Font shape `OT1/phv/b/it' tried instead on input line 2.
@@ -957,53 +947,30 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[21
+[18
 
 
-] ("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\principal.aux"
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/00-capa.aux
-")
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/01-falso-ro
-sto.aux")
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/02-rosto.au
-x")
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/03-dedicato
-ria.aux")
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/05-epigrafe
-.aux")
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/1-introduca
-o.aux")
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/2-aspectos-
-conceituais.aux")
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/3-especific
-acao.aux")
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/4-metodolog
-ia.aux")
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/5-implement
-acao.aux")
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/6-testes.au
-x")
-("C:\Users\Murilo\Desktop\2o. semestre\TCC\SVN\monografia\capitulos/7-conclusoe
-s.aux"))
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+] (./principal.aux (./capitulos/00-capa.aux) (./capitulos/01-falso-rosto.aux) (
+./capitulos/02-rosto.aux) (./capitulos/03-dedicatoria.aux)
+(./capitulos/05-epigrafe.aux) (./capitulos/1-introducao.aux)
+(./capitulos/2-aspectos-conceituais.aux) (./capitulos/3-especificacao.aux)
+(./capitulos/4-metodologia.aux) (./capitulos/5-implementacao.aux)
+(./capitulos/6-testes.aux) (./capitulos/7-conclusoes.aux)) ) 
 Here is how much of TeX's memory you used:
- 5223 strings out of 495285
- 76261 string characters out of 3180391
- 132740 words of memory out of 3000000
- 8182 multiletter control sequences out of 15000+200000
+ 5139 strings out of 493848
+ 69190 string characters out of 1152823
+ 130160 words of memory out of 3000000
+ 8178 multiletter control sequences out of 15000+50000
  41866 words of font info for 84 fonts, out of 3000000 for 9000
- 19 hyphenation exceptions out of 8191
+ 719 hyphenation exceptions out of 8191
  33i,11n,44p,1002b,370s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.8/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
-s/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX
- 2.8/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.8/fonts/typ
-e1/urw/helvetic/uhvbo8a.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/urw/helvet
-ic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/urw/helvetic/uhvro8a.pfb
->
-Output written on principal.pdf (28 pages, 100655 bytes).
+{/usr/share/texmf-t
+exlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texlive/fonts/type1/public
+/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvb
+8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/sha
+re/texmf-texlive/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-texlive/
+fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on principal.pdf (28 pages, 99658 bytes).
 PDF statistics:
  113 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
