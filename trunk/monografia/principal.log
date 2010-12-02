@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.8.26)  30 NOV 2010 19:00
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.8.26)  2 DEC 2010 11:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -725,16 +725,9 @@ LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
 [1
 
 ] (./principal.toc
-LaTeX Font Info:    Font shape `OT1/phv/bx/it' in size <12> not available
-(Font)              Font shape `OT1/phv/b/it' tried instead on input line 33.
-LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <12> not available
-(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 33.
-LaTeX Font Info:    Font shape `OT1/phv/b/sl' will be
-(Font)              scaled to size 11.39996pt on input line 33.
-
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 33.
+less on input line 34.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -744,7 +737,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [2
 
-])
+]
+LaTeX Font Info:    Font shape `OT1/phv/bx/it' in size <12> not available
+(Font)              Font shape `OT1/phv/b/it' tried instead on input line 36.
+LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <12> not available
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 36.
+LaTeX Font Info:    Font shape `OT1/phv/b/sl' will be
+(Font)              scaled to size 11.39996pt on input line 36.
+)
 \tf@toc=\write5
 \openout5 = `principal.toc'.
 
@@ -829,10 +829,15 @@ n[]as, de-se-jos e inten[][]oes
 Cap\'{\i }tulo 3.
 LaTeX Font Info:    Font shape `OT1/phv/m/sc' will be
 (Font)              scaled to size 11.39996pt on input line 7.
-)
+
+Overfull \hbox (5.28638pt too wide) in paragraph at lines 33--37
+[]\OT1/phv/m/n/12 O mo-delo im-ple-men-tado tem por ideia cen-tral que os di[]a
+logos s[]ao intera[][]oes de \OT1/phv/m/sl/12 est[]^^Pmulo
+ []
+
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 172.
+less on input line 53.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -845,6 +850,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 ]
+LaTeX Font Info:    Font shape `OT1/phv/bx/it' in size <14.4> not available
+(Font)              Font shape `OT1/phv/b/it' tried instead on input line 60.
+LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <14.4> not available
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 60.
+LaTeX Font Info:    Font shape `OT1/phv/b/sl' will be
+(Font)              scaled to size 13.67995pt on input line 60.
+) [12]
 \openout2 = `capitulos/4-metodologia.aux'.
 
  (./capitulos/4-metodologia.tex
@@ -859,11 +871,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[12
+[13
 
 
 
-]) [13]
+]) [14]
 \openout2 = `capitulos/5-implementacao.aux'.
 
  (./capitulos/5-implementacao.tex
@@ -878,11 +890,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[14
+[15
 
 
 
-]) [15]
+]) [16]
 \openout2 = `capitulos/6-testes.aux'.
 
  (./capitulos/6-testes.tex
@@ -898,7 +910,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[16
+[17
 
 
 
@@ -907,12 +919,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
  (./capitulos/7-conclusoes.tex
 Cap\'{\i }tulo 7.
-LaTeX Font Info:    Font shape `OT1/phv/bx/it' in size <14.4> not available
-(Font)              Font shape `OT1/phv/b/it' tried instead on input line 9.
-LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <14.4> not available
-(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 9.
-LaTeX Font Info:    Font shape `OT1/phv/b/sl' will be
-(Font)              scaled to size 13.67995pt on input line 9.
 )
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
@@ -924,7 +930,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[17
+[18
 
 
 
@@ -947,7 +953,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[18
+[19
 
 
 ] (./principal.aux (./capitulos/00-capa.aux) (./capitulos/01-falso-rosto.aux) (
@@ -957,22 +963,22 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 (./capitulos/4-metodologia.aux) (./capitulos/5-implementacao.aux)
 (./capitulos/6-testes.aux) (./capitulos/7-conclusoes.aux)) ) 
 Here is how much of TeX's memory you used:
- 5139 strings out of 493848
- 69190 string characters out of 1152823
+ 5140 strings out of 493848
+ 69198 string characters out of 1152823
  130160 words of memory out of 3000000
- 8178 multiletter control sequences out of 15000+50000
+ 8179 multiletter control sequences out of 15000+50000
  41866 words of font info for 84 fonts, out of 3000000 for 9000
  719 hyphenation exceptions out of 8191
- 33i,11n,44p,1002b,370s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 33i,11n,44p,1002b,362s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-t
 exlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texlive/fonts/type1/public
 /amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvb
 8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/sha
 re/texmf-texlive/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-texlive/
 fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on principal.pdf (28 pages, 99658 bytes).
+Output written on principal.pdf (29 pages, 103501 bytes).
 PDF statistics:
- 113 PDF objects out of 1000 (max. 8388607)
+ 116 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

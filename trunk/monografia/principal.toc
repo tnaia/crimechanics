@@ -13,21 +13,24 @@
 \contentsline {subsection}{\numberline {2.3.2}Quadro-negro --- blackboard}{8}
 \contentsline {subsection}{\numberline {2.3.3}O que avaliar}{10}
 \contentsline {chapter}{\numberline {3}Especifica\IeC {\c c}\IeC {\~a}o}{11}
-\contentsline {chapter}{\numberline {4}Metodologia}{12}
-\contentsline {section}{\numberline {4.1}Evolu\IeC {\c c}\IeC {\~a}o}{12}
-\contentsline {subsection}{\numberline {4.1.1}Percal\IeC {\c c}os e reajustes}{13}
-\contentsline {chapter}{\numberline {5}Implementa\IeC {\c c}\IeC {\~a}o}{14}
-\contentsline {section}{\numberline {5.1}Vis\IeC {\~a}o global}{14}
-\contentsline {section}{\numberline {5.2}Arquitetura}{14}
-\contentsline {section}{\numberline {5.3}Protocolo de comunica\IeC {\c c}\IeC {\~a}o}{14}
-\contentsline {section}{\numberline {5.4}Estrutura de pastas}{14}
-\contentsline {section}{\numberline {5.5}Arquivos auxiliares}{14}
-\contentsline {chapter}{\numberline {6}Testes}{16}
-\contentsline {chapter}{\numberline {7}Conclus\IeC {\~a}o}{17}
-\contentsline {section}{\numberline {7.1}Trabalhos futuros}{17}
-\contentsline {section}{\numberline {7.2}\emph {Post Mortem}}{17}
-\contentsline {subsection}{\numberline {7.2.1}\emph {``Lessons learned''}}{17}
-\contentsline {chapter}{Refer\IeC {\^e}ncias Bibliogr\IeC {\'a}ficas}{18}
-\contentsline {chapter}{Gloss\IeC {\'a}rio}{18}
-\contentsline {chapter}{Ap\^endice}{18}
-\contentsline {chapter}{\numberline {A}Gram\IeC {\'a}tica dos \emph {scripts} de di\IeC {\'a}logo}{18}
+\contentsline {section}{\numberline {3.1}Decis\IeC {\~o}es de projeto}{11}
+\contentsline {subsection}{\numberline {3.1.1}Limita\IeC {\c c}\IeC {\~o}es e controle da express\IeC {\~a}o dos agentes}{11}
+\contentsline {section}{\numberline {3.2}Compromissos (\emph {trade-offs})}{12}
+\contentsline {chapter}{\numberline {4}Metodologia}{13}
+\contentsline {section}{\numberline {4.1}Evolu\IeC {\c c}\IeC {\~a}o}{13}
+\contentsline {subsection}{\numberline {4.1.1}Percal\IeC {\c c}os e reajustes}{14}
+\contentsline {chapter}{\numberline {5}Implementa\IeC {\c c}\IeC {\~a}o}{15}
+\contentsline {section}{\numberline {5.1}Vis\IeC {\~a}o global}{15}
+\contentsline {section}{\numberline {5.2}Arquitetura}{15}
+\contentsline {section}{\numberline {5.3}Protocolo de comunica\IeC {\c c}\IeC {\~a}o}{15}
+\contentsline {section}{\numberline {5.4}Estrutura de pastas}{15}
+\contentsline {section}{\numberline {5.5}Arquivos auxiliares}{15}
+\contentsline {chapter}{\numberline {6}Testes}{17}
+\contentsline {chapter}{\numberline {7}Conclus\IeC {\~a}o}{18}
+\contentsline {section}{\numberline {7.1}Trabalhos futuros}{18}
+\contentsline {section}{\numberline {7.2}\emph {Post Mortem}}{18}
+\contentsline {subsection}{\numberline {7.2.1}\emph {``Lessons learned''}}{18}
+\contentsline {chapter}{Refer\IeC {\^e}ncias Bibliogr\IeC {\'a}ficas}{19}
+\contentsline {chapter}{Gloss\IeC {\'a}rio}{19}
+\contentsline {chapter}{Ap\^endice}{19}
+\contentsline {chapter}{\numberline {A}Gram\IeC {\'a}tica dos \emph {scripts} de di\IeC {\'a}logo}{19}
