@@ -10,3 +10,51 @@ Nesta seção descrevemos os critérios de aceitação do projeto:
 O Game Design, que é um dos anexos da monografia, complementa a
 especificação do projeto.
 
+
+\section{Decisões de projeto}
+
+\subsection{Limitações e controle da expressão dos agentes}
+
+Apesar de variabilidade e adaptabilidade da experiência do jogo
+constituírem, em grande medida, o que se busca ao introduzir-se algum
+modelo de inteligência na lógica de jogos, é preciso ter em mente que
+isso não significa que se queira abrir mão do design dessa
+experiência. De fato, parte da complexidade da incorporação de
+inteligência artificial a jogos advém da necessidade de identificar
+que aspectos da dinâmica da inteligência devem ser coergidos, moldados
+ou mesmo eliminados, em prol de atributos como a jogabilidade e mesmo
+adaptação às limitações e anseios dos jogadores.
+
+Nesse sentido, optou-se por um modelo --- experimental e
+por vezes potencialmente limitante, como será visto adiante ---
+restritivo de expressão dos agentes que controlam o diálogo com
+\npc{}s.
+
+O modelo implementado tem por ideia central que os diálogos são
+interações de \emph{estímulo e reação} do agente inteligente pelo
+jogador. Os estímulos estão associados ao que o jogador opta por
+dizer, e as reações às opções de fala do \npc. 
+
+As opções de um e outro estão registradas nos \emph{roteiros de
+  diálogo}, que são compostos pelos designers do jogo. Nesses
+roteiros, as falas de jogador e agente estão descritas, e tanto os
+estímulos que transmitem quanto as reações que expressam são definidos
+por uma \emph{marcação de conteúdo}. Assim, uma saudação pode ser um
+estímulo amigável; uma afirmação pode soar suspeita; e, por outro
+lado, uma interjeição pode expressar contentamento ou rabugice.
+
+Desse modo, o conjunto de condições passíveis de
+expressão pelos agentes fica sob controle do designer do jogo, por
+causa da estreita ligação entre os diálogos e os estímulos e
+manifestações disponíveis para os agentes. Essa é uma característica
+extremamente desejável, como já foi dito, por permitir introduzir a
+variabilidade de maneira controlada e em sintonia com a experiência
+que se quer produzir.
+
+Existem algumas dificuldades inerentes a esse processo de
+modelagem. Está sujeito a avaliação se em projetos de maior porte a
+tarefa de gerência dos vários estímulos e reações não se tornaria
+proibitiva do uso da técnica.
+
+
+\section{Compromissos (\emph{trade-offs})}
