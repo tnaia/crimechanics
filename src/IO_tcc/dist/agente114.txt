@@ -1,0 +1,13 @@
+﻿============ INFORMA��ES =============
+tipo: (Civil)
+@T 1
+nome: 
+@N Jose
+ID: 
+@ID 14
+============ PERSONALIDADE ===========
+@P personalidade(educado)
+@FP firmezaPersonalidade(88%)  #probabilidade de alterar a personalidade (em geral � baixa)
+========= ESTADO PSICOLOGICO =========
+@EP estadoPsicologico(feliz)
+@FEP firmezaPsicologica(40%)   #probabilidade de alterar o estado psicol�gico atual (mais alta, depende bastante da conversa)
