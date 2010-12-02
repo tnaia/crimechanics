@@ -1,0 +1,11 @@
+Neste exemplo a classe "Manipuladora" é a que interessa.
+Fiz um teste para alterar o conteúdo da personalidade do agente114.
+o nome do arquivo vem da seguinte regra: agente+"tipo"+"id"
+onde tipo é o número que caracteriza o agente como policial,civil ou 
+capanga e id é um inteiro único que representa o agente. 
+
+Para testar basta entrar na pasta dist, alterar a personalidade do
+arquivo agente114.txt (para qualquer coisa diferente de "grosseiro")
+e rodar o arquivo .jar (ou executar run.bat) no cmd.
+Após a execução a personalidade do arquivo agente114.txt
+deverá ser "personalidade(grosseiro)".
