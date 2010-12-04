@@ -1,15 +1,15 @@
 \chapter{Especificação}
 
-Nesta seção descrevemos os critérios de aceitação do projeto:
-\begin{itemize}
-\item descrição das telas,
-\item opções esperadas dos menus,
-\item comportamento esperado dos \npc{}s
-\end{itemize}
+%Nesta seção descrevemos os critérios de aceitação do projeto:
+%\begin{itemize}
+%\item descrição das telas,
+%\item opções esperadas dos menus,
+%\item comportamento esperado dos \npc{}s
+%\end{itemize}
 
-O Game Design, que é um dos anexos da monografia, complementa a
-especificação do projeto.
+Neste capítulo abordam-se os requisitos que o projeto deve satisfazer para que o estudo de caso seja efetivo. Foi dada atenção particular à aderência do projeto a padrões industriais de metodologia de desenvolvimento de jogos, na medida em que tal não se mostrasse incompatível com o escopo de um projeto de formatura. 
 
+Assim optou-se pelo emprego do GDD (Game Design Document --- apêndice~\ref{ap:gdd}) como meio de especificação e captura de requisitos do projeto. Da mesma forma foram tomadas decisões como a escolha das linguagens e bibliotecas empregadas, tendo em vista padrões recorrentes na indústria e portabilidade.
 
 \section{Decisões de projeto}
 
@@ -56,3 +56,41 @@ modelagem. Está sujeito a avaliação se em projetos de maior porte a
 tarefa de gerência dos vários estímulos e reações não se tornaria
 proibitiva do uso da técnica.
 
+\subsection{Licença e implicações}
+
+Desde o princípio fez-se a opção por desenvolver um projeto que se adaptasse à filosofia dos softwares livres, de código aberto. Essa característica teve consequências importantes e decisivas no encaminhamento do projeto durante toda a sua evolução. 
+
+Apesar da severidade que as restrições impostas por uma licensa livre ao projeto, deve-se frisar que essa escolha se apresentou certa para o grupo. Não só é inegável o caráter inerentemente livre da produção acadêmica de universidades públicas, meio em que se insere este projeto, como é preciso que se diga que há uma janela de oportunidade na atual carência, no universo dos softwares livres, de projetos de jogos. Essa carência, note-se, vem sendo paulatinamente alvo de estudos e experimentações no mercado, fato que se observa pela progressão do número de títulos que vêm sendo portados para sistemas livres.
+
+Há duas consequências de grande impacto prático na condução do projeto de um jogo livre,  a saber a restrição no uso de software de terceiros e de conteúdo midiático que pode ser aproveitado. Como será discutido adiante (seção~\ref{sec:tradeoffs}), essa opção reduziu a gama de arcabouços de tecnologia que puderam ser aproveitados, e impôs ao projeto a responsabilidade pela criação de parte da arte do jogo --- uma carga de trabalho não desprezível dado escopo e recursos disponíveis.  
+
+\subsection{Tecnologias empregadas}
+
+Uma das primeiras decisões que foram tomadas na definição das condições de contorno do projeto foi que a linguagem empregada para desenvolvimento do software deveria refletir algum padrão solidamente estabelecido na indústria. Optou-se por C++, uma linguagem que goza de grande popularidade na idústria com títulos conhecidos como \emph{Doom} e \emph{Age of Empires}.
+
+Outra decisão de impacto foi a escolha de engines. À partir de uma primeira lista, compilada por meio de pesquisas em fóruns de discussão sobre desenvolvimento de jogos, construiu-se uma matriz de decisão em que foram eliminadas as opções que não apresentavam licensas livres, portáveis e que não possuíssem interface com C++. Por fim escolheu-se empregar o Simple DirectMedia Layer (SDL), linguagem de interface portável com dispositivos de media e periféricos\footnote{Como um adendo, citamos dois títulos conhecidos que usam SDL em pelo menos uma versão: \emph{World of Goo} e \emph{Doom 3}.}.
+
+O uso da ferramenta Jason, para a criação dos agentes, se deve principalmente ao fato de que o projeto nasceu motivado pela tese de doutorado~\cite{tese_roberto} de um dos orientadores do grupo que, no desenvolvimento de seu projeto, utilizou a ferramenta. Além disso, como esta ferramenta é baseada em Java, parte do projeto foi desenvolvida utilizando essa linguagem como se pode observar na figura \ref{algumaCoisaDaArquiteturaDoSoftware!!!}.
+
+%Escolhemos C++ porque é bastante usado na indústria.
+%Fizemos uma matriz de decisão cruzando informações sobre diversos engines de %renderização, e baseamos a decisão segundo as restrições: tem que ser livre, tem que ser %portável, tem que dar pra usar com C++.
+%Jason -> ferramenta “bonitinha” para se trabalhar com sistemas de agentes inteligentes.
+%-> SDL, Jason (plug-in para eclipse), C++.
+
+
+\section{Especificação dos requisitos do software}
+Conforme o modelo de desenvolvimento adotado pela indústria, os requisitos do software foram levantados a partir do GDD e das decisões de projeto. Vale ressaltar que no caso do desenvolvimento de jogos, o documento de consulta primário é o GDD.
+
+É importante citar que a grande maioria dos requisitos funcionais do software são regras do jogo e estão descritos no documento de game design. Dentre os outros requisitos funcionais temos:
+\begin{itemize}
+\item O software deve fazer e administrar a comunicação entre os módulos implementados em C++ e Java.
+\item O diálogo entre o usuário e um \npc{} não pode parecer determinístico.
+\end{itemize}
+
+Os requisitos não-funcionais levantados foram os seguintes:
+\begin{itemize}
+\item A comunicação entre os módulos implementados em Java e C++ não deve demorar mais que 3 segundos.
+\item As tecnologias envolvidas no projeto devem ser livres.
+\item A interface homem-máquina deve ser simples e intuitiva
+\item O tempo de processamento de dados no blackboard não pode ser superior a 5 segundos.
+\end{itemize}
