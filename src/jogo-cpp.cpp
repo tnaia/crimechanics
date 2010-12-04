@@ -16,38 +16,39 @@
 #include "SDL/SDL_gfx.h"
 
 /* Our libraries */
-#include "ConcreteStateManager.hpp"
+#include "MyStateManager.hpp"
 #include "Renderer.hpp"
 
 // Concrete states...
 
-class Time
-{
-public:
-  static Time GetTime() const; 
-  Time( Uint32 t ) : time( t );
-private:
+class Time {
+ public:
+  static Time GetTime()  {  return SDL_GetTicks(); };
+ Time( Uint32 t ) : time( t );
+ private:
   Uint32 time;
 };
 
-Time Time::GetTime()
-{
-  //Returns a time which corresponds 
-  //to the current ticks...
-  return SDL_GetTicks(); 
-}
-
 int main( int argc, char ** argv )
 {
+
+  // Start SDL
+  if( init() == false )
+    {
+      std::cerr << "Erro: falha ao iniciar SDL." << std::endl;
+      return 1;
+    }
+
   Time t1 - Time::GetTime();
   Time dt = 0;
   bool quit = false;
+  MyStateManager & stateM =
+    MyStateManager::Instance();
   while( !quit )
     {
-      ConcreteStateManager & aSM =
-	ConcreteStateManager::Instance();
 
-      State * pState = aSM.GetCurrentState();
+
+      State * pState = stateM.GetCurrentState();
       if( pState != 0 )
 	{
 	  pState->Updade( dt );
