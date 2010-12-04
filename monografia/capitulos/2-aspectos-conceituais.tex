@@ -58,9 +58,9 @@ Atualmente existem muitas aplicações práticas que envolvem conceitos de intel
 \section{Jogos digitais}
 
 Após pesados investimentos em novas tecnologias, os jogos digitais atuais possuem gráficos avançadíssimos que beiram a realidade, no entanto, pouco foi investido em seu conteúdo. Houve uma preocupação enorme por parte das empresas desenvolvedoras de jogos em acompanhar a evolução tecnológica dos últimos tempos, com isso nasceram novos consoles poderosos como o XBOX da Microsoft, o Playstation 3 da Sony e o Nintendo Wii, porém, pouco foi feito com relação ao conteúdo dos jogos. É muito fácil observar este fenômeno, basta notar que atualmente os jogos que mais são lançados são continuações de jogos antigos com gráficos mais bonitos.
-Os jogos que mais provam esta teoria são os RPGs (Role-Playing Game) e os jogos de aventura onde o jogador controla um personagem dentro de um universo e  interage com outros jogadores ou NPCs (Non-Player Character). Apesar de toda qualidade gráfica oferecida por estes jogos, todos possuem uma lógica parecida, o usuário deverá realizar as mesmas tarefas para completar o jogo, no melhor caso existe mais de uma maneira de realizar uma mesma tarefa, no entanto, o jogo será sempre o mesmo, os NPCs sempre dirão as mesmas falas e farão as mesmas coisas não importa quantas vezes o usuário jogue.
-Um jogo que representa bem este fato é o jogo da Nintendo ``Legend of Zelda: Ocarina of Time'', nele o jogador ontrola um personagem que vive uma aventura para salvar uma princesa, na época em que foi lançado e até hoje o jogo ainda é um grande sucesso da Nintendo, no entanto, não importa quantas vezes seja jogado, a história é sempre a mesma, os diálogos com os NPCs são sempre os mesmos diálogos limitados, os poucos momentos em que o jogador pode ``falar'' com um NPC é para dizer ``sim'' ou ``não'' e em alguns casos é obrigado a escolher uma resposta pois a outra faz com que o NPC apenas repita a pergunta! Isso prejudica o jogo, pois uma vez que o usuário o termina, não existe mais a sensação do desafio a ser superado se ele jogar novamente, ou seja, a diversão associada ao jogo diminui.
-Talvez com um pouco de esforço e dedicação seja possível desenvolver jogos que não sejam tão simples e superficiais, onde os NPCs tenham ``vontades'' e possam dialogar com o usuário de forma mais parecida com a realidade humana. Outro ponto interessante seria se o NPC mudasse seu perfil toda vez que o jogador recomeçasse o jogo, tornando-o imprevisível.
+Os jogos que mais provam esta teoria são os RPGs (Role-Playing Game) e os jogos de aventura onde o jogador controla um personagem dentro de um universo e  interage com outros jogadores ou \npc{}s. Apesar de toda qualidade gráfica oferecida por estes jogos, todos possuem uma lógica parecida, o usuário deverá realizar as mesmas tarefas para completar o jogo, no melhor caso existe mais de uma maneira de realizar uma mesma tarefa, no entanto, o jogo será sempre o mesmo, os \npc{}s sempre dirão as mesmas falas e farão as mesmas coisas não importa quantas vezes o usuário jogue.
+Um jogo que representa bem este fato é o jogo da Nintendo ``Legend of Zelda: Ocarina of Time'', nele o jogador ontrola um personagem que vive uma aventura para salvar uma princesa, na época em que foi lançado e até hoje o jogo ainda é um grande sucesso da Nintendo, no entanto, não importa quantas vezes seja jogado, a história é sempre a mesma, os diálogos com os \npc{}s são sempre os mesmos diálogos limitados, os poucos momentos em que o jogador pode ``falar'' com um \npc{} é para dizer ``sim'' ou ``não'' e em alguns casos é obrigado a escolher uma resposta pois a outra faz com que o \npc{} apenas repita a pergunta! Isso prejudica o jogo, pois uma vez que o usuário o termina, não existe mais a sensação do desafio a ser superado se ele jogar novamente, ou seja, a diversão associada ao jogo diminui.
+Talvez com um pouco de esforço e dedicação seja possível desenvolver jogos que não sejam tão simples e superficiais, onde os \npc{}s tenham ``vontades'' e possam dialogar com o usuário de forma mais parecida com a realidade humana. Outro ponto interessante seria se o \npc{} mudasse seu perfil toda vez que o jogador recomeçasse o jogo, tornando-o imprevisível.
 
 %Uma curta evolução histórica, tendências atuais (puxando um pouco para os problemas de IA --- a questão da imprevisibilidade e adaptabilidade dos jogos). Referências.
 
@@ -70,10 +70,20 @@ O principal objetivo do uso de técnicas de inteligência artificial em jogos el
 
 Diferentemente da IA acadêmica que busca solucionar problemas extramamente difíceis, como imitar o reconhecimento que os humanos são capazes de realizar (reconhecimento facial e de imagens e objetos, por exemplo), ou mesmo entender e construir agentes inteligentes, a IA para jogos se preocupa com os resultados que o sistema irá gerar, e não como o sistema chega até os resultados. Isso se deve ao fato que jogos eletrônicos são negócios e os consumidores desses produtos os compram em busca de diversão, e não lhes interessa como a inteligência de um personagem no jogo foi criada, desde que ela transforme o jogo divertido e desafiador, além, claro, de tomar decisões coerentes com o contexto do jogo.
 
-Um exemplo que deixa claro a utilidade da IA para jogos são os \textit{shooters}. Nos jogos de tiros existem várias técnicas de IA que podem ser aplicadas, por exemplo, é possível fazer com que os \textit{Non-Player Characters} (NPCs) se comuniquem e criem estratégias para tentar cercar um inimigo, fato que pode tornar o jogo ainda mais interessante, no entanto, também é possível utilizar técnicas de IA para fazer com que os NPCs acertem todos os disparos na cabeça de seus inimigos, fato que passa longe da realidade humana, e que poderia prejudicar a qualidade do jogo do ponto de vista de um usuário.
+Um exemplo que deixa claro a utilidade da IA para jogos são os \textit{shooters}. Nos jogos de tiros existem várias técnicas de IA que podem ser aplicadas, por exemplo, é possível fazer com que os \npc{}s se comuniquem e criem estratégias para tentar cercar um inimigo, fato que pode tornar o jogo ainda mais interessante, no entanto, também é possível utilizar técnicas de IA para fazer com que os \npc{}s acertem todos os disparos na cabeça de seus inimigos, fato que passa longe da realidade humana, e que poderia prejudicar a qualidade do jogo do ponto de vista de um usuário.
 
 No começo do desenvolvimento de jogos eletrônicos, a programação de IA era mais usualmente conhecida por \textit{programação de jogabilidade}, pois não havia nada de inteligente sobre os comportamentos exibidos pelos personagens controlados pelo computador. 
-A figura abaixo \textbf{(figura IA jogos (SCHWAB, 2004) SCHWAB, Brian. AI Game Engine Programming. Hingham: Charles River Media. 2004.)}contém alguns exemplos de como a IA foi utilizada em jogos com o passar do tempo.
+A figura \ref{IA em jogos} contém alguns exemplos de como a IA foi utilizada em jogos com o passar do tempo.
+\textbf{(figura IA jogos (SCHWAB, 2004) SCHWAB, Brian. AI Game Engine Programming. Hingham: Charles River Media. 2004.)}
+
+\begin{figure}
+\centering
+\includegraphics [height=10cm]{figuras/evolucao_IA_jogos.jpg}
+\caption{Evolução da aplicação de IA em jogos}
+\label{IA em jogos}
+\end{figure}
+
+
 
 %Um pouco de história, motivação do uso, desafios e problemas comuns.
 
@@ -91,15 +101,14 @@ A seguir explicaremos melhor o que são crenças, desejos e intenções.
 A partir deste modelo nasceu a arquitetura BDI para agentes. Agentes BDI são sistemas localizados em um ambiente (em nosso caso o ambiente será virtual) sujeito a variações, além disso, percebem o estado deste ambiente constantemente e podem atuar sobre o mesmo para tentar alterar o estado atual.
 Abaixo vemos o processo de raciocínio prático de um agente BDI.
  
-\textbf{Figura 2 - Diagrama de uma arquitetura BDI genérica [4]}
 \begin{figure}
 \centering
 \includegraphics{figuras/visao_BDI.jpg}
 \caption{Diagrama de uma arquitetura BDI genérica [4]}
-\label{visao BDI}
+\label{arquitetura BDI}
 \end{figure}
 
-Como se pode observar existe sete elementos básicos que compõem um agente BDI, são eles \textbf{[5] Ingrid Oliveira de Nunes, Implementação do modelo e da arquitetura BDI}:
+Como se pode observar na figura \ref{arquitetura BDI}, existem sete elementos básicos que compõem um agente BDI, são eles \textbf{[5] Ingrid Oliveira de Nunes, Implementação do modelo e da arquitetura BDI}:
 \begin{itemize}
 \item Um conjunto de crenças (\textit{Desires}) atuais que representam as informações que o agente tem do ambiente.
 \item Uma função de revisão de crenças (\textit{Belief Revision Function}), a qual determina um novo conjunto de crenças a partir da percepção da entrada e das crenças do agente.
@@ -128,16 +137,34 @@ A resolução do problema começa quando o mesmo é escrito no quadro negro junt
 	 \item \textbf{Geração de solução incremental}: É evidente que a solução de um problema acontece de passo em passo, ou seja, um sistema faz uma contribuição com novos dados, a seguir, outro sistema utiliza tais dados e faz uma nova contribuição e de ciclo em ciclo o problema tende a ser resolvido. 
 	 \end{itemize}
 
-Abaixo temos uma visão geral de como funciona o blackboard. Basicamente existem fontes de conhecimento (sistemas que estão trabalhando na resolução do problema) um sistema de controle que concede permissões às fontes de conhecimento para alterarem os dados do quadro negro, este por sua vez, é uma base de dados que contem informações que ficam disponíveis a todas as fontes de conhecimento.
+Na figura \ref{blackboard} temos uma visão geral de como funciona o blackboard. Basicamente existem fontes de conhecimento (sistemas que estão trabalhando na resolução do problema) um sistema de controle que concede permissões às fontes de conhecimento para alterarem os dados do quadro negro, este por sua vez, é uma base de dados que contem informações que ficam disponíveis a todas as fontes de conhecimento.
 
-\textbf{Figura 1- Visão geral de um sistema blackboard}
+\begin{figure}
+\centering
+\includegraphics [height=7cm]{figuras/visao_geral_blackboard.jpg}
+\caption{Visão geral do blackboard}
+\label{blackboard}
+\end{figure}
 	
 Neste projeto utilizaremos a técnica blackboard como parte de um jogo computacional que será desenvolvido.
 
 
 \subsection{O que avaliar}
 
-O que o estudo de caso vai avaliar, e como. Decisões de projeto que
-validam o estudo (C++, \emph{data-driven} design, prototipação,
-engenharia de software), isto é, porque o projeto permite extrapolar
-conclusões para jogos na indústria.
+\subsection{Aspectos humanos} 
+
+Embora o escopo deste trabalho esteja mais próximo de uma avaliação de viabilidade do que de uma análise comparativa de desempenho propriamente dita, vale ressaltar que há espaço, e mesmo a necessidade, de que se estude o impacto da aplicação das técnicas de IA (alvo deste estudo) na experiência de jogo resultante.
+
+Assim, é importante que se tenha em mente que trabalhamos sobre a hipótese de que o campo da inteligência artificial tem a contribuir positivamente na adaptabilidade dos próprios roteiros e trama das histórias que permeiam jogos --- visto que sua aplicação já se dá efetivamente em outros contextos. A expectativa é obter um comportamento mais adaptado ao contexto e enredo em relação que se alcança hoje com máquinas de estado, sem sacrificar o controle que o designer tem.
+
+\subsection{Aspectos técnicos e de projeto}
+
+Existe um aumento na complexidade dos diálogos, em razão da necessidade de incorporar mais informações de contexto e variantes no jogo. Isso se traduz na composição de um número maior de derivações em diálogos, já que tanto o jogador quanto os \npc{}s passam a ter opções, e também a necessidade de projeto dos agentes em si.
+
+\subsection{Aspectos gerais}
+
+É interessante que se avalie o processo de adaptação das técnicas empregadas ao estudo feito, e se elas podem ser aplicadas a outros domínios. Em particular, o que jogos de diferentes gêneros podem ganhar com o uso da engenharia de software voltada a agentes e de técnicas como por exemplo, blackboard.
+%O que o estudo de caso vai avaliar, e como. Decisões de projeto que
+%validam o estudo (C++, \emph{data-driven} design, prototipação,
+%engenharia de software), isto é, porque o projeto permite extrapolar
+%conclusões para jogos na indústria.
