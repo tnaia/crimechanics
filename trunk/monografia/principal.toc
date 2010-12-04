@@ -31,6 +31,6 @@
 \contentsline {section}{\numberline {7.2}\emph {Post Mortem}}{18}
 \contentsline {subsection}{\numberline {7.2.1}\emph {``Lessons learned''}}{18}
 \contentsline {chapter}{Refer\IeC {\^e}ncias Bibliogr\IeC {\'a}ficas}{19}
-\contentsline {chapter}{Gloss\IeC {\'a}rio}{19}
-\contentsline {chapter}{Ap\^endice}{19}
-\contentsline {chapter}{\numberline {A}Gram\IeC {\'a}tica dos \emph {scripts} de di\IeC {\'a}logo}{19}
+\contentsline {chapter}{Gloss\IeC {\'a}rio}{20}
+\contentsline {chapter}{Ap\^endice}{20}
+\contentsline {chapter}{\numberline {A}Gram\IeC {\'a}tica dos \emph {scripts} de di\IeC {\'a}logo}{20}

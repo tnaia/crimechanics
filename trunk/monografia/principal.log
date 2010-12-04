@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.8.26)  2 DEC 2010 11:19
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.8.26)  4 DEC 2010 12:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -524,7 +524,8 @@ TextBlockOrigin set to 0pt x 0pt
 (./capitulos/05-epigrafe.aux) (./capitulos/1-introducao.aux)
 (./capitulos/2-aspectos-conceituais.aux) (./capitulos/3-especificacao.aux)
 (./capitulos/4-metodologia.aux) (./capitulos/5-implementacao.aux)
-(./capitulos/6-testes.aux) (./capitulos/7-conclusoes.aux))
+(./capitulos/6-testes.aux) (./capitulos/7-conclusoes.aux)
+(./capitulos/bibliografia.aux))
 \openout1 = `principal.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 126.
@@ -934,6 +935,29 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 
+]
+\openout2 = `capitulos/bibliografia.aux'.
+
+ (./capitulos/bibliografia.tex
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 9.
+
+(/usr/share/texmf-texlive/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+))
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 181.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[19
+
+
+
 ] (./apendices/gramatica-script-dialogo.tex
 Ap\^endice A.
 LaTeX Font Info:    Font shape `OT1/phv/bx/it' in size <20.74> not available
@@ -953,7 +977,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[19
+[20
 
 
 ] (./principal.aux (./capitulos/00-capa.aux) (./capitulos/01-falso-rosto.aux) (
@@ -961,24 +985,25 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 (./capitulos/05-epigrafe.aux) (./capitulos/1-introducao.aux)
 (./capitulos/2-aspectos-conceituais.aux) (./capitulos/3-especificacao.aux)
 (./capitulos/4-metodologia.aux) (./capitulos/5-implementacao.aux)
-(./capitulos/6-testes.aux) (./capitulos/7-conclusoes.aux)) ) 
+(./capitulos/6-testes.aux) (./capitulos/7-conclusoes.aux)
+(./capitulos/bibliografia.aux)) ) 
 Here is how much of TeX's memory you used:
- 5140 strings out of 493848
- 69198 string characters out of 1152823
- 130160 words of memory out of 3000000
- 8179 multiletter control sequences out of 15000+50000
- 41866 words of font info for 84 fonts, out of 3000000 for 9000
+ 5185 strings out of 493848
+ 69914 string characters out of 1152823
+ 130467 words of memory out of 3000000
+ 8212 multiletter control sequences out of 15000+50000
+ 42381 words of font info for 86 fonts, out of 3000000 for 9000
  719 hyphenation exceptions out of 8191
  33i,11n,44p,1002b,362s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf-t
-exlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texlive/fonts/type1/public
-/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvb
-8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/sha
-re/texmf-texlive/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-texlive/
-fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on principal.pdf (29 pages, 103501 bytes).
+{/usr/share/texmf-texlive/fonts/enc/dvips/base
+/8r.enc}</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
+sr/share/texmf-texlive/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-tex
+live/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-texlive/fonts/type1/
+urw/helvetic/uhvbo8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhv
+r8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on principal.pdf (30 pages, 114587 bytes).
 PDF statistics:
- 116 PDF objects out of 1000 (max. 8388607)
+ 123 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
