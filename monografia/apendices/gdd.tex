@@ -1,42 +1,41 @@
 \chapter{Game Design Document}\label{ap:gdd}
 
-\begin{enumerate}
-\item Visão geral essencial
+
+\section{Visão geral essencial}
 Em ``crimechanics'' o jogador deve arquitetar diversos roubos em uma cidade controlando uma gangue de engenhieros, cada um com suas habilidades específicas. O jogador deve fazer o reconhecimento dos alvos, conversar com personagens para coletar informações sobre o alvo e comprar itens para sua equipe. No entanto, é preciso ter cautela, a polícia já foi avisada e fará o possível para evitar os roubos.
-\begin{itemize}
-\item Resumo
-\item Aspectos fundamentais
-\item Golden nuggets
+
+\subsection{Resumo}
+\subsection{Aspectos fundamentais}
+\subsection{Golden nuggets}
 Na concepção dos agentes do jogo foi utilizada a arquitetura BDI para agentes inteligentes, com a finalidade de tornar os agentes mais complexos do que simples máquinas de estados. Com isso, a interação do usuário com os \npc{}s será muito mais divertida pois o rumo de um diálogo é inesperado.
-\end{itemize}
-\item Contexto do jogo
-\begin{itemize}
-\item História
+
+\section{Contexto do jogo}
+\subsection{História}
 Há muitos anos um homem, doutor Pinheirótopos convenceu diversos colegas, todos eles engenheiros, a investirem muito tempo e muito dinheiro em um projeto para fundar uma cidade onde pessoas mais pobres teriam acesso a educação e saúde e poderiam levar uma vida mais digna. Os engenheiros perderam muitas noites de sono desenhando plantas de edifícios e desenvolvendo sistemas para melhorar a qualidade de vida das pessoas que lá habitariam. 
 No entanto, Pinheirótopos deu um golpe, conseguiu se eleger prefeito da cidade, e mostrou suas verdadeiras intenções, aumentou impostos, criando um filtro populacional, os cidadãos que não conseguiam pagar a vida na cidade foram deslocados para periferias e separados da cidade pela polícia.
 Pinheirótopos ficou muito rico e transformou a pequena cidade em seu pequeno império, ninguém poderia morar nela se não fosse seu amigo ou conhecido ou soubesse como agradá-lo. Ele possui total controle sobre cidade, afinal fora projetada pelos melhores engenheiros, portanto, possuía um avançado sistema de segurança, com câmeras espalhadas pelas ruas que monitoram toda a movimentação na cidade 24 horas por dia, e um sistema de alarmes em todos os edifícios que se comunica diretamente com a sede da polícia.
 Pinheirótopos decretou que nenhum engenheiro poderia viver na cidade. Esta lei absurda nasceu de uma rivalidade universitária de sua juventude.
 Na periferia da cidade, os engenheiros que construíram este sonho se uniram e agora estão dispostos a recuperarem a cidade das mãos deste poderoso e inescrupuloso homem. Para isso, a solução encontrada foi deixar a população seleta de Pinheirótopos insatisfeita com o lugar e seu regente. Os engenheiros se organizaram e montaram uma “gangue” que roubará os melhores estabelecimentos da cidade para mostrar que ninguém está seguro e nem protegido como sempre garantiu Pinheirótopos, além de enfraquecer a economia do lugar.
-\item Principais jogadores
+
+\subsection{Principais jogadores}
 Os principais personagens do jogo são o engenheiros que compõem a gangue. O usuário terá controle sobre todos eles.
 Todos os personagens possuem características em comum, a única diferença entre eles será a especialidade, cada especialidade (elétrico, computação, produção, químico, mecânico, civil) influencia diretamente nas habilidades de cada personagem.
-\end{itemize}
-\item Objetos essenciais do jogo
-\begin{itemize}
-\item Personagens
+
+\section{Objetos essenciais do jogo}
+
+\subsection{Personagens}
 Os personagens do jogo estão divididos em três classes: civis, policiais e capangas.
 Os civis são agentes que estão espalhados nos níveis do jogo, o jogador pode iniciar diálogos com qualquer civil presente e dependendo do sucesso da conversa pode conseguir informações sobre determinados alvos ou mesmo desbloquear itens que podem ser comprados e usados para facilitar os roubos.
 Os policiais são agentes espalhados nos níveis do jogo que observam as ações ao seu redor e reportam à central da polícia qualquer atividade que considerem suspeita. Além disso, podem efetuar prisões de capangas. O jogador também pode iniciar diálogos com um policial e num caso de sucesso pode tentar suborná-lo e descobrir informações importantes sobre o processo de investigação da polícia.
 Todos os personagens são agentes criados utilizando a arquitetura BDI
-\item Armas
-\item Estruturas
-\item Objetos
-\end{itemize}
-\item Conflitos e soluções
-\item Inteligência Artificial
-\item Fluxo do jogo
-\item Controles
-\item Variações de jogo
-\item Definições
-\item Referências
-\end{enumerate}
+\subsection{Armas}
+\subsection{Estruturas}
+\subsection{Objetos}
+
+\section{Conflitos e soluções}
+\section{Inteligência Artificial}
+\section{Fluxo do jogo}
+\section{Controles}
+\section{Variações de jogo}
+\section{Definições}
+\section{Referências}
