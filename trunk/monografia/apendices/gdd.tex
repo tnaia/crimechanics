@@ -217,6 +217,57 @@ A figura \ref{blackboard_policia} apresenta de forma visual a estrutura descrita
 %basicamente o guia dos programadores, artistas, designers de níveis e de missões. Aqui devem ser detalhados todos os aspectos de como o jogo funcionará
 %De longe a mais longa!
 
+Ao iniciar o jogo, é apresentada uma tela com as opções \emph{novo jogo}, \emph{carregar jogo salvo} ou \emph{sair}. O jogador pode selecionar qualquer destas opções com o mouse.
+
+Optando por um novo jogo ou carregar jogo salvo, pede-se ao jogador que selecione um \emph{slot}, também com o mouse.
+
+Ao iniciar o jogo, é exibida uma sequência de cenas que contam a história da cidade. o jogador tem uma vista da cidade, e pode interagir com diversas regiões dela clicando em prédios como
+\begin{itemize}
+\item oficina mecânica (QG),
+\item mercado,
+\item loja de importados,
+\item loja de carros,
+\item banco, e
+\item joalheria.
+\end{itemize}
+
+Ao clicar em cada prédio, exceto o QG e o mercado, o jogador abre um menu em que tem as seguintes opções:
+\begin{itemize}
+\item conversar com civil,
+\item conversar com policial, e
+\item reconhecimento.
+\end{itemize}
+
+As opções disponíveis no mercado são
+\begin{itemize}
+\item conversar com civil,
+\item conversar com policial, e
+\item comprar;
+\end{itemize}
+ao passo que, ao clicar no QG, as opções são
+\begin{itemize}
+\item roubo!
+\item conversar
+\item inventário
+\end{itemize}
+
+As opções de conversa levam o jogo a exibir uma tela de diálogo, como esquematizado abaixo.
+
+%
+% INCLUIR FIGURA DO DIÁLOGO!
+%
+%
+
+O jogador faz opção por falas digitando um número correspondente às opções apresentadas.
+
+Já a opção de compras permite que o jogador selecione itens de uma lista e troque-os por dinheiro. É preciso que o jogador possa visualizar seu saldo então.
+
+No reconhecimento, o jogador seleciona um de seus capangas e envia-o para observar a disposição e itens de segurança (como alarmes, câmeras e sensores de movimento) que já no lugar. note-se que é possível que isso chame a atenção de algum guarda, e aumente o nível de suspeita do capanga. Dependendo do grau de segurança do local, isso pode mesmo implicar na prisão de um do comparsas do jogador.
+
+As opções do QG são ligeiramente distintas das demais. A opção \emph{roubo!} leva o jogador a uma sequência de telas que permitem gerenciar o roubo, escolhendo o local, os capangas que participarão, itens que cada um portará durante o troubo, e como o valor obtido será distribuído. Já \emph{conversar} leva a um diálogo com um dos capangas, que pode ser escolhido por um menu. Por fim, a opção \emph{inventário} permite observar os itens de que se dispõe, assim como com qual dos capangas ele está.
+
+É apropriado um pouco mais de detalhe sobre o que acontece quando se inicia um roubo. A chance de sucesso de um roubo é função da habilidade dos integrantes da equipe, dos itens que possuem, da qualidade do último reconhecimento feito do local,  e do nível da segurança do alvo do roubo. Antes de confirmar o roubo, ao jogador é apresentada uma estimativa de sucesso, baseada nas informações que ele dispõe sobre o local\footnote{Essa estimativa não é necessariamente precisa, já que à princípio o jogador não sabe o grau de segurança do lugar e, também há a possibilidade de o reconhecimento efetuado ter deixado não ter identificado todos os itens de segurança.}.A execução de cada roubo recebe uma nota entre zero e dez. Notas acima de cinco indicam um roubo bem sucedido, e quanto maior a nota, maiores dividendos obtidos com ele. Por outro lado, roubos que obtenham notas abaixo de cinco representam tentativas frustradas, e o jogador será penalizado, quer tendo um de seus capangas preso, quer perdendo algum dos itens durante a fuga da equipe. De todo modo, a segurança de um lugar que tenha sido roubado é reforçada.
+
 \section{Controles}
 Praticamente todo o jogo é baseado no conceito de point-and-click, ou seja, a grande maioria dos controles é feita através do mouse. Exceto durante diálogos quando forem apresentadas diversas opções de fala ao jogador, este selecionará uma fala através do teclado, onde cada fala será representada por um número.
 
