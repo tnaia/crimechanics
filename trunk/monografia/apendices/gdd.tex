@@ -1,14 +1,17 @@
 \chapter{Game Design Document}\label{ap:gdd}
-
-
 \section{Visão geral essencial}
-Em ``crimechanics'' o jogador deve arquitetar diversos roubos em uma cidade controlando uma gangue de engenhieros, cada um com suas habilidades específicas. O jogador deve fazer o reconhecimento dos alvos, conversar com personagens para coletar informações sobre o alvo e comprar itens para sua equipe. No entanto, é preciso ter cautela, a polícia já foi avisada e fará o possível para evitar os roubos.
+%A principal função da primeira seção do documento é fazer com que qualquer pessoa se familiarize rapidamente com a idéia do jogo, o que o fará se destacar e --- ter boa jogabilidade.
+
+Em ``crimechanics'' o jogador deve arquitetar diversos roubos em uma cidade controlando uma gangue de engenheiros, cada um com suas habilidades específicas. O jogador deve fazer o reconhecimento dos alvos, conversar com personagens para coletar informações sobre o alvo e comprar itens para sua equipe. No entanto, é preciso ter cautela, a polícia já foi avisada e fará o possível para evitar os roubos.
 
 \subsection{Resumo}
+%O resumo é uma síntese de toda a experiência do jogo.
 
 A interação com o jogo se dá principalmente  por meio de diálogos e menus. Assim o jogador compra itens, estuda a segurança dos lugares que pretende roubar, gerencia a equipe a participar de cada investida e também os dividendos dos participantes.
 
 \subsection{Aspectos fundamentais}
+%O objetivo desta seção é extrair componetes fundamentais do jogo que constituirão a trama central para a experiência e a diversão do jogador.
+
 \newcommand{\nomeCidade}{Cobrópolis}
 
 O jogo narra a história de um grupo de engenheiros, cujo líder é controlado pelo jogador, que planejam subverter a ordem do poder local. A cidade é uma cidade planejada pelos próprios engenheiros, para ser um ambiente sustentável e um modelo de igualdade social. Acontece que um dos maiores investidores do projeto, o dr. Pinheirótopos, mudou as regras do jogo perto do fim, e, mostrando-se um prefeito despótico ao assumir o cargo, proibiu o exercício de engenharia no perímetro da cidade. Além disso, transformou-a num paraíso para abastados, decidindo pelo número de dígitos no saldo da conta bancária os cidadãos que teriam direito a viver em \nomeCidade.
@@ -19,27 +22,34 @@ Com o intuito de esvaziar a cidade, e esvaziar o poder do autoproclamado prefeit
 
 Sem emprego, e revoltados com o rumo dos acontecimentos, o grupo ilegal de engenheiros se forma: os \nomeGrupo{} se preparam para uma batalha épica contra o prefeito.
 
-
 \subsection{Golden nuggets}
 Na concepção da inteligência artificial do jogo foi empregada a arquitetura BDI para agentes, com a finalidade de torná-los mais realistas e adaptáveis do que simples máquinas de estados. Com isso, a interação do usuário com os \npc{}s será muito mais rica, pois o rumo de um diálogo passa a ser mais imprevisível.
 
-%\section{Contexto do jogo}
-
+\section{Contexto do jogo}
 \subsection{História}
-Há muitos anos um homem, doutor Pinheirótopos convenceu diversos colegas, todos eles engenheiros, a investirem muito tempo e muito dinheiro em um projeto para fundar uma cidade onde pessoas mais pobres teriam acesso a educação e saúde e poderiam levar uma vida digna. Os engenheiros perderam muitas noites de sono desenhando plantas de edifícios e desenvolvendo sistemas para melhorar a qualidade de vida das pessoas que lá habitariam. 
+
+Há muitos anos um homem, doutor Pinheirótopos convenceu diversos colegas, todos eles engenheiros, a investirem muito tempo e muito dinheiro em um projeto para fundar uma cidade onde pessoas mais pobres teriam acesso a educação e saúde e poderiam levar uma vida digna. Os engenheiros perderam muitas noites de sono desenhando plantas de edifícios e desenvolvendo sistemas para melhorar a qualidade de vida das pessoas que lá habitariam.
 No entanto, Pinheirótopos deu um golpe, elegeu-se prefeito da cidade, e mostrou suas verdadeiras intenções: aumentou impostos, criando com isso uma barreira para justo aqueles para quem a cidade havia sido projetada; os cidadãos que não conseguiam pagar a vida na cidade foram deslocados para periferias e separados da cidade pela polícia.
 
 Pinheirótopos ficou muito rico e transformou a pequena cidade em um pequeno império, em que apenas pessoas selecionadas  por ele poderiam morar. Deu preferência a amigos, conhecidos e àqueles que sabiam agradá-lo. Detém total controle da cidade, afinal (sic) fora projetada por engenheiros, devido a um avançado sistema de segurança, com câmeras espalhadas pelas ruas monitorando a movimentação na cidade 24 horas por dia, e um sistema de alarmes em todos os edifícios que se comunica diretamente com a sede da polícia. Além disso, Pinheirótopos proibiu o emprego de engenheiros na cidade. Esta lei absurda nasceu de uma rivalidade universitária de sua juventude, que o prefeito havia ocultado por longos anos.
 
 Na periferia da cidade, os engenheiros que construíram este sonho se uniram e agora estão dispostos a recuperar a cidade das mãos deste poderoso e inescrupuloso homem. Para isso, a solução encontrada foi deixar a população seleta de Pinheirótopos insatisfeita com o lugar e seu regente. Os engenheiros se organizaram e montaram uma “gangue”, os \nomeGrupo{}, que roubará os melhores estabelecimentos da cidade para enfraquecer a economia da cidade e mostrar que ninguém está seguro e nem protegido como sempre garantiu Pinheirótopos.
+
 %\subsection{Eventos anteriores}
+%Esta seção explica o contexto da história do jogo. Dependendo da simplicidade do projeto %pode ser vazia.
+
 
 \subsection{Principais jogadores}
+%Se no projeto do jogo os personagens forem elementos-chave, nesta seção devem ser apresentados e explicados os principais personagens do jogo.
+
 O jogador controla um personagem que gerencia as atividades dos \nomeGrupo. Ele é um engenheiro, mas especialidade é desconhecida, e seu papel no grupo é coordenar, muito mais do que executar os roubos propriamente ditos.
 
 \section{Objetos essenciais do jogo}
 
 \subsection{Personagens}
+%Esta seção descreve os personagens do jogo, desde os principais personagens envolvidos na histório da jogo aos \npc{}s aliados ou inimigos menos importantes.
+
+
 Os personagens do jogo estão divididos em três classes: civis, policiais e capangas.
 
 Os civis são agentes que estão espalhados nos níveis do jogo, o jogador pode iniciar diálogos com qualquer civil presente e dependendo do desenrolar da conversa pode conseguir informações sobre determinados alvos ou mesmo desbloquear itens, que passam a poder ser comprados (ou até mesmo conquistados) e usados nos roubos.
@@ -49,26 +59,83 @@ Os policiais são agentes espalhados nos níveis do jogo que observam as ações
 Os capangas que compõem a gangue também são agentes, a maior diferença em relação aos outros tipos de agentes é que todos os capangas possuem uma mesma lista de habilidades. A especialidade de cada um (elétrico, computação, produção, químico, mecânico ou civil) influencia diretamente em seu desempenho em tarefas específicas.
 Todos os personagens são agentes criados utilizando a arquitetura BDI.
 
+\subsubsection{Lista de habilidades}
+
+\begin{table}\footnotesize
+\begin{tabular}{ccccccc}
+& computação & civil & elétrico & mecânico & produção & químico \\
+\hline
+invadir sistema & 7&2&4&2&2&2\\
+reconhecimento de segurança & 3&7&4&4&2&2\\
+danificar infra-estrutura &3&7&5&4&2&3\\
+desligar aparelhos &6&4&7&3&2&2\\
+falsificar crachá &3&4&7&2&6&2\\
+arrombar &3&5&4&7&2&4\\
+carisma &3&4&2&4&8&5\\
+explodir &3&5&3&4&2&7\\
+arma química &3&1&1&1&2&7\\
+força &4&5&2&7&6&5\\
+pontaria &5&5&5&6&5&5\\
+\hline
+\end{tabular}
+\caption{Matriz de habilidades dos capangas.}\label{tab:habilidadesCapang}
+\end{table}
+
+%-->> Listar as personalidades
+%-->> Listar os estados psicológicos
+
 \subsection{Armas}
-O sucesso de um roubo depende muito das habilidades de cada capanga da gangue. As habilidades são iguais para todos os capangas, o que varia é o quão bem desenvolvida é a habilidade em cada capanga. Além disso, existem itens que o jogador pode comprar e equipar seus capangas com a finalidade de aumentar o nível de habilidades especíicas.
+O sucesso de um roubo depende muito das habilidades de cada capanga da gangue. As habilidades são iguais para todos os capangas (ou seja, não existem ``classes'' diferentes), o que varia é o quão bem desenvolvida é a habilidade em cada capanga. Além disso, existem itens que o jogador pode comprar e equipar seus capangas com a finalidade de aumentar o nível de habilidades específicas.
+
+\subsubsection{Lista de itens}
+
+Segue uma lista dos itens disponíveis para compra no mercado do jogo (``Lojas Tem’’, tudo o que você precisa!''), em que são discriminadas pequenas descrições que serão apresentadas ao jogador.
+
+\begin{description}
+\item[arma] Use com responsabilidade! [é necessário fazer registro! (ou não)]
+\item[picareta] Tool-kit casa dos seus sonhos.
+\item[dormeflex] Remédio para adormecer (mamíferos em geral)
+\item[bife] O prato favorito dos cães.
+\item[chave de fenda] Imprescindível!
+\item[maçarico] Tool-kit casa dos seus sonhos. Sabendo usar, abre até cofres!
+\item[ácido sulfúrico] Nas mãos certas dissolve tudo!
+\item[tnt] Ideal para demolições bem barulhentas
+\item[terno] Todo mundo fica bem de terno!
+\item[cosméticos] Para embelezar!
+\item[alicate] Tool-kit casa dos seus sonhos.
+\item[pda] Veja seu email ou jogue tetris na fila de espera!
+\item[máscara de carnaval] Ninguém vai te reconhecer!
+\item[fralda] Deixe seu bebê sequinho e confortável!
+\item[fantasia de ladrão] Máscara, luvas e tudo o mais que um ladrão precisa! (para uma festa!)
+\item[Rainequem] Para animar qualquer festa! Beba geladinha!
+\item[corta-vidro] Tool-kit casa dos seus sonhos.
+\item[hp] Não saia de casa sem a sua.
+\item[jornal] Palavras cruzadas!
+\end{description}
 
 \subsection{Estruturas}
 O jogo acontece em uma cidade fictícia onde existem duas estruturas chave, os alvos que são estabelecimentos que o jogador tentará roubar, o quartel general que apresenta a interface de controle da equipe para o jogador poder arquitetar os roubos.
 Na tela de apresentação é mostrado um mapa da cidade, numa visão superficial onde o jogador pode clicar em cada estrutura para analisar as opções disponíveis em cada caso.
 No caso dos alvos, todos possuem uma variável (interna) associada chamada ``nível de segurança'' que representa o nível de atenção que a polícia dedica a um determinado alvo, quanto maior o valor da variável maior será o esquema de segurança associado ao lugar e, consequentemente, menores são as chances de um roubo ser bem sucedido.
 
-%\subsection{Objetos}
+%-->> Listar os alvos
+
+%\subsection{Objetos} (NÃO HÁ)
 
 \section{Conflitos e soluções}
 
 \section{Inteligência Artificial}
+Falar sobre o BDI e como isso afetará os diálogos com os npcs e falar sobre o blackboard que auxiliará a polícia.
 
 \section{Fluxo do jogo}
+%basicamente o guia dos programadores, artistas, designers de níveis e de missões. Aqui devem ser detalhados todos os aspectos de como o jogo funcionará
+%De longe a mais longa!
 
 \section{Controles}
 Praticamente todo o jogo é baseado no conceito de point-and-click, ou seja, a grande maioria dos controles é feita através do mouse. Exceto durante diálogos quando forem apresentadas diversas opções de fala ao jogador, este selecionará uma fala através do teclado, onde cada fala será representada por um número.
 
 \section{Variações de jogo}
+Aqui a gente pode falar sobre como é possível efetuar roubos de diversas maneiras (usando ou não itens) e sobre os diferentes caminhos que um diálogo pode tomar.
 
 \section{Definições}
 
