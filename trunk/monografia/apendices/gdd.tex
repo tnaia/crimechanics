@@ -175,8 +175,7 @@ Segue uma lista dos itens disponíveis para compra no mercado do jogo (``Lojas T
 \subsection{Estruturas}
 O jogo acontece em uma cidade fictícia onde existem três tipos estruturas, os alvos que são estabelecimentos que o jogador tentará roubar, o quartel general (chamado de ``oficina mecanica’’) que apresenta a interface de controle da equipe para o jogador poder arquitetar os roubos e o mercado onde o jogador pode comprar itens para equipar seus capangas.
 Na tela de apresentação é mostrado um mapa da cidade, numa visão superficial onde o jogador pode clicar em cada estrutura para analisar as opções disponíveis em cada caso.
-No caso dos alvos, todos possuem uma variável (interna) associada chamada \emph{nível de segurança} que representa o nível de atenção que a polícia dedica a um determinado alvo, quanto maior o valor da variável maior será o esquema de segurança associado ao lugar e, consequentemente, menores são as chances de um roubo ser bem sucedido.
-O valor desta variável é alterado conforme a variação no valor de outra variável, o \emph{nível de suspeita} do local que indica as chances do local ser um alvo segundo a inteligência da polícia.
+No caso dos alvos, todos possuem uma variável (interna) chamada \emph{nível de segurança} que representa o nível de atenção que a polícia dedica a um determinado alvo, quanto maior o valor da variável maior será o esquema de segurança associado ao lugar e, consequentemente, menores são as chances de um roubo ser bem sucedido.
 
 %-->> Listar os alvos
 Os possíveis alvos são os seguintes:
@@ -190,7 +189,7 @@ Os possíveis alvos são os seguintes:
 %\subsection{Objetos} (NÃO HÁ)
 
 \section{Conflitos e soluções}
-No jogo proposto, o adversário do jogador é a polícia. A polícia fará o possível para prender os capangas do jogador e frustrar as tentativas de roubo. A prisão é decretada se o nível de suspeita de um capanga, que é uma variável oculta que a polícia atribui a cada capanga, chegar a um nível muito elevado. Além disso, a polícia pode aumentar o nível de segurança de um alvo se  o valor da variável nível de suspeita do local, que indica as chances do local ser um alvo segundo a inteligência da polícia, chegar a um nível muito alto.
+No jogo proposto, o adversário do jogador é a polícia. A polícia fará o possível para prender os capangas do jogador e frustrar as tentativas de roubo. A prisão é decretada se o nível de suspeita de um capanga, que é uma variável oculta que a polícia atribui a cada capanga, chegar a um nível muito elevado. Além disso, a polícia pode aumentar o nível de segurança de um alvo se, segundo a inteligência da polícia (blackboard), existirem chances do local ser um alvo.
 
 O jogador deve tomar cuidado para não perder capangas, evitando fazer atividades supeitas como reconhecimento e diálogos nos quais o \npc{} com quem esteja conversando se ofenda e tome uma atitude que possa chamar a atenção do policial no cenário.
 Um capanga preso fica indisponível, o jogo termina se o jogador perder todos os seus capangas.
