@@ -60,7 +60,6 @@ Os capangas que compõem a gangue também são agentes, a maior diferença em re
 Todos os personagens são agentes criados utilizando a arquitetura BDI.
 
 \subsubsection{Lista de habilidades}
-
 \begin{table}\footnotesize
 \begin{tabular}{ccccccc}
 & computação & civil & elétrico & mecânico & produção & químico \\
@@ -81,8 +80,57 @@ pontaria &5&5&5&6&5&5\\
 \caption{Matriz de habilidades dos capangas.}\label{tab:habilidadesCapang}
 \end{table}
 
+
+\subsection{Características comuns dos agentes}
+Todos os agentes possuem ao menos duas características em comum, sua \emph{personalidade} e  \emph{estados psicológicos}. Estas características são importantes pois é graças a elas que os agentes conseguem deliberar durante um diálogo. Elas influenciam diretamente nas ações e respostas do mesmo.
+
+É válido ressaltar a difernça conceitual entre ambas as características. O estado psicológico de um agente pode ser visto como o análogo do estado de um autômato. A principal diferença entre ambos é que as transições de estado psicológico dependem do contexto percebido pelo agente. Além disso, fixados um contexto e uma tendência a alteração do estado psicológico, situação mais detalhada posteriormente nesta seção, o próximo estado psicológico dependerá também da personalidade do agente, que reflete, de certo modo, como o agente reage a estímulos. Note-se que a personalidade não é algo fixo, embora altere-se raramente. Retomando a analogia com autômatos, e expandindo-a de certa forma, é como se personalidades distintas fossem conjuntos de estados próximos entre si, com grande probabilidade de serem visitados em seguida para a maior parte das cadeias. Assim, é improvável que um agente mude de personalidade, enquanto, por outro lado, é provável que vários estados psicológicos associados a uma mesma personalidade sejam visitados durante a operação do agente.
+
+
+Além disso, existem \emph{estímulos}, que são gerados conforme o jogador opta por determinadas falas durante um diálogo com um agente. O agente recebe então estes estímulos, e varia seu estado psicológico ou até mesmo sua personalidade de acordo com os estímulos recebidos.
+
+\subsubsection{Tipos de personalidades}
+Abaixo são listados os possíveis estados psicológicos em que um agente pode estar durante um diálogo. Cada estado psicológico influencia  as decisões do agente de alguma forma.
 %-->> Listar as personalidades
+\begin{itemize}
+\item rabugento
+\item simpático
+\item educado
+\item grosseiro
+\item apressado
+\end{itemize}
+
+\subsubsection{Tipos de estados psicológicos}
+Abaixo são listados os possíveis estados psicológicos em que um agente pode estar durante um diálogo. Cada estado psicológico influencia  as decisões do agente de alguma forma.
 %-->> Listar os estados psicológicos
+\begin{itemize}
+\item feliz
+\item zangado
+\item apreensivo
+\item lisonjeado
+\item compreensivo
+\end{itemize}
+
+\subsubsection{Tipos de estímulos}
+Abaixo são listados os estímulos que são enviados a um agente durante um diálogo conforme as falas que o jogador seleciona.
+%Listar os estímulos
+\begin{itemize}
+\item oferece-propina (Estímulo exclusivo aos agentes policiais)
+\item fala-amigavel
+\item elogio
+\item insulto
+\item fala-timida
+\item inquisitivo
+\item suspeito
+\item inquestionavel
+\end{itemize}
+
+No caso dos agentes policiais existe uma variável \emph{conduta} que é determinante no caso de um suborno, podendo assumir apenas dois valores.
+\begin{itemize}
+\item lisonjeado
+\item compreensivo
+\end{itemize}
+
 
 \subsection{Armas}
 O sucesso de um roubo depende muito das habilidades de cada capanga da gangue. As habilidades são iguais para todos os capangas (ou seja, não existem ``classes'' diferentes), o que varia é o quão bem desenvolvida é a habilidade em cada capanga. Além disso, existem itens que o jogador pode comprar e equipar seus capangas com a finalidade de aumentar o nível de habilidades específicas.
@@ -114,18 +162,45 @@ Segue uma lista dos itens disponíveis para compra no mercado do jogo (``Lojas T
 \end{description}
 
 \subsection{Estruturas}
-O jogo acontece em uma cidade fictícia onde existem duas estruturas chave, os alvos que são estabelecimentos que o jogador tentará roubar, o quartel general que apresenta a interface de controle da equipe para o jogador poder arquitetar os roubos.
+O jogo acontece em uma cidade fictícia onde existem três tipos estruturas, os alvos que são estabelecimentos que o jogador tentará roubar, o quartel general (chamado de ``oficina mecanica’’) que apresenta a interface de controle da equipe para o jogador poder arquitetar os roubos e o mercado onde o jogador pode comprar itens para equipar seus capangas.
 Na tela de apresentação é mostrado um mapa da cidade, numa visão superficial onde o jogador pode clicar em cada estrutura para analisar as opções disponíveis em cada caso.
-No caso dos alvos, todos possuem uma variável (interna) associada chamada ``nível de segurança'' que representa o nível de atenção que a polícia dedica a um determinado alvo, quanto maior o valor da variável maior será o esquema de segurança associado ao lugar e, consequentemente, menores são as chances de um roubo ser bem sucedido.
+No caso dos alvos, todos possuem uma variável (interna) associada chamada \emph{nível de segurança} que representa o nível de atenção que a polícia dedica a um determinado alvo, quanto maior o valor da variável maior será o esquema de segurança associado ao lugar e, consequentemente, menores são as chances de um roubo ser bem sucedido.
+O valor desta variável é alterado conforme a variação no valor de outra variável, o \emph{nível de suspeita} do local que indica as chances do local ser um alvo segundo a inteligência da polícia.
 
 %-->> Listar os alvos
+Os possíveis alvos são os seguintes:
+\begin{itemize}
+\item loja de importados,
+\item loja de carros,
+\item banco, e
+\item joalheria.
+\end{itemize}
 
 %\subsection{Objetos} (NÃO HÁ)
 
 \section{Conflitos e soluções}
+No jogo proposto, o adversário do jogador é a polícia. A polícia fará o possível para prender os capangas do jogador e frustrar as tentativas de roubo. A prisão é decretada se o nível de suspeita de um capanga, que é uma variável oculta que a polícia atribui a cada capanga, chegar a um nível muito elevado. Além disso, a polícia pode aumentar o nível de segurança de um alvo se  o valor da variável nível de suspeita do local, que indica as chances do local ser um alvo segundo a inteligência da polícia, chegar a um nível muito alto.
+
+O jogador deve tomar cuidado para não perder capangas, evitando fazer atividades supeitas como reconhecimento e diálogos nos quais o \npc{} com quem esteja conversando se ofenda e tome uma atitude que possa chamar a atenção do policial no cenário.
+Um capanga preso fica indisponível, o jogo termina se o jogador perder todos os seus capangas.
+
+Além disso, o jogador pode tentar subornar um policial para descobrir informações sobre os níveis de segurança dos alvos e os níveis de suspeita dos capangas, mundi dessas informações o jogador pode alterar sua estratégia, utilizar outro capanga ou roubar outro alvo. É importante lembrar que um suborno mau sucedido implica na prisão direta do capanga em uso.
 
 \section{Inteligência Artificial}
-Falar sobre o BDI e como isso afetará os diálogos com os npcs e falar sobre o blackboard que auxiliará a polícia.
+O uso da arquitetura BDI tem como objetivo melhorar a experiência do jogador, principalmente durante os diálogos.
+
+No jogo em questão todos os \npc{}s são agentes modelados através da arquitetura BDI. Os agentes foram modelados de forma que conforme um diálogo acontece, suas respostas variam de acordo com seu estado interno, e este, por sua vez, varia de acordo com estímulos que são enviados pelo jogador de forma subliminar através dos diálogos, por exemplo, se um agente tem uma personalidade simpática e um estado psicológico feliz e recebe como estímulo do jogador um elogio, seu estado psicológico passa a ser \emph{lisonjeado} e ele provavelmente optará por uma resposta que expresse sua gratidão.
+
+Além disso, foi utilizada uma técnica conhecida como blackboard de solução de problemas de forma cooperativa que é utilizada por agentes da polícia, ocultos ao jogador, que através desta processam informações enviadas pelos agentes policiais das fases.
+
+Um agente policial nota alguma atividade suspeita e envia essa informação para uma base de conhecimento a qual os agentes ocultos possuem acesso. Estes agentes ocultos processam essa informação e podem (ou não) enviar a todos os agentes policiais alguma nova ação que deve ser realizada, tal ação é passada a todos os agentes policiais como um objetivo na arquitetura BDI.
+A figura \ref{blackboard_policia} apresenta de forma visual a estrutura descrita acima.
+\begin{figure}
+\centering
+\includegraphics [height=10cm]{figuras/blackboard_policia.jpg}
+\caption{Esquema do blackboard no jogo}
+\label{blackboard_policia}
+\end{figure}
 
 \section{Fluxo do jogo}
 %basicamente o guia dos programadores, artistas, designers de níveis e de missões. Aqui devem ser detalhados todos os aspectos de como o jogo funcionará
@@ -135,8 +210,8 @@ Falar sobre o BDI e como isso afetará os diálogos com os npcs e falar sobre o 
 Praticamente todo o jogo é baseado no conceito de point-and-click, ou seja, a grande maioria dos controles é feita através do mouse. Exceto durante diálogos quando forem apresentadas diversas opções de fala ao jogador, este selecionará uma fala através do teclado, onde cada fala será representada por um número.
 
 \section{Variações de jogo}
-Aqui a gente pode falar sobre como é possível efetuar roubos de diversas maneiras (usando ou não itens) e sobre os diferentes caminhos que um diálogo pode tomar.
+Existem diversas maneiras como um roubo pode ser realizado, o jogador é livre para bolar seu próprio plano. A forma de arquitetar um determinado roubo é sempre a mesma, no entanto, quanto mais o jogador investigar antes da ação e quanto mais itens (pertinentes ao roubo) o jogador utilizar, maiores são as chances do roubo ser bem sucedido.
 
-\section{Definições}
+%\section{Definições}
 
-\section{Referências}
+%\section{Referências}
