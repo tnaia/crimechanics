@@ -2,9 +2,16 @@
 
 
 Findo o projeto, resta uma série de considerações a serem feitas,
-relativas a diversas das dimensões do trabalho desenvolvido. No que
+relativas a diversas dimensões do trabalho desenvolvido. No que
 segue, procuramos abordar algumas das questões que foram investigadas,
-assim como as queforam surgiram e eventualmente foram deixadas à
+assim como as que foram surgiram e eventualmente foram deixadas à
+margem.
+\chapter{Conclusão}
+
+Findo o projeto, resta uma série de considerações a serem feitas,
+relativas a diversas dimensões do trabalho desenvolvido. No que
+segue, procuramos abordar algumas das questões que foram investigadas,
+assim como as que foram surgiram e eventualmente foram deixadas à
 margem.
 
 
@@ -17,9 +24,9 @@ novos questionamentos.
 
 No que concerne à aplicação da arquitetura BDI e do blackboard,
 chegamos à conclusão de que existem restrições a seu uso. Restrições
-em ao menos dois aspectos: conceitual e técnico. 
+em ao menos dois aspectos: conceitual e técnico.
 
-Como discutido na seção~\ref{sec:trade-offs}, foi observado, com
+Como discutido na seção~\ref{sec:tradeoffs}, foi observado, com
 vantagem para o projeto, o compromisso de limitação da ação
 ``independente'' do BDI em prol do ganho de controle na composição dos
 diálogos. Quanto ao blackboard, existe ainda a questão de encontrar
@@ -32,11 +39,18 @@ redes médias e grandes de contextos intersectantes.
 De todo modo, observou-se um enriquecimento das possibilidades de
 expressão ao se permitir que \npc{}s variem seu comportamento.
 
+Dadas as restrições do projeto, acreditamos que a investigação feita aponta para um resultado promissor, em que técnicas de inteligência artificial permitirão expandir as fronteiras da interação em jogos.
+
 \section{Trabalhos futuros}
 
-Seria legal um editor de diálogos, e explorar mais a elaboração de
-perfis de agentes (mais variados e mais complexos)
-Sucesso do estudo de caso?
+Foi identificada uma certa carência de ferramentas de desenvolvimento no decorrer do projeto.
+Como a proposta do trabalho foi, de certa forma inovadora, esta carência não foi inesperada. Um caso que se destaca é a falta de ergonomia do método de composição de diálogos que se empregou. Isso pois como tanto o jogador como o \npc{} possuem mais de uma fala possível em alguns nós do diálogo, a árvore de interações possíveis expande rapidamente. Seria interessante desenvolver alguma interface para a  edição desses diálogos, permitindo rápida identificação do locutor, bifurcações e reuniões de linhas do discurso.
+
+Ademais, é interessante que se investigue outros modelos de perfis de agentes, explorando mais as capacidades do AgentSpeak, tanto em variabilidade de perfis como em complexidade dos agentes.
+
+%Seria legal um editor de diálogos, e explorar mais a elaboração de
+%perfis de agentes (mais variados e mais complexos)
+%Sucesso do estudo de caso?
 
 
 É importante destacar o papel que a aquisição de conhecimento no
@@ -46,23 +60,15 @@ na mudança da própria maneira e enfoque do projetar e compreender o
 projeto do jogo. Nesse contexto é notável o papel que desempenhou o
 curso de uma disciplina do domínio da produção de
 jogos\footnote{A referida disciplina é Design e Programação de Games
-  (\textsc{PCS2530}), cursada no segundo semestre de 2010.}, assim
+ (\textsc{PCS2530}), cursada no segundo semestre de 2010.}, assim
 como a participação no SBGames, nos quais adiquiriu-se um conhecimento
 que, de certo modo, não está acessível por meio das vias consagradas
 de estudo; um conhecimento vivo, orgânico, da esfera cultural que é
 parte inerente dos jogos neste tempo.
 
-Jogos encontram-se hoje, na opinião do grupo, em uma posição
+Muito mais do que estávamos cientes, os jogos digitais encontram-se, hoje, em uma posição
 privilegiada, na fronteira entre tecnologia e arte, entre ciência e
-cultura. E há toda uma dimensão no jogo, uma dimensão além de um
-entretenimnto que é produto e passa-tempo apenas, que estava pouco
-presente na concepção que anteriormente possuíamos.
+cultura. Há toda uma dimensão no jogo, uma dimensão além de um
+entretenimento que é produto e passa-tempo apenas. Um universo vasto e cheio de possibilidades a explorar.
 
-\section{Trabalhos futuros}
-
-Próximo SBGames?
-
-\section{\emph{Post Mortem}}
-
-\subsection{\emph{``Lessons learned''}}
-
+É nessa perspectiva que o grupo cogita a possibilidade de continuar o desenvolvimento de projetos na linha de investigação da aplicação de técnicas de inteligência artificial a jogos, com vistas a participar do próximo Simpósio Brasileiro de Games, apresentando os resultados dessa pesquisa.
