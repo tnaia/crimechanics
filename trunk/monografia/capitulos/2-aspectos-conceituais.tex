@@ -84,11 +84,6 @@ A figura \ref{IA em jogos} contém alguns exemplos de como a IA foi utilizada em
 \end{figure}
 
 
-%Um pouco de história, motivação do uso, desafios e problemas comuns.
-\section{Desenvolvimento de jogos}
-%Um pouco de como funciona o processo de desenvolvimento de jogos digitias (citar gdd, e empresas!)
-
-
 \subsection{Crença, desejo e intenção --- a arquitetura BDI}
 
 O modelo BDI (\textit{Beliefs Desires Intentions}) foi originalmente proposto por Bratman como uma teoria filosófica do raciocínio prático, propondo uma análise do comportamento humano que seria baseado em crenças, desejos e intenções.
@@ -149,6 +144,110 @@ Na figura \ref{blackboard} temos uma visão geral de como funciona o blackboard.
 \end{figure}
 	
 Neste projeto utilizaremos a técnica blackboard como parte de um jogo computacional que será desenvolvido.
+
+
+%Um pouco de história, motivação do uso, desafios e problemas comuns.
+\section{Desenvolvimento de jogos}
+%Um pouco de como funciona o processo de desenvolvimento de jogos digitias (citar gdd, e empresas!)
+A metodologia atual de desenvolvimento de jogos eletrônicos segue os seguintes passos:
+\begin{itemize}
+\item Nascimento da idéia: Seja uma pessoa pensando num jogo ou uma equipe inteira fazendo reuniões, o primeiro passo para o desenvolvimento de um jogo é a idéia, nesta etapa é feita uma descrição abstrata do jogo, qual o tipo, os objetivos e desafios que poderão ser criados entre outros.
+\item Especificação do documento de game design: O GDD (Game Design Document) é o documento mais importante do processo de desenvolvimento, nele são descritos todos os aspectos do jogo com um alto nível de detalhamento. Uma analogia que existe com a engenharia diz que o GDD é equivalente a uma planta baixa de uma construção, sem ela uma equipe tem todo o material que precisa para construir uma casa mas não sabe por onde começar. O GDD tem o mesmo efeito no processo de desenvolvimento de jogos, as tecnologias necessárias estão presentes, a equipe possui acesso a elas e sabe utilizá-las, porém, sem o GDD, nada fariam.
+\item Levantamento dos requisitos de software através do GDD e das decisões de projeto, como por exemplo a plataforma de desenvolvimento que será utilizada gera diversos requisitos, principalmente não funcionais.
+\item Desenvolvimento, codificação em si e testes.
+\end{itemize}
+
+Na lista acima foi ocultada uma etapa comercial do desenvolvimento, em geral o documento de GDD tem uma área de descrição do jogo que é voltada para a propaganda, isto é necessário pois nas grandes empresas, para uma equipe poder desenvolver um jogo é preciso apresentar uma proposta do mesmo para investidores com a finalidade de se conseguir investimentos.
+
+
+\subsection{Documento de Game Design}
+Esta seção apresenta algumas das características principais do documento de design do jogo. Existem componentes fundamentais em um documento de design completo de um jogo. Esses componentes podem ser documentados separados ou podem ser agrupados em um metadocumento de design do game, que aborda todos os aspectos do design. \textbf{SCHUYTEMA, Paul. Design de Games: uma abordagem prática. São Paulo: Editora Cengage, 2008}
+
+O documeto de design é criado por uma equipe de design em diversas etapas. Primeiro, o conceito essencial é delineado em um breve documento de visão geral que exlplica os princípios mais importantes do jogo e alguns de seus principais recursos.
+Geralmente este documento deve ser aprovado pela empresa que irá desenvolver para que o projeto tenha continuação, uma vez aprovado, começam os trabalhos no documento de design que delineiam todos os aspectos do jogo, incluindo por exemplo, missões, recursos, personagens, níveis, entre outros. Nesta etapa, programadores de scipts já podem iniciar seu trabalho.
+
+A seguir é apresentada a estrutura de um documento completo de design de um jogo extraída de \textbf{SCHUYTEMA, Paul. Design de Games: uma abordagem prática. São Paulo: Editora Cengage, 2008}.
+
+\begin{enumerate}
+\item Visão geral essencial
+\begin{itemize}
+\item Resumo
+\item Aspectos fundamentais
+\item Golden nuggets
+\end{itemize}
+\item Contexto do jogo
+\begin{itemize}
+\item História
+\item Eventos anteriores
+\item Principais jogadores
+\end{itemize}
+\item Objetos essenciais do jogo
+\begin{itemize}
+\item Personagens
+\item Armas
+\item Estruturas
+\item Objetos
+\end{itemize}
+\item Conflitos e soluções
+\item Inteligência Artificial
+\item Fluxo do jogo
+\item Controles
+\item Variações de jogo
+\item Definições
+\item Referências
+\end{enumerate}
+
+
+A principal função da primeira seção do documento é fazer com que qualquer pessoa se familiarize rapidamente com a idéia do game, o que o fará se destacar e --- ter boa jogabilidade.
+\subsubsection{Resumo}
+O resumo é uma síntese de toda a experiência do jogo.
+\subsubsection{Aspectos fundamentais}
+O objetivo desta seção é extrair componetes fundamentais do jogo que constituirão a trama central para a experiência e a diversão do jogador.
+\subsubsection{Golden Nuggets}
+Esta seção deve listar os elementos do jogo que o diferenciam dos concorrentes.
+
+
+Na segunda seção do documento é definido o contexto do jogo. Todo jogo existe dentro de um contexto que é essencial para se entender o que acontece no mesmo.
+\subsubsection{História do jogo}
+Nesta seção  história do jogo deve ser explicada desde o seu início até o seu final.
+\subsubsection{Eventos anteriores}
+Esta seção explica o contexto da história do jogo. Dependendo da simplicidade do projeto pode ser vazia.
+\subsubsection{Principais jogadores}
+Se no projeto do jogo os personagens forem elementos-chave, nesta seção devem ser apresentados e explicados os principais personagens do jogo.
+
+
+Na terceira seção do documento são descritos os diversos objetos que aparecem no jogo.
+\subsubsection{Personagens}
+Esta seção descreve os personagens do jogo, desde os principais personagens envolvidos na histório da jogo aos \npc{}s aliados ou inimigos menos importantes.
+\subsubsection{Armas}
+Esta seção estabelece quaisquer armas ou habilidades que desempenham papel essencial no jogo.
+\subsubsection{Estruturas}
+Esta seção define quaisquer estruturas singulares e significativas encontradas no jogo.
+\subsubsection{Objetos}
+Nesta seção são definidos todos os objetos relevantes que não se encaixam em nenhuma das categorias anteriores.
+
+
+A quarta seção do documento, ``Conflitos e Soluções'' é normalmente muito detalhada se o combate for um dos principais desafios para o usuário. Todo jogo tem alguma forma de conflito e solução, e essa a área do documento usada para descrevê-los em detalhes.
+
+
+Na quinta seção, ``Inteligência Artificial'' são resumidos quaisquer comportamentos que definem as ações dos \npc{}s e quaisquer informações (por parte de IA) que afetam esses comportamentos.
+
+
+A seção ``Fluxo do jogo'', que pode ser uma das mais longas de todo o documento, é basicamente o guia dos programadores, artistas, designers de níveis e de missões. Aqui devem ser detalhados todos os aspectos de como o jogo funcionará.
+
+
+A seção ``Controles'' do documento abrange os comandos e controles do usuário.
+
+A seção ``Variações de jogo'' abrange qualquer variação prevista no modo de jogar. Se o jogo possuir um único modo de jogar, esta seção torna-se desnecessária.
+
+
+A seção ``Definições'' só é necessária se na descrição do jogo forem usados alguns termos que não sejam claros.
+
+E finalmente, a seção ``Referências'' contém informações sobre qualquer material de referência que seja essencial para ajudar a captar o clima e a idéia do jogo.
+
+
+No projeto foi elaborado um documento de design de jogo baseado na estrutura descrita anteriormente.
+
 
 
 \subsection{O que avaliar}
