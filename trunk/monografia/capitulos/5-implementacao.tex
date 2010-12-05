@@ -16,7 +16,43 @@ Passada essa etapa de estabelecimento de comunicação, a interação entre C++ 
 
 \section{Compromissos (\emph{trade-offs})}\label{sec:tradeoffs}
 
+Esta seção descreve algumas opções que o grupo fez, sacrificando certos atributos desejáveis em prol de outros no projeto. 
+
+Já foi mencionado que a opção por uma licensa livre para o projeto incorreu tanto em beneífios como em perdas para o projeto. Passou-se a dispor de espaço para hospedagem do projeto, por um lado, embora, por outro, tenha sido necessário abrir mão do uso de engines e bibliotecas proprietárias para o desenvolvimento.
+
+Outro ponto de compromisso foi a decisão por um modelo ``fechado'' de respostas de agentes nos diálogos: a reação dos agentes nesse caso ficou restrita ao conjunto de opções previstas pelo escritor do diálogo. Se por um lado perde-se com a restrição da manifestação do BDI a um conjunto pré-modelado de respostas, por outro ganha-se em condução do diálogo, uma vantagem que não pode ser menosprezada no design do jogo.
+
+Por fim, devemos mencionar que, dado o escopo temporal do projeto, optamos por simplificações na sofisticação da renderização. O ganho de tempo dedicado ao projeto veio, nesse caso, às custas de um distanciamento do objeto-alvo de estudo, jogos comerciais, uma vez que o investimento n desenvolvimento de uma apresentação gráfica adequada é uma preocupação constante nesse meio.
+
 \section{Arquitetura}
+
+Conforme descrito anteriormente, a arquitetura do sistema é baseada em dois grandes subsistemas. O subsistema implementado em Java que inclui os códigos interpretados pelo Jason e o subsistema implementado em C++. A figura \ref{arquiteturaGeral} ilustra esta situação.
+
+\begin{figure}
+\centering
+\includegraphics {figuras/arquitetura.jpg}
+\caption{Visão geral da arquitetura do sistema}
+\label{arquiteturaGeral}
+\end{figure}
+
+
+\subsection{Subsistema: Java}
+
+A figura \ref{arquiteturaJava} apresenta a arquitetura do subsistema implementado em Java. Existem três classes principais, \emph{Manipuladora}, \emph{Comunicadora} e \emph{Level}.
+A classe Manipuladora é responsável por consultar e manter atualizados os arquivos de modelos de agentes (explicados em \ref{estruturaPastas}), já a classe Comunicadora é a responsável por receber, enviar e traduzi as mensagens que chegam através da conexão com o subsitema C++. Ambas as classes se comunicam com a classe Level que nada mais é do que a classe de ambiente dos agentes. A classe Level é uma classe utilizada pelo Jason, ela representa o ambiente (enviroment) e é nela que todas as ações dos agentes foram implementadas, no caso deste programa as ações dos agentes são basicamente escolher um tipo de resposta ou atualizar variáveis de controle dos agentes e dos lugares.
+
+\begin{figure}
+\centering
+\includegraphics {figuras/arquitetura-java.jpg}
+\caption{Visão geral da arquitetura do subsistema Java}
+\label{arquiteturaJava}
+\end{figure}
+
+
+
+\subsection{Subsistema: C++}
+
+
 
 \section{Protocolo de comunicação}
 
