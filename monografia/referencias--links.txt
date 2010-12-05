@@ -59,3 +59,9 @@ Dicionário Português
 
 LaTeX
  http://www.ime.usp.br/~tassio/latex/recursos-melhores.php
+
+(Di�rio de bordo)
+Usability Engineering Life Cycle (mapa de conceitos)
+Game Programming in Linux (fala sobre SDL)
+AI Game Programming Wisdom
+Software Engineering for Game Development
