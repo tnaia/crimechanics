@@ -2,47 +2,108 @@
 
 O sucesso de um projeto depende em grande medida da capacidade de
 adaptação dos envolvidos. Nesta seção tratamos do método de
-planejamento de atividades to trabalho, e de sua evolução no decorrer
+planejamento de atividades do trabalho, e de sua evolução no decorrer
 do projeto. Assim, em certa medida trataremos das mudanças que se
 operaram nas expectativas e previsões que fizemos ao longo do tempo.
 
 \section{Evolução}
 
-\begin{enumerate}
-\item Levantamento de atividades e assuntos a pesquisar, cronograma
-  preliminar (de pesquisas), criação de diário de bordo.%
+Nesta seção discorre-se brevemente sobre as atividades desenvolvidas durante o projeto, desde sua especificação às etapas finais de sua implementação.
 
-\item Decisões de projeto iniciais (condições de contorno): ferramentas e
-tecnologias de desenvolvimento:
+A ideia de desenvolvimento de um projeto no campo de jogos nasceu há mais de um ano, e diversos assuntos foram elencados como possíveis temas para o projeto de conclusão de curso. Mas foi somente em março de 2010 que a equipe se consolidou e o professor doutor Ricardo Nakamura aceitou orientar o grupo, dando início ao processo de refinamento do tema do trabalho. Foi então que entramos em contato com o professor doutor Roberto Cezar Bianchini, co-orientador do projeto, e autor da tese de doutoramento~\cite{tese_roberto} que sugeriu o tema do presente estudo de caso.  
+
+As primeiras atividades do grupo então concentraram-se na elaboração de um primeiro cronograma, e foram selecionados assuntos a pesquisar. Nesse ponto foi iniciada a composição de um diário de bordo, em que se registrou todo o avanço do projeto.
+
+O passo seguinte foi solidificar as condições de contorno do problema, por meio de reuniões em que se procurou unificar a visão dos envolvidos, progredindo gradualmente rumo a uma concepção amadurecida dos objetivos e métodos a serem empregados no projeto.
+
+Após diversas reuniões, o grupo optou por utilizar uma linguagem de presença expressiva na idústria: C++ (conforme justificado na seção~\ref{tecnologias_empregadas}); além disso, estipulou-se que o projeto teria uma licença livre.
+
+Com relação ao jogo, o grupo optou por desenvolver um jogo em 2D, esta escolha foi feita para simplificar o desenvolvimento, uma vez que a parte gráfica do jogo não era o foco do projeto.
+O grupo procurou simuladores de sistemas multi-agentes que trabalhassem com a arquitetura BDI. Por fim, o grupo buscou listar os requisitos de engines e softwares de renderização que viria a utilizar.
+
+O grupo então definiu que a parte gráfica do jogo seria implementada usando SDL. Além disso, o grupo decidiu trabalhar com a ferrametna Jason para o desenvolvimento de sistemas multi-agentes, fato que implicou diretamente na escolha da linguagem Java como auxiliar no desenvolvimento do projeto.
+Após esta decisão, nasceu a necessidade de se criar uma forma de comunicação entre as partes do jogo que foram desenvolvidas em Java e em C++, a solução escolhida foi fazer comunicação usando TCP via loop-back (foram analisadas outras soluções, porém nenhuma delas eram tão simples quanto a solução adotada). Após esta etapa a arquitetura do software começou a ficar mais transparente aos envolvidos, isto foi importante pois permitiu que o trabalho fosse dividido de forma eficiente entre o integrantes do grupo.
+
+A seguir, o grupo apresentou aos orientadores uma proposta de um jogo que já envolvia os conceitos que foram abordados no projeto. Após algums reuniões sobre a proposta surgiram os primeiros rascunhos do documento de design do jogo.
+
+Com a consolidação da proposta, o grupo efetuou uma primeira divisão de responsabilidades de estudos, particionando os assuntos em escopos de conhecimento: tecnológico (C++, BDI, Java, AgentSpeak, SDL, e arquiteturas de software empregadas em jogos).
+Ficou definido que toda a lógica do jogo e a parte gráfica seriam implementadas em C++, enquanto os agentes e o blackboard seriam desenvolvidos em AgentSpeak e Java respectivamente.
+
+Esse estudo acompanhou o desenvolvimento do projeto até estágios avaçados, mas após alguns meses desde seu início preparou-se um cronograma mais detalhado, adiantado propositadamente de modo que as atividades previstas se encerrassem com um mês de antecedência em relação às datas oficiais de entregas e apresentações do projeto, de modo a acomodar sem transtornos eventuais imprevistos --- que, adianta-se, ocorreram.
+
+Esse cronograma destacava as atividades que então foram consideradas essenciais
 \begin{itemize}
-\item  escolha de linguagem de presença expressiva na indústria: C++;
-\item  definição de licensa livre para o projeto;
-\item  opção por jogo 2D;
-\item  pesquisa de simuladores BDI;
-\item  identificação de necessidades de renderização;
-\item  pesquisa de engines livres.
-\end{itemize}%
-
-\item Divisão do projeto em escopos de conhecimento. C++, Java, BDI,
-AgentSpeak, SDL, Arquitetura de software para jogos.%
-
-\item Cronograma refinado (com um mês de folga): 
-\begin{itemize}
-\item escrita do documento de especificação game-design document (GDD);
-\item previsão de tempos de implementação, 
-  busca de conteúdo artístico, e modelagem;
-\item especificação de testes.
+\item Formação da equipe
+\item Escolha do orientador
+\item Testes com as tecnologias
+\item Escolha das tecnologias
+\item Estudo das tecnologias
+\item Integração das tecnologias
+\item Game Design
+\item Especificação dos requisitos
+\item Protótipo do software
+\item Testes do protótipo
+\item Validação
 \end{itemize}
 
-\item Metodologia de desenvolvimento: controle de versão, práticas de
-engenharia de software (referências), prototipação das funcionalidades básicas.
-\end{enumerate}
+A composição do GDD iniciou em fins de abril, baseando-se em previas e estudos de conceito do jogo que haviam sido armazenados no decorrer do semestre, e estendeu-se até meados de agosto. Este segundo cronograma estimava já o tempo de implementação dos componentes da arquitetura do sistema --- como era concebido então --- além de estimar o tempo que a equipe levaria para encontrar conteúdo artístico com licensa compatível com a do projeto e, paralelamente, modelar os agentes do sistema.
+
+Já no segundo semestre o grupo reestruturou o cronograma criando pontos de avaliação do progresso do desenvolvimento (\emph{milestones}), quando então ocorriam encontros com os orientadores em que se apresentava o progresso, comparavam-se as metas previstas e alcançadas, faziam-se novas estimativas para conclusão do que não se havia cumprido, e discutiam-se os problemas encontrados e vislumbrados para o futuro. As milestones estão listadas abaixo. Outras alterações de impacto na visão da equipe sobre as etapas por futuras do projeto foi o acerto de uma divisão de tarefas mais acirrada nas etapas finais, concentrando-se um e outro em áreas que bem conheciam. Desse modo, Murilo ficou responsável pela parcela do projecto associada à inteligêngia e modelagem de agentes, enquanto Tássio trabalhou com a lógica e renderização do jogo. A elaboração do protocolo de comunicação entre os agentes e a lógica do jogo foi feita em conjunto, assim como a elaboração dos diálogos.
+
+\subsection{Primeira milestone (30 setembro)}
+\begin{itemize}
+\item pesquisa de coleções de arte (gráficos e som) que serão usadas no trabalho
+\item porte do projeto para o Subversion
+\item solução para comunicação entre processos Java e C++ do jogo
+\item elaboração de tabelas para modelagem de características de personagens do jogo.
+\item mecanismos de escrita e leitura do quadro-negro (blackboard)
+\item roteiro de aceitação do projeto
+\item capítulos introdutórios e de especificação da monografia
+\end{itemize}
+
+Das atividades listadas na primeira milestone, apenas os mecanismos de escrita e leitura no blackboard e o roteiro de aceitação do projeto não respeitaram a data proposta. Isso se deveu ao fato de que ainda havia a necessidade de aumentar o nível de detalhamento  nas especificações do jogo e da arquitetura do software como um todo. Por outro lado, o grupo foi capaz de adiantar algumas atividades definidas nas outras milestones, tais como a modelagem de agentes mais simples e subsistemas da lógica do jogo.
+
+\subsection{Segunda milestone (15 outubro)}
+\begin{itemize}
+\item navegação pelos modos e telas do jogo funcional
+\item quadro-negro (blackboard) com um tipo de conhecimento compartilhado
+\item modelagem de alguns agentes mais simples
+\item módulos de menus e diálogos
+\item capítulos de sobre decisões de projeto da monografia
+\end{itemize}
+
+Por essa data o projeto já contava com testes funcionais de controle de todos os subsistemas que o jogo precisaria, e já havia sido alcançada a integração entre áudio e vídeo, documentada em pequenos demos (tópico da terceira milestone). Nesse ponto, a equipe já tomou consciência de que a complexidade de alguns tópicos havia sido superestimada, enquanto a de outros subestimada. O grupo cogitava então participar do IX Simpósio Brasileiro de Games (SBGames).
+
+\subsection{Terceira milestone (25 outubro)}
+\begin{itemize}
+\item integração de áudio e gráficos
+\item terminada modelagem de todos os agentes do jogo
+\item quadro-negro compartilhando conhecimento de classes diversas
+\item testes de integração do sistema
+\item capítulos sobre projeto dos testes, resultados e conclusões da monografia
+\end{itemize}
+
+À terceira milestone o projeto havia atingido um estágio delicado. Boa parte do conhecimento necessário para sua conclusão já estava cominado pela equipe, mas algumas decisões importantes para a estruturação do e funcionamento do projeto estavam pendentes, necessitando de ajustes. O grupo por esta época já havia decidito participar do SBGames, como ouvinte (a princípio havia-se cogitado expor um artigo curto sobre o trabalho de conclusão de curso no evento).   
+
+\subsection{Quarta milestone (5 novembro)}
+\begin{itemize}
+\item monografia completa
+\item elaboração de roteiro de apresentação e material (capturas de tela, videos, etc.)
+\end{itemize}
+
+Infelizmente um dos integrantes teve que cancelar sua ida ao SBGames de última hora, em razão de seu estágio. De todo modo, a apresentação de milestones ficou suspensa durante uma semana --- mesmo porque um de nossos orientadores estava participando do simpósio.
 
 \subsection{Percalços e reajustes}
 
-O que não ocorreu como previsto, e os ajustes que foram feitos. (Falar
-em termos mais genéricos, o específico será dito na história de
-evolução do projeto.)
+Um fato que prejudicou o andamento do projeto foi que ambos os integrantes do grupo começaram a estagiar. Inicialmente este fato não parecia influenciar no desempenho dos integrantes, no entanto, conforme os estágios começaram a exigir mais tempo e dedicação o andamento do desenvolvimento diminuiu.
+Uma parte do desenvolvimento que realmente surpreendeu o grupo foi a criação dos diálogos. O grupo sempre acreditou que a criação dos arquivos de diálogos seria uma atividade demorada, no entanto, esta atividade foi muito mais complexa do que esperado, isso se deve ao fato de que cada arquivo de diálogo deve conter opções de falas tanto para o jogador quanto para os \npc{}s, sendo assim, cada diálogo do jogo, por mais simples que fosse, virou um arquivo de texto muito extenso.
+Um fato que atrasou um pouco o desenvolvimento do jogo foi a falta de conhecimento sobre os temas, os alunos ainda não tinham nem um contato com os conceitos de IA nem sobre programação orientada a agentes. Foram necessárias horas de estudos sobre os assuntos antes dos integrantes do grupo conseguirem iniciar o desenvolvimento.
 
-Complexidade da modelagem de agentes (?)
+
+\subsection{Considerações sobre aplicação da metodologia}
+
+É a percepção do grupo que houve uma adaptação das esperanças e estratégias de mobilização, planejamento, discussão e trabalho à medida que o projeto amadureceu, e adiquiriu-se maior confiança do que se poderia alcançar. Calibramos, aos poucos, a medida da incerteza de nossas previsões, e, embora seja inegável que há muito o que aprimorar, vislumbrou-se evolução considerável na habilidade de cada membro da equipe de lidar com imprevistos e incertezas, o que se mostrou crucial para que o término exitoso do projeto fosse alcançado.
+
+É importante destacar o papel que a aquisição de conhecimento no domínio do projeto --- e com isso referimo-nos tanto ao estudo técnico quanto ao conhecimento adquirido pelo contato com pessoas do ramo --- na mudança da própria maneira e enfoque do projetar e compreender o projeto do jogo. Nesse contexto é notável o papel que desempenhou o curso da disciplina Design e Programação de Games no segundo semestre de 2010, assim como a participação no SBGames, nos quais adiquiriu-se um conhecimento que, de certo modo, não está acessível por meio das vias consagradas de estudo; um conhecimento vivo, orgânico, da esfera cultural que é parte inerente dos jogos neste tempo.
+
 
