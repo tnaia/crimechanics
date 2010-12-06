@@ -1,0 +1,118 @@
+\chapter{Protocolo de comunicação entre C++ e Java}\label{ap:protocolo}
+
+A necessidade de comunicação entre os subsistemas de processamento da inteligência articial implementada e os mecanismos de controle e renderização do jogo surgiram tão logo se foram definidos dois requisitos do projeto, em seu início: o emprego de C++, de modo a refletir um padrão amplamente empregado na indústria de jogos, e a opção pelo uso do interpretador de AgentSpeak, Jason, que possui apenas interfaces para Java.
+
+Definiu-se então um protocolo simples, operando via TCP (\emph{loopback}), o que não incorre em perdas significativas de eficiência na troca de informações. O protocolo, que passou por diversas modificações ao longo da evolução do projeto, baseia-se na troca de mensagens, sequencias de inteiros, que respeitam regras simples:
+\begin{enumerate}
+\item o primeiro inteiro enviado representa quantos inteiros mais compõe a mensagem;
+\item o segundo inteiro identifica o nome da mensagem;
+\item os demais inteiros são parâmetros da mensagem.
+\end{enumerate}
+
+O nome da mensagem é recuperado pelo receptor da mensagem pela leitura de um arquivo de referência --- é a linha de número igual ao inteiro recebido. Munido dessa cadeia de caracteres, o receptor então pode buscar em um mapa interno a função responsável por tratar a mensagem e seus argumentos. De modo análogo, os argumentos representam, na maior parte das vezes, o número da linha que deve ser lida em algum arquivo do sistema (pré-definido para cada nome de mensagem) contendo algum complemento da informação.
+
+\section{Arquivos consultados}
+
+Os arquivos que são lidos pelas rotinas de tratamento das mensagens são
+\begin{description}
+\item[estímulos] contém estímulos que podem ser enviados a agentes no decorrer de diálogos;
+\item[respostas] contém as respostas que agentes podem expressar em diálogos;
+\item[capangas] contém nome (e possivelmente outras informações) a respeito de capangas na equipe dos \nomeGrupo;
+\item[lugares] contém o nome de lugares passíveis de roubo;
+\item[predicados] contém uma lista de avisos que podem ser dados à polícia;
+\item[configurações] contém, respectivamente, em suas linhas
+\begin{enumerate}
+\item o número da porta de comunicação loopback empregado pelos subsistemas em sua comunicação;
+\item o número de slots que o jogo possui
+\item o maior nível de suspeita possível para capangas (que é também o maior nível de segurança para lugares)
+\end{enumerate}
+\end{description}
+
+\section{As mensagens}
+
+O conjunto de mensagens passou por várias alterações desde sua primeira concepção, o que não somente era esperado, como demonstrou a utilidade da arquitetura de troca de mensagens que havia sido projetada, preparada para acomodar sem grande dificuldade adições e remoções de mensagens. As mensagens são listadas a seguir.
+
+\begin{enumerate}\footnotesize
+\item \verb!iniciaDialogo( )!
+\item \verb!retornaIdAgente()!
+%
+\item \verb!estimuloagente ( # agente, # estímulo )!
+\item \verb!atualizaBeliefs(# agente, # estimulo)!
+%
+\item \verb!ofereceEscolhas( # agente, # reacao1, # reacao2, … )!
+\item \verb!returnEscolha(# agente, #escolha)!
+%
+%
+\item \verb!fimDialogo( #agente )!
+\item \verb!acaoDaPolicia( #acao, #alvo )!
+%
+%ações policiais:       1 aumentar nivel suspeita - P
+            %2 diminuir nivel suspeita - P
+
+%3 prender - P
+
+%4 aumentar nivel segurança - L
+
+%5 diminuir nivel segurança - L
+%
+\item \verb!avisaPolicia( #sujeito, #predicado )!
+\item \verb!avisaPolicia( #sujeito, #predicado, #alvo )!
+%
+%predicados:
+%1 P fez-compra-suspeita
+%2 P agiu-de-modo-suspeito-em L
+%3 L foi-roubado-com-sucesso
+%4 L foi-roubado-sem-sucesso
+%legenda: (P - pessoa; L - lugar)   
+%
+%
+
+%[10 escreveBlackBoard(#sujeito, #predicado)] => 8
+%
+\item \verb!loadGame(! \#slot )
+\item \verb!newGame(! \#slot \verb!)!
+\item \verb!saveGame(! \#slot \verb!)!
+\item \verb!quitGame()!
+\end{enumerate}
+
+0 - “número de números”
+1 - tipo de mensagem
+2 … - parâmetros
+
+EXEMPLOS DE ARQUIVOS DE CONSULTA
+
+capangas:
+joe
+josé
+ricardo
+arroz
+roney
+antônio
+
+estímulos:
+oferece-propina
+fala-amigavel
+elogio
+insulto
+fala-timida
+
+reações:
+aceita-propina
+rejeita-propina
+insultar
+elogiar
+agradecer
+
+lugares:
+oficina mecânica (QG),
+mercado,
+loja de importados,
+loja de carros,
+banco, e
+joalheria.
+
+configurações:
+
+
+
+
