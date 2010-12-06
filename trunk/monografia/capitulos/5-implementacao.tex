@@ -71,7 +71,7 @@ Caso o agente receba opções de resposta, ele avalia o(s) estímulo(s) recebido
 
 Os casos demonstrados acima se aplicam a qualquer agente com o qual o jogador inicie um diálogo, inclusive os capangas, isto foi feito para manter a arquitetura dos agentes mais genérica.
 
-\subsubsection{Balckboard}
+\subsubsection{Blackboard}
 
 A técnica \emph{blackboard} foi implementada dentro da arquitetura dos agentes ocultos da polícia, esta decisão de projeto visou um melhor desempenho do software.
 Basicamente foi criado um agente oculto para cada tipo de informação que pode ser enviada por um agente policial, assim, toda vez que um agente policial executar a ação \emph{avisaPolicia(sujeito,predicado)} é adicionada uma crença em cada agente oculto sobre este aviso, no entanto, apenas um deles sabe o que deve fazer com esta informação, este agente processa a informação e avisa todos os outros agentes a nova informação, esta nova informação pode ser uma ação da polícia que será enviada aos agentes policiais ou pode ser uma nova informação que outro agente oculto sabe processar, assim o processo se torna incremental até que a informação seja completamente processada e resulte em algum tipo de ação da polícia.
@@ -79,7 +79,10 @@ Basicamente foi criado um agente oculto para cada tipo de informação que pode 
 
 \subsection{Subsistema: C++}
 
-
+A concepção do subsistema C++ foi talvez uma das etapas mais longas do
+projeto. Isto pois exite toda uma série de questões inerentes à a organização
+do controle da lógica e renderização de jogos, e, como é natural em
+sistemas complexos, 
 
 \section{Protocolo de comunicação}
 
