@@ -39,9 +39,9 @@ Para facilitar o entendimento, as linhas azuis representam as falas disponíveis
 </opts>
 
 <opts>
-<op inquisitivo>Você trabalha aqui?
-	<opts>
-		<op goto=sonifero> Não, trabalho na farmácia!
+  <op inquisitivo>Você trabalha aqui?
+  <opts>
+    <op goto=sonifero> Não, trabalho na farmácia!
 		
 		<op goto=sonifero>Não, sou farmacêutico!
 		<op apreensivo color=yellow> Por que você quer saber?
@@ -60,48 +60,76 @@ Para facilitar o entendimento, as linhas azuis representam as falas disponíveis
 	<op irritado color=red>Vá se danar!
 </opts>
 	</>
-	<op>Perdão, pensei que fosse um amigo meu. Mas nossa, vocês são muito parecidos!
+	<op>Perdão, pensei que fosse um amigo meu. Mas nossa, vocês
+são muito parecidos!
 	<opts>
-		<op only=EngProd>Curioso, você não é o primeiro a me dizer isso...
-		<>Sério? Seria incrível então se o senhor também trabalhasse com...
+		<op only=EngProd>Curioso, você não é o primeiro a me
+dizer isso...
+		<>Sério? Seria incrível então se o senhor também
+trabalhasse com...
 		<>Farmácia?
-		<>Caramba, isso é que é coincidência! Por falar nisso, eu estava indo para uma agora...
+		<>Caramba, isso é que é coincidência! Por falar nisso,
+eu estava indo para uma agora...
 		<>Doente, por algum acaso?
-		<>Bom, não exatamente. Insônia. Faz duas semanas que eu não consigo dormir direito.
-		<switchOn=dormeflex goto=terminabem color=green>Já sofri disso, é um incômodo. Aceita uma sugestão? Use o  “dormeflex”, vende na farmácia aqui perto.
+		<>Bom, não exatamente. Insônia. Faz duas semanas que
+eu não consigo dormir direito.
+		<switchOn=dormeflex goto=terminabem color=green>Já
+sofri disso, é um incômodo. Aceita uma sugestão? Use o  “dormeflex”,
+vende na farmácia aqui perto.
 		<op>Pois é... bom, tchau!
 </>
 	</opts>
 
 <label sonifero>
 <opts>
-	<op only=EngProd elogio> Sério? Você caiu do céu!! Você não teria um remédio para me ajudar a dormir teria?? Tenho sofrido muito com essa insonia!
+	<op only=EngProd elogio> Sério? Você caiu do céu!! Você não
+teria um remédio para me ajudar a dormir teria?? Tenho sofrido muito
+com essa insonia!
 	<opts>
-	<op goto=enecrraBem feliz SWITCHON=dormeflex color=green> Claro! 			Também sofro com este problema! Na verdade, tenho uma pílula aqui no 			bolso, pode levar!!
-<op goto=encerraBem  lisonjeado SWITCHON=dormeflex color=green> 		Caí do céu?? Que isso, foi pura coincidência! Mas  eu tenho o  remédio 		que você precisa, te vendo por um precinho amigo! quer comprar?
-<op goto=encerraBem SWITCHON=dormeflex color=green> 			Certamente! Passe no mercado e compre um “dormeflex”!
+	<op goto=enecrraBem feliz SWITCHON=dormeflex color=green>
+Claro! 			Também sofro com este problema! Na verdade,
+tenho uma pílula aqui no 			bolso, pode levar!!
+<op goto=encerraBem  lisonjeado SWITCHON=dormeflex color=green>
+Caí do céu?? Que isso, foi pura coincidência! Mas  eu tenho o  remédio
+que você precisa, te vendo por um precinho amigo! quer comprar?
+<op goto=encerraBem SWITCHON=dormeflex color=green>
+Certamente! Passe no mercado e compre um “dormeflex”!
 </opts>
-	<op suspeito> O senhor vende remédios para fazer alguem dormir?
+	<op suspeito> O senhor vende remédios para fazer alguem
+dormir?
 	<opts>
-		<op apreensivo color=yellow> Claro que sim! Mas por que o senhor 				desejaria fazer alguém dormir?
-<op goto=encerraBem SWITCHON=dormeflex color=green> Vendo sim! 		Passe no mercado e compre uma pílula de “dormeflex”! Derruba 			elefantes!
+		<op apreensivo color=yellow> Claro que sim! Mas por
+que o senhor 				desejaria fazer alguém dormir?
+<op goto=encerraBem SWITCHON=dormeflex color=green> Vendo sim!
+Passe no mercado e compre uma pílula de “dormeflex”! Derruba
+elefantes!
 </opts>
 	<opts>
 	<op insulto> Não lhe interessa!
 	<op insulto> Pra “alguém” dormir!
 	<op fala-amigavel> É para minha esposa! Ela sofre de insônia!
-	<op only=EngProd inquestionavel> Vou ser sincero! É para minha esposa, amanhã tem final do futebol! Preciso que ela durma senão não posso ver o jogo em paz!!
+	<op only=EngProd inquestionavel> Vou ser sincero! É para minha
+esposa, amanhã tem final do futebol! Preciso que ela durma senão não
+posso ver o jogo em paz!!
 </opts>
 	<opts>
-	<op goto=encerraBem SWITCHON=dormeflex compreensivo 			color=green> Muito justo o seu motivo! Aqui está, coloque na 			bebida dela ou na comida e ela vai dormir a noite toda!
-	<op goto=encerraMau color=red> Que absurdo! O senhor quer 			drogar sua própria esposa?! Não posso e nem quero participar 			disto!
+	<op goto=encerraBem SWITCHON=dormeflex compreensivo
+color=green> Muito justo o seu motivo! Aqui está, coloque na
+bebida dela ou na comida e ela vai dormir a noite toda!
+	<op goto=encerraMau color=red> Que absurdo! O senhor quer
+drogar sua própria esposa?! Não posso e nem quero participar
+disto!
 </opts>
 	
 	<op insulto> Ou, descola uns remédios para dormir pra mim??
 		<opts>
-			<op goto=encerraMau zangado color=red>  De jeito nenhum!
-			<op goto=encerraMau rabugento color=red> Não sou traficante 					“mano”!
-			<op goto=encerraBem SWITCHON=dormeflex color=green> 					Compra lá no mercado uns “dormeflex”.
+			<op goto=encerraMau zangado color=red>  De
+jeito nenhum!
+			<op goto=encerraMau rabugento color=red> Não
+sou traficante 					“mano”!
+			<op goto=encerraBem SWITCHON=dormeflex
+color=green> 					Compra lá no mercado
+uns “dormeflex”.
 </opts>
 </opts>
 </label sonifero>
@@ -112,7 +140,8 @@ Para facilitar o entendimento, as linhas azuis representam as falas disponíveis
 		<op fala-amigavel> Muito obrigado!
 		<op elogio> O senhor salvou minha vida!! Obrigado!
 </opts>
-<color=green> Que isso!? É um prazer ajudar! Me procure sempre que precisar! Até mais!
+<color=green> Que isso!? É um prazer ajudar! Me procure sempre que
+precisar! Até mais!
 </label encerraBem>
 
 <label encerraMau>
