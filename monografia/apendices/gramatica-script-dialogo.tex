@@ -1,6 +1,86 @@
-\chapter{Gramática dos \emph{scripts} de
-  diálogo}\label{ap:gram-script-dialogo}
+\chapter{Cenas e \emph{scripts} de
+  diálogo}\label{ap:gram-script-dialogo}\label{ap:script-cena}
 
+Scripts, em geral, constituem parte da interface entre os times de
+desenvolvimento, arte e dessign de games. Muito se discute, nesse
+meio, quanta complexidade é interessante que os programadores deixem
+acessível por meio do script que criaram. Complexidade em demasia via
+de regra vem acompanhada de estruturas elaboradas de programação, com
+duas consequências negativas que vale a pena citar
+\begin{itemize}
+\item aumento no tempo gasto implementando o interpretador de scripts,
+\item risco de ocorrer delegação de tarefas da equipe de
+  desenvolvimento para as demais.
+\end{itemize}
+
+É certo que, usados com parcimônia, os scripts são uma ferramenta
+fundamental na dinamização do processo de testes e experimentação
+durante a confecção do jogo, e o resultado, é o que alguns chamam
+de~\emph{design orientado a dados}, ou~(\emph{data-driven design}).
+
+Nesta seção abordamos duas linguagens de scripts feitas, para controle
+de ``filmes'' exibidos durante o jogo, e para composição de diálogos.
+
+\section{Script de cenas}
+
+Adoou-se uma simplificação no tipo de cena que seria o jogo
+comportaria. As cenas são uma sequência de imagens e texto,
+acompanhadsd de música --- algo similar a apresentações de slides. Eis
+um pequeno exemplo de script.
+
+{\centering
+\footnotesize
+\begin{verbatim}
+<music=musica-de-fundo.mp3>
+<background=imagem-de-fundo-1.jpg>
+<>Uma ideia brilhante
+<wait=1000>
+<>Uma ideia brilhante.
+<wait=1000>
+<>Uma ideia brilhante..
+<wait=1000>
+<>Uma ideia brilhante...
+<wait=2000>
+<fadeOut=500>
+<background=imagem-de-fundo-2.jpg>
+<fadeIn=100>
+<>Um projeto
+<wait=1000>
+<>Um projeto re
+<wait=600>
+<>Um projeto revo
+<wait=600>
+<>Um projeto revolu
+<wait=300>
+<>Um projeto revolucio
+<wait=600>
+<>Um projeto revolucioná
+<wait=600>
+<>Um projeto revolucionário!
+<wait=2000>
+<fadeOut=2000>
+<background-color=black>
+<>Porém...
+<fadeIn=500>
+<wait=4500>
+<fadeOut>
+\end{verbatim}
+}
+
+O exemplo acima foi construído para exibir as principais
+características do script feito. Primeiro, inicia uma música de fundo,
+acompanhada de uma imagem ao fundo. A seguir, uma sequência de frases
+é exibida, de modo que fique a impressão de que letras são adicionadas
+pouco a pouco. A seguir a tela escurece, prepara-se uma outra imagem
+de fundo para substituir a anterior, e o mesmo efeito de substituição
+do texto por um texto parecido é empregado para enfatizar a palavra
+``revolucionário'', que aparece sílaba por sílaba, a intervalos de
+$600$ milisegundos. A tela então escurece novamente, e prepara-se a
+exibição de uma tela preta com os dizeres ``Porém\ldots'', que então
+aparecem em umatransição de $500$ms. Por fim, após $4,5$ segundos a
+tela escurece novamente e a cena termina.
+
+\section{Script de diálogos}
 Descrevemos a seguir a gramática da linguagem de especificação de diálogos.
 Os diálogos são criados através de uma linguagem de marcação muito parecida com a linguagem \emph{xml}. Todas as instruções são descritas no começo da linha na seguinte forma: \emph{$<$instrucao1 instrucao2 … instrucaoN$>$ texto}. Vale citar que uma fala pode não ser precedida por nenhuma instrução, representada por \emph{$<>$}, nesse caso a fala, seja ela do jogador ou do \npc{} é simplesmente apresentada. A marcação de fim do diálogo é feita através da sequência $<$/$>$.
 Cada diálogo é completamente escrito em um arquivo, sendo assim, quando o jogador inicia um diálogo, somente um arquivo é utilizado e neste arquivo, a primeira fala será sempre a do jogador.
