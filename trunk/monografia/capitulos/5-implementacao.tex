@@ -82,7 +82,72 @@ Basicamente foi criado um agente oculto para cada tipo de informação que pode 
 A concepção do subsistema C++ foi talvez uma das etapas mais longas do
 projeto. Isto pois exite toda uma série de questões inerentes à a organização
 do controle da lógica e renderização de jogos, e, como é natural em
-sistemas complexos, 
+sistemas complexos, pequenas decisões da estrutura e organização
+refletem grandemente na adequação do sistema à manutenção e
+alterações.
+
+Manteve-se em mente durante o pojeto que, dada a novidade do campo de
+desenvolvimento de jogos para os integrantes do grupo, dever-se-ia
+optar por soluções mais afeitas à modificações. Essa opção é natural,
+dado que era grande a probabilidade de que fosse neessário efetuar
+modificações para comportar necessidades identificadas ao longo do
+desenvolvimento. Ademais, a metodologia de design do jogo escolhida
+valia-se de prototipações frequentes, e, nesse sentido, foi importante
+que o sistema em si refletisse essa flexibilidade, de modo a atender
+às requisições de alteração de comportamento exigidas pela
+experimentação com a lógica do jogo. Ressaltamos, entretanto, que essa
+flexibilidade não foi total, e desde muito cedo o projeto se fixou em
+restrições de apresentação gráfica, numa tentativa de se guardar certo
+controle sobre o crescimento da complexidade da renderização do jogo.
+
+Posto de maneira simples, o jogador transita no jogo por estados, como
+o \emph{menu principal}\footnote{Menu que permite optar por iniciar um
+  novo jogo, carregar um jogo salvo, ou terminar o aplicativo.}, o
+\emph{mapa da cidade}\footnote{Mapa por meio do qual o jogador obtém
+  acesso à ações como roubar um estabelecimento, fazer compras no
+  mercado, etc. (vide o documento de game design, na
+  seção~\ref{fluxo-jogo}).}, \emph{diálogos} e \emph{cenas}, 
+\emph{gerência de seu inventário de itens}, \emph{compra no mercado} e
+\emph{planejamento do roubo}\footnote{Sequência de telas que
+  compreende a seleção de participantes do roubo, equipamento a usar,
+  e disribuição das recompensas.}. Cada estado é uma abstração de um
+conjunto de interações que o jogador pode ter com o jogo.
+
+Foram encapsuladas as primitivas da biblioteca SDL em classes que
+\emph{gestoras de recursos}. Esses recursos são
+\begin{itemize}
+\item imagens (carregadas para serem exibidas na tela,
+\item sons,
+\item fontes, e
+\item eventos.
+\end{itemize}
+
+A conexão com o subsistema Java também foi feita encapsulando-se uma
+interface SDL, e adaptou-se o sistema interno de captação e
+comunicação de eventos do SDL para incorporar as mensagens do
+protocolo de comunicação elaborado (vide apêndice~\ref{ap:protocolo}).
+
+Outras abstrações implementadas incluem \emph{design-patterns} como
+\emph{decoration}, \emph{strawman}, \emph{singleton}, \emph{factory} e
+\emph{interface}. Por exemplo, objetos que queiram ser informados de
+eventos do protocolo devem ser \emph{EventListeners} e se inscrever na
+lista de ouvintes do \emph{EventManager}, servidor de mensagens do
+jogo. Analogamente, objetos que queiram ser desenhados devem ser
+\emph{Drawable} e se inscreverem (ou serem inscritos) em alguma
+\emph{View} (objetos gerenciadores de exibição de imagens na
+tela).
+
+Finalmente, mas não menos importante, o laço principal do jogo
+constitui-se da constante medida do tempo decorrido (em milisegundos)
+desde a última execução do laço. Este valor é passado para um método
+de atualização do gerenciador de estados
+(\emph{StateManager}\footnote{Os estados são objetos em uma pilha,
+  gerenciada pelo \emph{StateManager}. Ele também é o responsável pela
+criação e destruição dos estados.}), que faz o controle da taxa
+de atualização da tela.
+
+
+
 
 \section{Protocolo de comunicação}
 
