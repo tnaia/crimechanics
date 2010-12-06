@@ -2,3 +2,125 @@
   diálogo}\label{ap:gram-script-dialogo}
 
 Descrevemos a seguir a gramática da linguagem de especificação de diálogos.
+Os diálogos são criados através de uma linguagem de marcação muito parecida com a linguagem \emph{xml}. Todas as instruções são descritas no começo da linha na seguinte forma: \emph{<instrucao1 instrucao2 … instrucaoN> texto}. Vale citar que uma fala pode não ser precedida por nenhuma instrução, representada por \emph{<>}, nesse caso a fala, seja ela do jogador ou do \npc{} é simplesmente apresentada.
+Cada diálogo é completamente escrito em um arquivo, sendo assim, quando o jogador inicia um diálogo, somente um arquivo é utilizado e neste arquivo, a primeira fala será sempre a do jogador.
+
+A grande funcionalidade da linguagem criada é que ela oferece, de forma simples opções de falas tanto para o jogador quanto para o \npc{}. Toda vez que for encontrada a sequência \emph{<opts>} significa que foi aberta uma parte do diálogo é possível ao jogador ou ao \npc{} escolher mais de uma fala. As opções são listadas ao lado da sequência \emph{<op>}, e ao final da lista de opções deve existir a sequência de fechamento \emph{</opts>}.
+
+Outro aspecto interessante da linguagem desenvolvida é a existência de desvios no rumo do diálogo, o desenvolvedor pode dividir o arquivo em blocos de um mesmo diálogo separados por \emph{labels}, como por exemplo, \emph{<sucesso>...</sucesso>} e desviar o diálogo para este bloco através de uma instrução do tipo \emph{<goto=sucesso>} onde \emph{``sucesso’’} é um label associado a um bloco do diálogo que só será acessado se o jogador ou o \npc{} selecionar uma fala que contenha a instrução descrita acima.
+
+A principal característica da linguagem desenvolvida é que com ela é possível passar ao \npc{} o estímulo que a fala irá produzir, por exemplo \emph{<op elogio> voce é linda!}, com isso o \npc pode considerar possíveis opções de resposta, estas por sua vez estão associadas à reações que são descritas da mesma maneira, por exemplo \emph{<op agradecer> obrigado!}. 
+
+Além disso, dois detalhes interessantes foram adicionados, um comando que associa uma cor a uma fala do \npc{} e um comando de liga/desliga que pode ser utilizado por exemplo para habilitar/desabilitar itens para o jogador. O fato da cor associada a fala do \npc{} mudar é interessante pois a cor será um tipo de \emph{feedback} para o jogador ter uma noção de como o \npc{} está se sentindo. O comando tem a seguinte sintaxe: \emph{<color=cor>}, onde a variável cor pode assumir três valores, green (\npc{} está gostando), yellow (\npc{} está apreensivo) ou red (\npc{} não está gostando), além disso, caso o \npc{} esteja indiferente, nenhuma cor é associada à caixa de texto de sua fala. 
+
+O comando para ligar/desligar é da forma \emph{<SWITCHON=x>} para ativar qualquer coisa que seja representada pela variável \emph{x} ou {<SWITCHOFF=x>} para desativar.
+
+O último comando que deve ser apresentado é o comando \emph{<only=DadoCapanga>texto} onde a variável \emph{DadoCapanga} representa algum atributo descrito no arquivo de modelo do capanga em questão. Desta forma, a fala em questão só estará disponível para o jogador se a condição do comando for verdadeira.
+
+A seguir apresentamos um exemplo de um texto de diálogo entre o jogador e um \npc{}. Neste caso, se o jogador tiver sucesso ele destrava um item, ou até mesmo ganha este item, senão não terá acesso ao item e pode até mesmo ter o nível de suspeita de seu capanga incrementado.
+Para facilitar o entendimento, as linhas azuis representam as falas disponíveis ao jogador e as linhas pretas as falas disponíveis ao \npc{}.
+<! Diálogo entre homens para liberar sonífero / se tornar suspeito >
+<opts>
+	<op fala-amigavel>Bom dia, senhor.
+<opts>
+	<op> Bom dia.
+		<op> Olá.
+		 <op goto=rabugento rabugento color=yello> Bom dia pra quem?!
+		<op goto=rabugento rabugento color=yellow> Hmpf, o que o senhor quer?
+		<op apressado> Desculpe, estou sem tempo para conversar.
+		</>
+	</opts>
+	<op insulto>E aí véio?
+<goto=retratacao color=red effect=shaking>Quem é velho?
+	<op only=EngProd  fala-amigavel elogio>Está um belo dia hoje não? Tão belo quanto o senhor!
+</opts>
+
+<opts>
+<op inquisitivo>Você trabalha aqui?
+	<opts>
+		<op goto=sonifero> Não, trabalho na farmácia!
+		
+		<op goto=sonifero>Não, sou farmacêutico!
+		<op apreensivo color=yellow> Por que você quer saber?
+	</opts>
+<op>Você tem horas?
+<>Erm, não...
+</>
+<op>
+</opts>
+</>
+<label retratacao>
+<opts>
+	<op insulto>Não ouviu? Eu disse E AÍ SURDO!?
+	<opts>
+<op color=red> Que absurdo!
+	<op irritado color=red>Vá se danar!
+</opts>
+	</>
+	<op>Perdão, pensei que fosse um amigo meu. Mas nossa, vocês são muito parecidos!
+	<opts>
+		<op only=EngProd>Curioso, você não é o primeiro a me dizer isso...
+		<>Sério? Seria incrível então se o senhor também trabalhasse com...
+		<>Farmácia?
+		<>Caramba, isso é que é coincidência! Por falar nisso, eu estava indo para uma agora...
+		<>Doente, por algum acaso?
+		<>Bom, não exatamente. Insônia. Faz duas semanas que eu não consigo dormir direito.
+		<switchOn=dormeflex goto=terminabem color=green>Já sofri disso, é um incômodo. Aceita uma sugestão? Use o  “dormeflex”, vende na farmácia aqui perto.
+		<op>Pois é... bom, tchau!
+</>
+	</opts>
+
+<label sonifero>
+<opts>
+	<op only=EngProd elogio> Sério? Você caiu do céu!! Você não teria um remédio para me ajudar a dormir teria?? Tenho sofrido muito com essa insonia!
+	<opts>
+	<op goto=enecrraBem feliz SWITCHON=dormeflex color=green> Claro! 			Também sofro com este problema! Na verdade, tenho uma pílula aqui no 			bolso, pode levar!!
+<op goto=encerraBem  lisonjeado SWITCHON=dormeflex color=green> 		Caí do céu?? Que isso, foi pura coincidência! Mas  eu tenho o  remédio 		que você precisa, te vendo por um precinho amigo! quer comprar?
+<op goto=encerraBem SWITCHON=dormeflex color=green> 			Certamente! Passe no mercado e compre um “dormeflex”!
+</opts>
+	<op suspeito> O senhor vende remédios para fazer alguem dormir?
+	<opts>
+		<op apreensivo color=yellow> Claro que sim! Mas por que o senhor 				desejaria fazer alguém dormir?
+<op goto=encerraBem SWITCHON=dormeflex color=green> Vendo sim! 		Passe no mercado e compre uma pílula de “dormeflex”! Derruba 			elefantes!
+</opts>
+	<opts>
+	<op insulto> Não lhe interessa!
+	<op insulto> Pra “alguém” dormir!
+	<op fala-amigavel> É para minha esposa! Ela sofre de insônia!
+	<op only=EngProd inquestionavel> Vou ser sincero! É para minha esposa, amanhã tem final do futebol! Preciso que ela durma senão não posso ver o jogo em paz!!
+</opts>
+	<opts>
+	<op goto=encerraBem SWITCHON=dormeflex compreensivo 			color=green> Muito justo o seu motivo! Aqui está, coloque na 			bebida dela ou na comida e ela vai dormir a noite toda!
+	<op goto=encerraMau color=red> Que absurdo! O senhor quer 			drogar sua própria esposa?! Não posso e nem quero participar 			disto!
+</opts>
+	
+	<op insulto> Ou, descola uns remédios para dormir pra mim??
+		<opts>
+			<op goto=encerraMau zangado color=red>  De jeito nenhum!
+			<op goto=encerraMau rabugento color=red> Não sou traficante 					“mano”!
+			<op goto=encerraBem SWITCHON=dormeflex color=green> 					Compra lá no mercado uns “dormeflex”.
+</opts>
+</opts>
+</label sonifero>
+
+<label encerraBem>
+<! fala do jogador>
+	<opts>
+		<op fala-amigavel> Muito obrigado!
+		<op elogio> O senhor salvou minha vida!! Obrigado!
+</opts>
+<color=green> Que isso!? É um prazer ajudar! Me procure sempre que precisar! Até mais!
+</label encerraBem>
+
+<label encerraMau>
+	<opts>
+		<op insulto> Muito obrigado! Por não me ajudar em nada!
+		<op fala-amigavel> Desculpe incomodá-lo!
+</opts>
+<opts>
+	<op educado> Sinto muito! Não posso ajudá-lo!
+	<op zangado color=red> Veremos o que a polícia acha disso?
+	<op apreensivo color=red> Não quero nada com isso!!
+	<op> Adeus senhor!
+</opts>
+</label encerraMau>
