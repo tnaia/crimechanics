@@ -2,23 +2,24 @@
   diálogo}\label{ap:gram-script-dialogo}
 
 Descrevemos a seguir a gramática da linguagem de especificação de diálogos.
-Os diálogos são criados através de uma linguagem de marcação muito parecida com a linguagem \emph{xml}. Todas as instruções são descritas no começo da linha na seguinte forma: \emph{<instrucao1 instrucao2 … instrucaoN> texto}. Vale citar que uma fala pode não ser precedida por nenhuma instrução, representada por \emph{<>}, nesse caso a fala, seja ela do jogador ou do \npc{} é simplesmente apresentada.
+Os diálogos são criados através de uma linguagem de marcação muito parecida com a linguagem \emph{xml}. Todas as instruções são descritas no começo da linha na seguinte forma: \emph{$<$instrucao1 instrucao2 … instrucaoN$>$ texto}. Vale citar que uma fala pode não ser precedida por nenhuma instrução, representada por \emph{$<>$}, nesse caso a fala, seja ela do jogador ou do \npc{} é simplesmente apresentada. A marcação de fim do diálogo é feita através da sequência $<$/$>$.
 Cada diálogo é completamente escrito em um arquivo, sendo assim, quando o jogador inicia um diálogo, somente um arquivo é utilizado e neste arquivo, a primeira fala será sempre a do jogador.
 
-A grande funcionalidade da linguagem criada é que ela oferece, de forma simples opções de falas tanto para o jogador quanto para o \npc{}. Toda vez que for encontrada a sequência \emph{<opts>} significa que foi aberta uma parte do diálogo é possível ao jogador ou ao \npc{} escolher mais de uma fala. As opções são listadas ao lado da sequência \emph{<op>}, e ao final da lista de opções deve existir a sequência de fechamento \emph{</opts>}.
+A grande funcionalidade da linguagem criada é que ela oferece, de forma simples opções de falas tanto para o jogador quanto para o \npc{}. Toda vez que for encontrada a sequência \emph{$<$opts$>$} significa que foi aberta uma parte do diálogo é possível ao jogador ou ao \npc{} escolher mais de uma fala. As opções são listadas ao lado da sequência \emph{$<$op$>$}, e ao final da lista de opções deve existir a sequência de fechamento \emph{$<$/opts$>$}.
 
-Outro aspecto interessante da linguagem desenvolvida é a existência de desvios no rumo do diálogo, o desenvolvedor pode dividir o arquivo em blocos de um mesmo diálogo separados por \emph{labels}, como por exemplo, \emph{<sucesso>...</sucesso>} e desviar o diálogo para este bloco através de uma instrução do tipo \emph{<goto=sucesso>} onde \emph{``sucesso’’} é um label associado a um bloco do diálogo que só será acessado se o jogador ou o \npc{} selecionar uma fala que contenha a instrução descrita acima.
+Outro aspecto interessante da linguagem desenvolvida é a existência de desvios no rumo do diálogo, o desenvolvedor pode dividir o arquivo em blocos de um mesmo diálogo separados por \emph{labels}, como por exemplo, \emph{$<$sucesso$>$ . . . $<$/$>$} e desviar o diálogo para este bloco através de uma instrução do tipo \emph{$<$goto=sucesso$>$} onde \emph{``sucesso’’} é um label associado a um bloco do diálogo que só será acessado se o jogador ou o \npc{} selecionar uma fala que contenha a instrução descrita acima.
 
-A principal característica da linguagem desenvolvida é que com ela é possível passar ao \npc{} o estímulo que a fala irá produzir, por exemplo \emph{<op elogio> voce é linda!}, com isso o \npc pode considerar possíveis opções de resposta, estas por sua vez estão associadas à reações que são descritas da mesma maneira, por exemplo \emph{<op agradecer> obrigado!}. 
+A principal característica da linguagem desenvolvida é que com ela é possível passar ao \npc{} o estímulo que a fala irá produzir, por exemplo \emph{$<$op elogio$>$ voce é linda!}, com isso o \npc pode considerar possíveis opções de resposta, estas por sua vez estão associadas à reações que são descritas da mesma maneira, por exemplo \emph{$<$op agradecer$>$ obrigado!}. 
 
-Além disso, dois detalhes interessantes foram adicionados, um comando que associa uma cor a uma fala do \npc{} e um comando de liga/desliga que pode ser utilizado por exemplo para habilitar/desabilitar itens para o jogador. O fato da cor associada a fala do \npc{} mudar é interessante pois a cor será um tipo de \emph{feedback} para o jogador ter uma noção de como o \npc{} está se sentindo. O comando tem a seguinte sintaxe: \emph{<color=cor>}, onde a variável cor pode assumir três valores, green (\npc{} está gostando), yellow (\npc{} está apreensivo) ou red (\npc{} não está gostando), além disso, caso o \npc{} esteja indiferente, nenhuma cor é associada à caixa de texto de sua fala. 
+Além disso, dois detalhes interessantes foram adicionados, um comando que associa uma cor a uma fala do \npc{} e um comando de liga/desliga que pode ser utilizado por exemplo para habilitar/desabilitar itens para o jogador. O fato da cor associada a fala do \npc{} mudar é interessante pois a cor será um tipo de \emph{feedback} para o jogador ter uma noção de como o \npc{} está se sentindo. O comando tem a seguinte sintaxe: \emph{$<$color=cor$>$}, onde a variável cor pode assumir três valores, green (\npc{} está gostando), yellow (\npc{} está apreensivo) ou red (\npc{} não está gostando), além disso, caso o \npc{} esteja indiferente, nenhuma cor é associada à caixa de texto de sua fala. 
 
-O comando para ligar/desligar é da forma \emph{<SWITCHON=x>} para ativar qualquer coisa que seja representada pela variável \emph{x} ou {<SWITCHOFF=x>} para desativar.
+O comando para ligar/desligar é da forma \emph{$<$SWITCHON=x$>$} para ativar qualquer coisa que seja representada pela variável \emph{x} ou {$<$SWITCHOFF=x$>$} para desativar.
 
-O último comando que deve ser apresentado é o comando \emph{<only=DadoCapanga>texto} onde a variável \emph{DadoCapanga} representa algum atributo descrito no arquivo de modelo do capanga em questão. Desta forma, a fala em questão só estará disponível para o jogador se a condição do comando for verdadeira.
+O último comando que deve ser apresentado é o comando \emph{$<$only=DadoCapanga$>$texto} onde a variável \emph{DadoCapanga} representa algum atributo descrito no arquivo de modelo do capanga em questão. Desta forma, a fala em questão só estará disponível para o jogador se a condição do comando for verdadeira.
 
 A seguir apresentamos um exemplo de um texto de diálogo entre o jogador e um \npc{}. Neste caso, se o jogador tiver sucesso ele destrava um item, ou até mesmo ganha este item, senão não terá acesso ao item e pode até mesmo ter o nível de suspeita de seu capanga incrementado.
 Para facilitar o entendimento, as linhas azuis representam as falas disponíveis ao jogador e as linhas pretas as falas disponíveis ao \npc{}.
+
 {\footnotesize
 \begin{verbatim}
 <! Diálogo entre homens para liberar sonífero / se tornar suspeito >
@@ -49,7 +50,6 @@ Para facilitar o entendimento, as linhas azuis representam as falas disponíveis
 <op>Você tem horas?
 <>Erm, não...
 </>
-<op>
 </opts>
 </>
 <label retratacao>
@@ -132,7 +132,7 @@ color=green> 					Compra lá no mercado
 uns “dormeflex”.
 </opts>
 </opts>
-</label sonifero>
+</>
 
 <label encerraBem>
 <! fala do jogador>
@@ -142,7 +142,7 @@ uns “dormeflex”.
 </opts>
 <color=green> Que isso!? É um prazer ajudar! Me procure sempre que
 precisar! Até mais!
-</label encerraBem>
+</>
 
 <label encerraMau>
 	<opts>
@@ -155,6 +155,6 @@ precisar! Até mais!
 	<op apreensivo color=red> Não quero nada com isso!!
 	<op> Adeus senhor!
 </opts>
-</label encerraMau>
+</>
 \end{verbatim}
 }
