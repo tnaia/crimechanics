@@ -43,11 +43,38 @@ A classe Manipuladora é responsável por consultar e manter atualizados os arqu
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{figuras/arquitetura-java.jpg}
+\includegraphics[height=10cm]{figuras/arquitetura-java.jpg}
 \caption{Visão geral da arquitetura do subsistema Java}
 \label{arquiteturaJava}
 \end{figure}
 
+\subsubsection{Arquitetura BDI}
+Após pesquisas, o grupo encontrou um \emph{plug-in} do interpretador Jason para rodar com a IDE eclipse, com isto o trabalho ficou mais simples, todo a parte do projeto que utilizava linguagem Java e AgentSpeak foi implementada utilizando a IDE eclipse.
+A arquitetura dos agentes não ficou complexa, basicamente todos possuem caracterísicas em comum como a \emph{personalidade} e o \emph{estado psicológico}. No caso de um diálogo estas duas características são necessárias pois é baseado nelas que o agente toma decisões, a atualização destas características ocorre da seguinte forma:
+\begin{enumerate} 
+\item Classe comunicadora recebe mensagem do tipo estimuloagente ( num agente, num estímulo )
+\item Classe Level recebe os parâmetros e insere a crença estímulo(nomeEstimulo) no agente em questão
+\item Agente atualiza sua personalidade e seu estado psicológico
+\end{enumerate}
+
+Caso o agente receba opções de resposta, ele avalia o(s) estímulo(s) recebido pela fala do jogador e procura a resposta que contenha a reação que lhe interessa, este processo acontece da seguinte forma:
+
+\begin{enumerate} 
+\item Classe comunicadora recebe mensagem do tipo estimuloagente ( num agente, num estímulo )
+\item Classe Level recebe os parâmetros e insere a crença estímulo(nomeEstimulo) no agente em questão
+\item Agente atualiza sua personalidade e seu estado psicológico
+\item Classe comunicadora recebe mensagem do tipo ofereceEscolhas( num agente, num reacao1, num reacao2, ... )
+\item Classe Level recebe os parâmetros e insere a crença respostas(reacao1,reacao2) no agente em questão
+\item O agente procura em sua lógica qual a melhor reacao segundo sua personalidade e seu estado psicológico 
+\item O agente executa a ação responder(reacao) que envia para o subsitema C++ a escolha do agente
+\end{enumerate}
+
+Os casos demonstrados acima se aplicam a qualquer agente com o qual o jogador inicie um diálogo, inclusive os capangas, isto foi feito para manter a arquitetura dos agentes mais genérica.
+
+\subsubsection{Balckboard}
+
+A técnica \emph{blackboard} foi implementada dentro da arquitetura dos agentes ocultos da polícia, esta decisão de projeto visou um melhor desempenho do software.
+Basicamente foi criado um agente oculto para cada tipo de informação que pode ser enviada por um agente policial, assim, toda vez que um agente policial executar a ação \emph{avisaPolicia(sujeito,predicado)} é adicionada uma crença em cada agente oculto sobre este aviso, no entanto, apenas um deles sabe o que deve fazer com esta informação, este agente processa a informação e avisa todos os outros agentes a nova informação, esta nova informação pode ser uma ação da polícia que será enviada aos agentes policiais ou pode ser uma nova informação que outro agente oculto sabe processar, assim o processo se torna incremental até que a informação seja completamente processada e resulte em algum tipo de ação da polícia.
 
 
 \subsection{Subsistema: C++}
@@ -127,5 +154,6 @@ correspondente. Essa string é, por fim, enviada ao sistema BDI, que
 fará a sua própria busca para identificar qual o estímulo recebido.
 
 Vale notar que os arquivos contendo os estímulos e reações são gerados por um programa que os extrai dos diálogos escritos para o jogo.
+
 
 
