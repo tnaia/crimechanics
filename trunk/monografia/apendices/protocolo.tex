@@ -33,48 +33,54 @@ Os arquivos que são lidos pelas rotinas de tratamento das mensagens são
 O conjunto de mensagens passou por várias alterações desde sua primeira concepção, o que não somente era esperado, como demonstrou a utilidade da arquitetura de troca de mensagens que havia sido projetada, preparada para acomodar sem grande dificuldade adições e remoções de mensagens. As mensagens são listadas a seguir.
 
 \begin{enumerate}\footnotesize
-\item \verb!iniciaDialogo( )!
-\item \verb!retornaIdAgente()!
+\item \verb!iniciaDialogo( )! solicita o envio do id de um agente com
+  quem o jogador está iniciando um diálogo (o perfil e estado
+  psicológico do agente são sorteados pelo subsistema Java);
+\item \verb!retornaIdAgente()! retorna um id solicitado por \verb!iniciaDialogo()!;
 %
-\item \verb!estimuloagente ( # agente, # estímulo )!
-\item \verb!atualizaBeliefs(# agente, # estimulo)!
+\item \verb!estimuloagente ( # agente, # estímulo )! estimula o agente
+  referido;
+%\item \verb!atualizaBeliefs(# agente, # estimulo)! 
 %
 \item \verb!ofereceEscolhas( # agente, # reacao1, # reacao2, … )!
-\item \verb!returnEscolha(# agente, #escolha)!
+ lista uma série de reações que o agente pode expressar;
+\item \verb!returnEscolha(# agente, #escolha)! retorna a escolha
+  escolhida pelo agente como a que mais se aproxima de expressar seu
+  estado psicológico atual;
 %
 %
-\item \verb!fimDialogo( #agente )!
-\item \verb!acaoDaPolicia( #acao, #alvo )!
+\item \verb!fimDialogo( #agente )! avisa o término do diálogo;
+\item \verb!acaoDaPolicia( #acao, #alvo )! solicita ao jogo que tome
+  alguma ação em nome da polícia; ações previstas incluem
+  \begin{itemize} 
+  \item  aumentar nivel suspeita de capanga (alvo);
+  \item  diminuir nivel suspeita de capanga (alvo);
+  \item  prender  capanga (alvo);
+  \item  aumentar nivel segurança de lugar (alvo);
+  \item  diminuir nivel segurança de lugar (alvo);
+  \end{itemize}
 %
-%ações policiais:       1 aumentar nivel suspeita - P
-            %2 diminuir nivel suspeita - P
-
-%3 prender - P
-
-%4 aumentar nivel segurança - L
-
-%5 diminuir nivel segurança - L
-%
-\item \verb!avisaPolicia( #sujeito, #predicado )!
-\item \verb!avisaPolicia( #sujeito, #predicado, #alvo )!
-%
-%predicados:
-%1 P fez-compra-suspeita
-%2 P agiu-de-modo-suspeito-em L
-%3 L foi-roubado-com-sucesso
-%4 L foi-roubado-sem-sucesso
-%legenda: (P - pessoa; L - lugar)   
-%
-%
-
+\item \verb!avisaPolicia( #sujeito, #predicado )! informa a polícia de
+  algo:
+  \begin{itemize}
+  \item alguém fez compra suspeita;
+    \item tentativa de roubo (sucesso);
+      \item tentativa de roubo (sucesso);
+  \end{itemize}
+\item \verb!avisaPolicia( #sujeito, #predicado, #alvo )! informa a
+  polícia de algo sobre alguém;
+  \begin{itemize}
+  \item alguém agiu de modo suspeito em um dado lugar;
+  \end{itemize}
 %[10 escreveBlackBoard(#sujeito, #predicado)] => 8
 %
-\item \verb!loadGame(! \#slot )
-\item \verb!newGame(! \#slot \verb!)!
-\item \verb!saveGame(! \#slot \verb!)!
-\item \verb!quitGame()!
+\item \verb!loadGame(! \#slot \verb!)! solicita carga de jogo;
+\item \verb!newGame(! \#slot \verb!)! solicita novo jogo;
+\item \verb!saveGame(! \#slot \verb!)! sollicita salvamento de jogo
+\item \verb!quitGame()! informa fim de jogo.
 \end{enumerate}
 
+\begin{comment}
 0 - “número de números”
 1 - tipo de mensagem
 2 … - parâmetros
@@ -116,3 +122,4 @@ configurações:
 
 
 
+\end{comment}
