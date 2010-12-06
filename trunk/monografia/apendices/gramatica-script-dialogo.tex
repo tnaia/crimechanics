@@ -7,7 +7,7 @@ Cada diálogo é completamente escrito em um arquivo, sendo assim, quando o joga
 
 A grande funcionalidade da linguagem criada é que ela oferece, de forma simples opções de falas tanto para o jogador quanto para o \npc{}. Toda vez que for encontrada a sequência \emph{$<$opts$>$} significa que foi aberta uma parte do diálogo é possível ao jogador ou ao \npc{} escolher mais de uma fala. As opções são listadas ao lado da sequência \emph{$<$op$>$}, e ao final da lista de opções deve existir a sequência de fechamento \emph{$<$/opts$>$}.
 
-Outro aspecto interessante da linguagem desenvolvida é a existência de desvios no rumo do diálogo, o desenvolvedor pode dividir o arquivo em blocos de um mesmo diálogo separados por \emph{labels}, como por exemplo, \emph{$<$sucesso$>$ . . . $<$/$>$} e desviar o diálogo para este bloco através de uma instrução do tipo \emph{$<$goto=sucesso$>$} onde \emph{``sucesso’’} é um label associado a um bloco do diálogo que só será acessado se o jogador ou o \npc{} selecionar uma fala que contenha a instrução descrita acima.
+Outro aspecto interessante da linguagem desenvolvida é a existência de desvios no rumo do diálogo, o desenvolvedor pode dividir o arquivo em blocos de um mesmo diálogo separados por \emph{labels}, como por exemplo, \emph{$<$label sucesso$>$ . . . $<$/$>$} e desviar o diálogo para este bloco através de uma instrução do tipo \emph{$<$goto=sucesso$>$} onde \emph{``sucesso’’} é um label associado a um bloco do diálogo que só será acessado se o jogador ou o \npc{} selecionar uma fala que contenha a instrução descrita acima.
 
 A principal característica da linguagem desenvolvida é que com ela é possível passar ao \npc{} o estímulo que a fala irá produzir, por exemplo \emph{$<$op elogio$>$ voce é linda!}, com isso o \npc pode considerar possíveis opções de resposta, estas por sua vez estão associadas à reações que são descritas da mesma maneira, por exemplo \emph{$<$op agradecer$>$ obrigado!}. 
 
@@ -74,7 +74,7 @@ eu estava indo para uma agora...
 		<>Bom, não exatamente. Insônia. Faz duas semanas que
 eu não consigo dormir direito.
 		<switchOn=dormeflex goto=terminabem color=green>Já
-sofri disso, é um incômodo. Aceita uma sugestão? Use o  “dormeflex”,
+sofri disso, é um incômodo. Aceita uma sugestão? Use o  "dormeflex",
 vende na farmácia aqui perto.
 		<op>Pois é... bom, tchau!
 </>
@@ -93,7 +93,7 @@ tenho uma pílula aqui no 			bolso, pode levar!!
 Caí do céu?? Que isso, foi pura coincidência! Mas  eu tenho o  remédio
 que você precisa, te vendo por um precinho amigo! quer comprar?
 <op goto=encerraBem SWITCHON=dormeflex color=green>
-Certamente! Passe no mercado e compre um “dormeflex”!
+Certamente! Passe no mercado e compre um "dormeflex"!
 </opts>
 	<op suspeito> O senhor vende remédios para fazer alguem
 dormir?
@@ -101,12 +101,12 @@ dormir?
 		<op apreensivo color=yellow> Claro que sim! Mas por
 que o senhor 				desejaria fazer alguém dormir?
 <op goto=encerraBem SWITCHON=dormeflex color=green> Vendo sim!
-Passe no mercado e compre uma pílula de “dormeflex”! Derruba
+Passe no mercado e compre uma pílula de "dormeflex"! Derruba
 elefantes!
 </opts>
 	<opts>
 	<op insulto> Não lhe interessa!
-	<op insulto> Pra “alguém” dormir!
+	<op insulto> Pra "alguém" dormir!
 	<op fala-amigavel> É para minha esposa! Ela sofre de insônia!
 	<op only=EngProd inquestionavel> Vou ser sincero! É para minha
 esposa, amanhã tem final do futebol! Preciso que ela durma senão não
@@ -126,10 +126,10 @@ disto!
 			<op goto=encerraMau zangado color=red>  De
 jeito nenhum!
 			<op goto=encerraMau rabugento color=red> Não
-sou traficante 					“mano”!
+sou traficante 					"mano"!
 			<op goto=encerraBem SWITCHON=dormeflex
 color=green> 					Compra lá no mercado
-uns “dormeflex”.
+uns "dormeflex".
 </opts>
 </opts>
 </>
