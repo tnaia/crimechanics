@@ -4,17 +4,22 @@
 Os testes foram concebidos de modo a englobar pequenas histórias de
 uso, de um lado, e funcionalidades, de outro.
 
+Os testes planejados de carga e salvamento de progresso foram suprimidos do projeto em razão de sua baixa prioridade quando comparados aos demais testes.
+
 \section{Diálogos}
 
-Mecanismo de exibição de diálogo, \emph{switches}.
+Este teste envolveu diversos subsistemas do projeto simultaneamente. não apenas o mecanismo de exibição de diálogo, como também o funcionamento da sequência do script de diálogo e as mudanças de crenças dos agentes do BDI foram testados conjuntamente. Estes sistemas haviam sido testados por si, independentemente, mas optou-se por apresentar neste documento uma pequena quantidade de testes significativos da correta operação dos sistemas.
 
 \section{Navegação pelo jogo}
 
-\section{Carga e salvamento de progresso}
+O teste de navegação incluiu a escolha das diferentes opções em cada uma das telas do jogo.
 
 \section{Cenas}
 
+Analogamente aos diálogos, foram testadas diversas cenas do jogo, embora nem todas sejam de fato parte integrante de sua versão final. Os testes ``extras'' tiveram por objetivo testar as funcionalidades implementada da linguagem script de cenas. (Nem todos os comandos previstos são usados nas cenas de fato produzidas para demonstração do projeto.)
+
 \section{BDI em ação}
+Este teste foi efeuado juntamente com o teste de diálogos. A ferramenta Jason oferece um recurso de monitoramento da base de crenças e intenções do agente, com isso, fomos capazes de apresentar todas as alterações que ocorreram nessa base durante um diálogo.
 
 \section{Inferência pelo Blackboard}
-
+Da mesma forma que o teste anterior, utilizando o recurso de monitoração da base de crenças dos agentes, observamos o que aconteceu na base dos agentes ocultos quando uma informação foi adicionada por um agente policial.
