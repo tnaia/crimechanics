@@ -1,14 +1,19 @@
-all: jogo
+SERVER=jogo-cpp
+CLIENT=Client
+MANIF=manifest.txt
+FLAGS=-Wall -ansi -pedantic
 
-jogo: jogo-cpp jogo-java
 
-jogo-cpp: jogo.cpp
+all: main $(CLIENT).jar $(MANIF) $(SERVER)
 
-Renderer.o: Renderer.cpp Renderer.hpp
-	g++ -Wall -ansi -O2 -pedantic -lSDL -lSDL_ttf -lSDL_image -lSDL_mixer Renderer.cpp -c
+$(SERVER): $(SERVER).cpp
+	g++ $(FLAGS) -lSDL_net $(SERVER).cpp -o $(SERVER)
 
-SDLManager.o: SDLManager.cpp SDLManager.hpp
-	g++ -Wall -ansi -O2 -pedantic -lSDL -lSDL_ttf -lSDL_image -lSDL_mixer SDLManager.cpp -c
+$(CLIENT).jar: $(CLIENT).java $(MANIF)
+	javac $(CLIENT).java
+	jar cvfm $(CLIENT).jar $(MANIF) $(CLIENT).class
+	chmod u+x $(CLIENT).jar
 
-teste-renderer: Renderer.o SDLManager.o main-Renderer.cpp
-	g++ -Wall -ansi -O2 -pedantic -lSDL -lSDL_ttf -lSDL_image -lSDL_mixer Renderer.o SDLManager.o main-Renderer.cpp -o Main
+$(MANIF):
+	echo Main-Class: $(CLIENT) > $(MANIF)
+	echo >> $(MANIF)
