@@ -20,9 +20,9 @@ int main( int argc, char ** argv )
     {
       execl( "/bin/sh", 
 	     "sh", "-c", 
-	     "java -jar jogo-java.jar", 
+	     "java -jar Client.jar", 
 	     (char *) NULL );
-      std::cout << "Error: failed to run jogo-java.jar" 
+      std::cout << "Error: failed to run Client.jar" 
 		<< std::endl;
     }
   return 0;
