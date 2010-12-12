@@ -25,6 +25,9 @@ int main (int argc, char **argv)
     printf("SDLNet_TCP_Open: %s\n", SDLNet_GetError());
     exit(2);
   }
+
+  unsigned long data = 114;
+  do {
   printf("Waiting for connection...\n");
   do {
     new_tcpsock = SDLNet_TCP_Accept(tcpsock);
@@ -33,7 +36,6 @@ int main (int argc, char **argv)
   while (!new_tcpsock);
 
   // Once connected, I try to send some data                                                                                                             
-  unsigned long data = 114;
   std::cout << "(C++): sending "<< data;
   printf (" (hexa: %lX).\n", data);
   SDLNet_TCP_Send(new_tcpsock, &data, sizeof(unsigned long));
@@ -44,15 +46,19 @@ int main (int argc, char **argv)
   unsigned long ndata = 0;
   int aux = sizeof( unsigned long );
   unsigned long mask = 0xFF;
+  //printf("(C++): Got a response: %lu (hexa %lX) <- antes de inverter\n", data, data );
   while( aux > 0 )
     {
+      //printf( "mask = %lX\n", mask );
+      //printf ( "%lX >> ( 8 * ( %d -1 ) ) = %lX\n", data, aux, data >> ( 8 * (aux -1)));
+      //printf ( "mask & (%lX >> ( 8 * ( %d -1 ) )) = %lX\n",data, aux,  mask & (data >> ( 8 * (aux -1))));
       ndata |=  ( ( mask & ( data >> ( 8 * ( aux -1 ) ) ) ) << (8 * ( sizeof( unsigned long) -aux ) ) );
       --aux;
     }
-  data = ndata;
+  data = ndata >>32;
   printf("(C++): Got a response: %lu (hexa %lX)\n", data, data );
-
-
+}while( data > 0 );
+ 
   SDLNet_TCP_Close(tcpsock);
   SDLNet_TCP_Close(new_tcpsock);
 
