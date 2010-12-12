@@ -1,0 +1,15 @@
+aceitarPropina
+rejeitarPropina
+insultar
+elogiar
+agradecer
+rabugento
+simpatico
+educado
+grosseiro
+apressado
+feliz
+zangado
+apreensivo
+lisonjeado
+compreensivo
