@@ -1,0 +1,13 @@
+============ INFORMAÇÕES =============
+tipo: (Civil)
+@T 1
+nome: 
+@N Murilo
+ID: 
+@ID 14
+============ PERSONALIDADE ===========
+@P personalidade(simpatico)
+@FP firmezaPersonalidade(88)  #probabilidade de alterar a personalidade (em geral é baixa)
+========= ESTADO PSICOLOGICO =========
+@EP estadoPsicologico(lisonjeado)
+@FEP firmezaPsicologica(40)   #probabilidade de alterar o estado psicológico atual (mais alta, depende bastante da conversa)
