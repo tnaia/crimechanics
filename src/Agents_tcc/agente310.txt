@@ -12,4 +12,4 @@ ID:
 @EP estadoPsicologico(feliz)
 @FEP firmezaPsicologica(55)   #probabilidade de alterar o estado psicológico atual (mais alta, depende bastante da conversa)
 ========= NIVEL SUSPEITA =========
-@NS 4
+@NS 5

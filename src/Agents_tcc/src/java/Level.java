@@ -37,6 +37,8 @@ public class Level extends Environment {
         lugares[0] = "banco";
         lugares[1] = "lojaImportados";
         System.out.println("inicializando agentes. . .\n\n");
+        int i = con.recebeMensagem();
+        System.out.println("CHEGOU AO AMBIENTE O NUMERO: "+i);
     }
 
     @Override

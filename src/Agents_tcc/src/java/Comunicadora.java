@@ -18,7 +18,7 @@ public class Comunicadora {
 	    s.connect(addr, 0);}catch(Exception e){System.out.println("FALHA NA CONEXAO COM O SERVIDOR!");e.printStackTrace();}
 		}//fim do construtor
 		
-	public void recebeMensagem(){
+	public int recebeMensagem(){
 		try{
 		InputStream inp = s.getInputStream();
 	    buffer.clear();
@@ -36,6 +36,8 @@ public class Comunicadora {
 		}
 	    
 		System.out.println("(Java): Received data (hex): " + Integer.toHexString(buffer.getInt()) );
+		
+		return buffer.getInt();
 		
 		switch(buffer.getInt()){
 			case 1:
