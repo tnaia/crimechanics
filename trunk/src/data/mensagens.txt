@@ -1,0 +1,12 @@
+iniciaDialogo
+retornaIdAgente
+estimulaAgente
+ofereceEscolhas
+retornaEscolha
+fimDialogo
+acaoDaPolicia
+avisaPolicia
+loadGame
+newGame
+saveGame
+quitGame
