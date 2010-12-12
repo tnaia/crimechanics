@@ -1,0 +1,5 @@
+iniciaDialogo
+estimuloAgente
+ofereceEscolhas
+fimDialogo
+avisaPolicia
