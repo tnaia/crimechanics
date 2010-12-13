@@ -1,0 +1,14 @@
+============ INFORMAÇÕES =============
+tipo: (Civil)
+@T 1
+nome: 
+@N Snape
+ID: 
+@ID 10
+============ PERSONALIDADE ===========
+
+@P personalidade(grosseiro)
+@FP firmezaPersonalidade(88)  #probabilidade de alterar a personalidade (em geral é baixa)
+========= ESTADO PSICOLOGICO =========
+@EP estadoPsicologico(zangado)
+@FEP firmezaPsicologica(40)   #probabilidade de alterar o estado psicológico atual (mais alta, depende bastante da conversa)
