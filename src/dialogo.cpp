@@ -36,17 +36,18 @@ struct Token{
 
 typedef void (*ptr2func)(string origem, struct Token &t, string destino, void * data);
 typedef void (*ptr2funcSemToken)(string origem, string destino, void * data);
+
 class SimuladorAutomato {
 public:
   SimuladorAutomato() {};
   void add_transition( string origem, tipo_token tipo, string destino, ptr2func f );
-  void add_auto_transition( string origem, string destino, ptr2func f );
+  void add_auto_transition( string origem, string destino, ptr2funcSemToken f );
   bool simula_automato( string estado_inicial, vector<struct Token> v, void * data );
   void set_as_accepting( string estado );
 private:
   vector<string> estados;
   map< string, map< tipo_token, pair<string, ptr2func> > > transicoes;
-  map< string, pair<string, ptr2func> > auto_transicoes;
+  map< string, pair<string, ptr2funcSemToken> > auto_transicoes;
   set<string> aceitacao;  
 };
 
@@ -54,7 +55,7 @@ void SimuladorAutomato::set_as_accepting( string estado ) {
   aceitacao.insert( estado );
 }
 
-void SimuladorAutomato::add_auto_transition( string origem, string destino, ptr2func f )
+void SimuladorAutomato::add_auto_transition( string origem, string destino, ptr2funcSemToken f )
 {
   auto_transicoes[origem] = make_pair( destino, f );
 }
@@ -62,7 +63,6 @@ void SimuladorAutomato::add_auto_transition( string origem, string destino, ptr2
 bool SimuladorAutomato::simula_automato( string estado_inicial, vector<struct Token> v, void * data )
 {
   stack<string> estado_atual;
-  stack<ptr2func> funcoes;
   unsigned int num_token = 0 ;
   estado_atual.push( estado_inicial );
   // se tem autotransição faz ela primeiro.
@@ -70,11 +70,8 @@ bool SimuladorAutomato::simula_automato( string estado_inicial, vector<struct To
  
   if( auto_transicoes.find( estado_atual.top() ) != auto_transicoes.end() )
     {
-      string destino = auto_transicoes[ estado_atual.top() ].first;
-      ptr2func f = auto_transicoes[ estado_atual.top() ].second;
       // keep current state on the stack and stack next onto it (the destination from an state with autotransition must be unique).
       estado_atual.push( estado_inicial );
-      funcoes.push( f );
     }
   else if ( ( transicoes.find( estado_atual.top() ) != transicoes.end() )
 	    && ( transicoes[ estado_atual.top() ].find( v[ num_token ].tipo ) != transicoes[estado_atual.top()].end() ) )
@@ -86,10 +83,13 @@ bool SimuladorAutomato::simula_automato( string estado_inicial, vector<struct To
       estado_atual.push( destino );
       ++num_token;
     }
-  else if( aceitacao.find( estado_atual.top() != aceitacao.end() )
+  else if( aceitacao.find( estado_atual.top() )  != aceitacao.end() )
     {
       estado_atual.pop();
-      string destino = auto_transicoes[ estado_atual.top() ].
+      string origem = estado_atual.top();
+      string destino = auto_transicoes[ estado_atual.top() ].first;
+      ptr2funcSemToken f = auto_transicoes[ estado_atual.top() ].second;
+      f ( origem, destino, data );
     }
   return true;
 }
