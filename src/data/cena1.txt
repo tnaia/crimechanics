@@ -1,0 +1,33 @@
+<music=musica-de-fundo.mp3>
+<background=imagem-de-fundo-1.jpg>
+<>Uma ideia brilhante
+<wait=1000>
+<>Uma ideia brilhante.
+<wait=1000>
+<>Uma ideia brilhante..
+<wait=1000>
+<>Uma ideia brilhante...
+<wait=2000>
+<fadeOut=500>
+<background=imagem-de-fundo-2.jpg>
+<fadeIn=100>
+<>Um projeto
+<wait=1000>
+<>Um projeto re
+<wait=600>
+<>Um projeto revo
+<wait=600>
+<>Um projeto revolu
+<wait=300>
+<>Um projeto revolucio
+<wait=600>
+<>Um projeto revolucioná
+<wait=600>
+<>Um projeto revolucionário!
+<wait=2000>
+<fadeOut=2000>
+<background-color=black>
+<>Porém...
+<fadeIn=500>
+<wait=4500>
+<fadeOut>
