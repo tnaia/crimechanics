@@ -5,7 +5,7 @@
 
 #include "dialogo.h"
 using namespace std;
-
+unsigned int numck = 0;
 Dialogo::Dialogo ( string nome_arq_script ) {
   int i = 0;
   ++i;
@@ -22,7 +22,8 @@ enum tipo_token { LANGLE, RANGLE, SLASH,
 		  OPTS, OP,
 		  WAIT,
 		  BACKGROUND,
-		  FADEIN, FADEOUT };
+		  FADEIN, FADEOUT,
+		  MUSIC };
 
 struct Token{
   tipo_token tipo;
@@ -45,14 +46,17 @@ bool read_simple_word( ifstream &in, struct Token &t )
   tipos[ "background" ] = BACKGROUND;
   tipos[ "fadein" ] = FADEIN;
   tipos[ "fadeout" ] = FADEOUT;
+  tipos[ "music" ] = MUSIC;
   string already_read = "";
   char c;
   c = in.get();
+
   while( in.good() )
     {
-      if( ( 'a' <= c && c <= 'z' ) ||
-	  ( 'A' <= c && c <= 'Z' ) ||
-	  c == '-' || c == '_' )
+      if( ( 'a' <= c && c <= 'z' ) 
+	  || ( 'A' <= c && c <= 'Z' ) 
+	  || ( '0' <= c && c <= '9' )
+	  || c == '-' || c == '_' || c == '.' )
 	{
 	  already_read += c;
 	  c = in.get();
@@ -63,22 +67,23 @@ bool read_simple_word( ifstream &in, struct Token &t )
 	  break;
 	}
     }
-  
+  //cout << "pequena palavra " << already_read << endl; 
   if( already_read.length() > 0 )
     {
       vector<string> keywords;
-      keywords.push_back("switchon");
-      keywords.push_back("switchoff");
-      keywords.push_back("only");
-      keywords.push_back("opts");
-      keywords.push_back("op");
-      keywords.push_back("goto");
-      keywords.push_back("color");
-      keywords.push_back("label");
-      keywords.push_back("wait");
-      keywords.push_back("background");
-      keywords.push_back("fadein");
-      keywords.push_back("fadeout");   
+      keywords.push_back( "switchon" );
+      keywords.push_back( "switchoff" );
+      keywords.push_back( "only" );
+      keywords.push_back( "opts" );
+      keywords.push_back( "op" );
+      keywords.push_back( "goto" );
+      keywords.push_back( "color" );
+      keywords.push_back( "label" );
+      keywords.push_back( "wait" );
+      keywords.push_back( "background" );
+      keywords.push_back( "fadein" );
+      keywords.push_back( "fadeout" );   
+      keywords.push_back( "music" );
 
       unsigned int pos = 0;
       while( keywords.size() > 0  && pos < already_read.length() )
@@ -92,6 +97,7 @@ bool read_simple_word( ifstream &in, struct Token &t )
 		     && already_read [ pos ] <= 'Z' 
 		     && keywords[ i ][ pos ] + ( 'A' - 'a' ) != already_read[ pos ] ) )
 	      keywords.erase( keywords.begin() + i );
+	  ++pos;
 	}
       
       if( keywords.size() == 1 )
@@ -167,30 +173,35 @@ int get_token( struct Token & t, ifstream &in )
   bool achou = false;
   c = in.get();
 
-  while( in.good() )
+  while( in.good() && !achou )
     {
-      
+      //cout<<"entrei no while"<< endl;
       while( in.good() && ( c == ' ' || c == '\t' || c == '\n' ) )
 	c = in.get();
-      
+
       if( ! in.good() )
 	break;
-      
+  
       switch( c )
 	{
 	case '<':
-	  if ( in.good() && '!' == in.get() )
+	  if ( in.get() == '!' )
 	    {
+	      //cout << "comentário"<< endl;
 	      do {
 		c = in.get();
 	      } while( in.good() && c != '<' );
 	      if( c == '<' )
-		in.unget();
-	      continue;
-	    } 
+		{
+		  in.unget();
+		  c = in.get();
+		}
+	      continue; // <<<<<< olha pra esse cara aqui
+	    }
 	  else 
 	    {
 	      in.unget();
+	      //cout<<"langle"<< endl;
 	      t.tipo = LANGLE;
 	      t.valor = "";
 	      achou = true;
@@ -198,25 +209,29 @@ int get_token( struct Token & t, ifstream &in )
 	      break;
 	    }
 	case '>':
+	  //cout << "rangle" << endl;
 	  t.tipo = RANGLE;
 	  t.valor = "";
 	  achou = true;
 	  inside_angles = false;
 	  break;
 	case '/':
+	  //cout << "slash" << endl;
 	  t.tipo = SLASH;
 	  t.valor = "";
 	  achou = true;
 	  break;
 	case '=':
+	  //cout << "equals" << endl;
 	  t.tipo = EQUALS;
 	  t.valor = "";
 	  achou = true;
 	  break;
 	default:
+	  //cout << "default" << endl;
+	  in.unget();
 	  if( inside_angles && read_simple_word( in, t ) )
 	    {
-	      t.tipo = SIMPLE_WORD;
 	      achou = true;
 	      break;		
 	    } 
@@ -230,13 +245,20 @@ int get_token( struct Token & t, ifstream &in )
 	  else 
 	    {
 	      t.tipo = TEXT;
-	      t.valor += c;
 	      c = in.get();
 	      while( in.good() && c != '<' )
 		{
 		  t.valor += c;
 		  c = in.get();
 		}
+	      // remove brancos ao fim
+	      unsigned int f = t.valor.length();
+	      while( f > 1 
+		     && ( t.valor[ f -1 ] == ' '  
+			  || t.valor[ f -1 ] == '\n' 
+			  || t.valor[ f -1 ] == '\t' ) )
+		     --f;
+	      t.valor = t.valor.substr( 0, f );
 	      if( c == '<' )
 		in.unget();
 	      achou = true;
@@ -254,10 +276,10 @@ vector<struct Token> * tokenize_file( string nome_arq )
   struct Token t;
   ifstream in;
   in.open( nome_arq.c_str(), ios_base::in );
+
   while( get_token( t, in ) == 1 )
     {
       v->push_back( t );
-      //cout << t.valor << " " << (*v)[v->size() -1].valor << endl;
     }
 
   in.close();
@@ -265,12 +287,38 @@ vector<struct Token> * tokenize_file( string nome_arq )
   return v;
 }
 
-int main() {
-  cout<< "Oi"<< endl;
-  vector<struct Token> * v = tokenize_file( "dialogo.cpp" );
+int main(int argc, char ** argv ) {
+  if( argc != 2 )
+    {
+      cerr<< "2 argumentos, moron!\n"<<endl;
+      return 1;
+    }
+
+  vector<struct Token> * v = tokenize_file( argv[1] );
+
+  map<tipo_token, string> tipos;
+  tipos[ LANGLE ] = "langle";
+  tipos[ RANGLE ] = "rangle";
+  tipos[ SLASH ] = "slash";
+  tipos[ SIMPLE_WORD ] = "simple word...";
+  tipos[ TEXT ] = "text...";
+  tipos[ EQUALS ] = "equals";
+  tipos[ SWITCHON ] = "switchOn";
+  tipos[ SWITCHOFF ] = "switchOff";
+  tipos[ ONLY ] = "only";
+  tipos[ GOTO ] = "goto";
+  tipos[ COLOR ] = "color";
+  tipos[ LABEL ] = "label";
+  tipos[ OPTS ] = "opts";
+  tipos[ OP ] = "op";
+  tipos[ WAIT ] = "wait";
+  tipos[ BACKGROUND ] = "background";
+  tipos[ FADEIN ] = "fadeIn";
+  tipos[ FADEOUT ] = "fadeOut";
+  tipos[ MUSIC ] = "music";
   
   for( unsigned int i = 0; i < v->size(); ++i )
-    cout << (*v)[i].valor;
+    cout << tipos[ (*v)[i].tipo ] << "\t\t" << (*v)[i].valor << endl;
   delete v;
   return 0;
 }
