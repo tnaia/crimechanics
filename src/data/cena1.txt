@@ -27,7 +27,7 @@
 <>Um projeto revolucionário!
 <wait=2000>
 <fadeOut=2000>
-<background-color=black>
+<backgroundcolor=black>
 <>Porém...
 <fadeIn=500>
 <wait=4500>
