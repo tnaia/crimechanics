@@ -1,0 +1,8 @@
+propina
+amigavel
+elogio
+insulto
+timida
+inquisitivo
+suspeito
+inquestionavel
