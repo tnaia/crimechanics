@@ -86,7 +86,7 @@ bool read_simple_word( ifstream &in, struct Token &t )
       keywords.push_back( "fadeout" );   
       keywords.push_back( "music" );
       keywords.push_back( "background-color" );
-
+      //cout<<"\t\t\t"<<already_read<<endl;
       unsigned int pos = 0;
       while( keywords.size() > 0  && pos < already_read.length() )
 	{
@@ -98,8 +98,8 @@ bool read_simple_word( ifstream &in, struct Token &t )
 	  */
 	  for( unsigned int i = 0; i < keywords.size(); ++i )
 	    if( keywords[ i ].length() <= pos 
-		|| ( 'A' > already_read[ pos ] 
-		     &&  already_read[ pos ] > 'Z'
+		|| ( 'A' > keywords[i][ pos ] 
+		     &&  keywords[i][ pos ] > 'Z'
 		     &&  keywords[ i ][ pos ] != already_read[ pos ] )
 		|| ( 'A' <= already_read [ pos ]
 		     && already_read [ pos ] <= 'Z' 
@@ -109,11 +109,10 @@ bool read_simple_word( ifstream &in, struct Token &t )
 	  ++pos;
 	}
       
-      if( keywords.size() == 1 )
+      if( keywords.size() == 1 && keywords[0].length() == already_read.length())
 	{
 	  t.valor = "";
 	  t.tipo = tipos[ keywords[ 0 ] ];
-	  cout<<"ahá"<< keywords[0]<<" "<<tipos[keywords[0]]<<endl;
 	}
       else
 	{
