@@ -1,0 +1,15 @@
+============ INFORMAÇÕES =============
+tipo: (policial)
+@T 2
+nome: 
+@N Cap.Nascimento
+ID: 
+@ID 23
+============ PERSONALIDADE ===========
+@P personalidade(educado)
+@FP firmezaPersonalidade(100)  #probabilidade de alterar a personalidade (em geral é baixa)
+========= ESTADO PSICOLOGICO =========
+@EP estadoPsicologico(feliz)
+@FEP firmezaPsicologica(40)   #probabilidade de alterar o estado psicológico atual (mais alta, depende bastante da conversa)
+========= INDOLE =========
+@IND indole(integro)
