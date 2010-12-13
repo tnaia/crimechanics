@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <fstream>
+#include <map>
 
 #include "dialogo.h"
 using namespace std;
@@ -29,15 +30,103 @@ struct Token{
   Token() {;};
 };
 
-bool read_simple_word( ifstream &in, string &s )
+bool read_simple_word( ifstream &in, struct Token &t )
 {
+  map<string, tipo_token> tipos;
+  tipos[ "switchon" ] = SWITCHON;
+  tipos[ "switchoff" ] = SWITCHOFF;
+  tipos[ "only" ] = ONLY;
+  tipos[ "opts" ] = OPTS;
+  tipos[ "op" ] = OP;
+  tipos[ "goto" ] = GOTO;
+  tipos[ "color" ] = COLOR;
+  tipos[ "label" ] = LABEL;
+  tipos[ "wait" ] = WAIT;
+  tipos[ "background" ] = BACKGROUND;
+  tipos[ "fadein" ] = FADEIN;
+  tipos[ "fadeout" ] = FADEOUT;
+  string already_read = "";
   char c;
   c = in.get();
+  while( in.good() )
+    {
+      if( ( 'a' <= c && c <= 'z' ) ||
+	  ( 'A' <= c && c <= 'Z' ) ||
+	  c == '-' || c == '_' )
+	{
+	  already_read += c;
+	  c = in.get();
+	}
+      else
+	{
+	  in.unget();
+	  break;
+	}
+    }
+  
+  if( already_read.length() > 0 )
+    {
+      vector<string> keywords;
+      keywords.push_back("switchon");
+      keywords.push_back("switchoff");
+      keywords.push_back("only");
+      keywords.push_back("opts");
+      keywords.push_back("op");
+      keywords.push_back("goto");
+      keywords.push_back("color");
+      keywords.push_back("label");
+      keywords.push_back("wait");
+      keywords.push_back("background");
+      keywords.push_back("fadein");
+      keywords.push_back("fadeout");   
+
+      unsigned int pos = 0;
+      while( keywords.size() > 0  && pos < already_read.length() )
+	{
+	  for( unsigned int i = 0; i < keywords.size(); ++i )
+	    if( keywords[ i ].length() <= pos 
+		|| ( 'a' <= already_read[ pos ] 
+		     &&  already_read[ pos ] <= 'z'
+		     &&  keywords[ i ][ pos ] != already_read[ pos ] )
+		|| ( 'A' <= already_read [ pos ]
+		     && already_read [ pos ] <= 'Z' 
+		     && keywords[ i ][ pos ] + ( 'A' - 'a' ) != already_read[ pos ] ) )
+	      keywords.erase( keywords.begin() + i );
+	}
+      
+      if( keywords.size() == 1 )
+	{
+	  t.valor = "";
+	  t.tipo = tipos[ keywords[ 0 ] ];
+	}
+      else
+	{
+	  t.valor = already_read;
+	  t.tipo = SIMPLE_WORD;
+	}
+      return 1;
+    }
+  else
+    {
+      return false;
+    }
+
+
+
+  /*  char c;
+  c = in.get();
+  while( in.good() && ( c == ' ' || c == '\t' || c == '\n' ) )
+    c = in.get();
+
     if( in.good() )
       switch( c )
 	{
 	case 's':
 	case 'S':
+	  int pos = 1;
+	  string word1 = "switchon";
+	  string word2 = "switchoff";
+	  while (pos < word1.length() ||
 	  break;
 	case 'o':
 	case 'O':
@@ -54,7 +143,17 @@ bool read_simple_word( ifstream &in, string &s )
 	case 'w':
 	case 'W':
 	  break;
-case  
+	case 'b':
+	case 'B':
+	  break;
+	case 'f':
+	case 'F':
+	  break;
+	default:
+	  in.unget();
+	  return false;
+	  }*/
+    return true;
 }
 
 int get_token( struct Token & t, ifstream &in )
@@ -115,7 +214,7 @@ int get_token( struct Token & t, ifstream &in )
 	  achou = true;
 	  break;
 	default:
-	  if( inside_angles && read_simple_word( in, t.valor ) )
+	  if( inside_angles && read_simple_word( in, t ) )
 	    {
 	      t.tipo = SIMPLE_WORD;
 	      achou = true;
@@ -131,11 +230,11 @@ int get_token( struct Token & t, ifstream &in )
 	  else 
 	    {
 	      t.tipo = TEXT;
-	      valor += c;
+	      t.valor += c;
 	      c = in.get();
 	      while( in.good() && c != '<' )
 		{
-		  valor += c;
+		  t.valor += c;
 		  c = in.get();
 		}
 	      if( c == '<' )
