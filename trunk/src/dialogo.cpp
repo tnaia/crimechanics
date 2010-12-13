@@ -21,7 +21,7 @@ enum tipo_token { LANGLE, RANGLE, SLASH,
 		  LABEL,
 		  OPTS, OP,
 		  WAIT,
-		  BACKGROUND,
+		  BACKGROUND, BACKGROUND_COLOR,
 		  FADEIN, FADEOUT,
 		  MUSIC };
 
@@ -47,6 +47,7 @@ bool read_simple_word( ifstream &in, struct Token &t )
   tipos[ "fadein" ] = FADEIN;
   tipos[ "fadeout" ] = FADEOUT;
   tipos[ "music" ] = MUSIC;
+  tipos[ "background-color" ] = BACKGROUND_COLOR;
   string already_read = "";
   char c;
   c = in.get();
@@ -84,19 +85,27 @@ bool read_simple_word( ifstream &in, struct Token &t )
       keywords.push_back( "fadein" );
       keywords.push_back( "fadeout" );   
       keywords.push_back( "music" );
+      keywords.push_back( "background-color" );
 
       unsigned int pos = 0;
       while( keywords.size() > 0  && pos < already_read.length() )
 	{
+	  /*
+	  cout<<"opções"<<endl;
+	  for( unsigned int j = 0; j < keywords.size(); ++j )
+	    cout<<keywords[j]<<endl;
+	      cout<<"---"<<endl;
+	  */
 	  for( unsigned int i = 0; i < keywords.size(); ++i )
 	    if( keywords[ i ].length() <= pos 
-		|| ( 'a' <= already_read[ pos ] 
-		     &&  already_read[ pos ] <= 'z'
+		|| ( 'A' > already_read[ pos ] 
+		     &&  already_read[ pos ] > 'Z'
 		     &&  keywords[ i ][ pos ] != already_read[ pos ] )
 		|| ( 'A' <= already_read [ pos ]
 		     && already_read [ pos ] <= 'Z' 
 		     && keywords[ i ][ pos ] + ( 'A' - 'a' ) != already_read[ pos ] ) )
 	      keywords.erase( keywords.begin() + i );
+	  
 	  ++pos;
 	}
       
@@ -104,6 +113,7 @@ bool read_simple_word( ifstream &in, struct Token &t )
 	{
 	  t.valor = "";
 	  t.tipo = tipos[ keywords[ 0 ] ];
+	  cout<<"ahá"<< keywords[0]<<" "<<tipos[keywords[0]]<<endl;
 	}
       else
 	{
@@ -316,7 +326,7 @@ int main(int argc, char ** argv ) {
   tipos[ FADEIN ] = "fadeIn";
   tipos[ FADEOUT ] = "fadeOut";
   tipos[ MUSIC ] = "music";
-  
+  tipos[ BACKGROUND_COLOR ] = "background-color";
   for( unsigned int i = 0; i < v->size(); ++i )
     cout << tipos[ (*v)[i].tipo ] << "\t\t" << (*v)[i].valor << endl;
   delete v;
