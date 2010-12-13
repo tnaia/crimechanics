@@ -1,3 +1,4 @@
+<! uma cena de suspense >
 <music=musica-de-fundo.mp3>
 <background=imagem-de-fundo-1.jpg>
 <>Uma ideia brilhante
