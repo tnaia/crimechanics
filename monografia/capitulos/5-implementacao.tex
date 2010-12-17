@@ -6,7 +6,7 @@ Neste capítulo descrevemos brevemente o sistema, abordando a organização de s
 
 O jogo é disparado por um pequeno aplicativo cuja única função é iniciar\footnote{Isso foi feito por meio do fork to processo e alteração de suas imagens nos processos pai e filho resultantes.} os componentes Java e C++ do projeto, que passam então a se comunicar via TCP (via \emph{loopback}), empregando a porta de número especificado no arquivo de configuração.
 
-Passada essa etapa de estabelecimento de comunicação, a interação entre C++ e Java se dá pela troca de mensagens, segundo um protocolo simples desenvolvido no trabalho para este projeto em particular. Sua descrição consta no apêndice~\ref{ap:protocolo}. As responsabilidades ficam então assim divididas: a renderização e gerenciamento dos arquivos de diálogos e variáveis do jogo (inventário, membros ativos da gangue, recursos financeiros, etc.) fica a encargo do programa C++, enquanto que toda a tarefa de simulação da arquitetura  BDI e da gerência do blackboard, assim como manutenção do registro dos estados psicológicos, personalidade e conduta dos agentes são de responsabilidade do programa Java (o que inclui o interpretador de AgentSpeak, Jason). Ademais, na arquitetura implementada, o processo Java roda como cliente TCP, e o C++ como servidor.
+Passada essa etapa de estabelecimento de comunicação, a interação entre C++ e Java se dá pela troca de mensagens, segundo um protocolo simples desenvolvido no trabalho para este projeto em particular. Sua descrição consta no apêndice~\ref{sec:protocolo}. As responsabilidades ficam então assim divididas: a renderização e gerenciamento dos arquivos de diálogos e variáveis do jogo (inventário, membros ativos da gangue, recursos financeiros, etc.) fica a encargo do programa C++, enquanto que toda a tarefa de simulação da arquitetura  BDI e da gerência do blackboard, assim como manutenção do registro dos estados psicológicos, personalidade e conduta dos agentes são de responsabilidade do programa Java (o que inclui o interpretador de AgentSpeak, Jason). Ademais, na arquitetura implementada, o processo Java roda como cliente TCP, e o C++ como servidor.
 
 %Como as coisas funcionam. O que faz o quê (macroscopicamente).
 
@@ -24,7 +24,7 @@ Outro ponto de compromisso foi a decisão por um modelo ``fechado'' de respostas
 
 Um ponto de destaque foi a decisão de trabalhar com mais de uma linguagem de programação, o fato de trabalharmos com C++, Java e AgentSpeak gerou a necessidade de se desenvolver protocolos de comunicação para integrar os subsistemas, fato este que consumiu bastante tempo e dedicação do grupo.
 
-Por fim, devemos mencionar que, dado o escopo temporal do projeto, optamos por simplificações na sofisticação da renderização. O ganho de tempo dedicado ao projeto veio, nesse caso, às custas de um distanciamento do objeto-alvo de estudo, jogos comerciais, uma vez que o investimento n desenvolvimento de uma apresentação gráfica adequada é uma preocupação constante nesse meio.
+Por fim, devemos mencionar que, dado o escopo temporal do projeto, optamos por simplificações na sofisticação da renderização. O ganho de tempo dedicado ao projeto veio, nesse caso, às custas de um distanciamento do objeto-alvo de estudo, jogos comerciais, uma vez que o investimento no desenvolvimento de uma apresentação gráfica adequada é uma preocupação constante nesse meio.
 
 \section{Arquitetura}
 
@@ -67,7 +67,7 @@ Caso o agente receba opções de resposta, ele avalia o(s) estímulo(s) recebido
 \item Agente atualiza sua personalidade e seu estado psicológico
 \item Classe comunicadora recebe mensagem do tipo ofereceEscolhas( num agente, num reacao1, num reacao2, ... )
 \item Classe Level recebe os parâmetros e insere a crença respostas(reacao1,reacao2) no agente em questão
-\item O agente procura em sua lógica qual a melhor reacao segundo sua personalidade e seu estado psicológico 
+\item O agente procura em sua lógica qual a melhor reação segundo sua personalidade e seu estado psicológico 
 \item O agente executa a ação responder(reacao) que envia para o subsitema C++ a escolha do agente
 \end{enumerate}
 
@@ -127,7 +127,7 @@ Foram encapsuladas as primitivas da biblioteca SDL em classes que
 A conexão com o subsistema Java também foi feita encapsulando-se uma
 interface SDL, e adaptou-se o sistema interno de captação e
 comunicação de eventos do SDL para incorporar as mensagens do
-protocolo de comunicação elaborado (vide apêndice~\ref{ap:protocolo}).
+protocolo de comunicação elaborado (vide apêndice~\ref{sec:protocolo}).
 
 Outras abstrações implementadas incluem \emph{design-patterns} como
 \emph{decoration}, \emph{strawman}, \emph{singleton}, \emph{factory} e
@@ -151,7 +151,7 @@ de atualização da tela.
 
 
 
-\section{Protocolo de comunicação}
+\section{Protocolo de comunicação}\label{sec:protocolo}
 
 A necessidade de comunicação entre os subsistemas de processamento da inteligência articial implementada e os mecanismos de controle e renderização do jogo surgiram tão logo se foram definidos dois requisitos do projeto, em seu início: o emprego de C++, de modo a refletir um padrão amplamente empregado na indústria de jogos, e a opção pelo uso do interpretador de AgentSpeak, Jason, que possui apenas interfaces para Java.
 
@@ -181,7 +181,7 @@ Os arquivos que são lidos pelas rotinas de tratamento das mensagens são
 \end{enumerate}
 \end{description}
 
-\subsection{As mensagens}
+\subsection{Mensagens}
 
 O conjunto de mensagens passou por várias alterações desde sua primeira concepção, o que não somente era esperado, como demonstrou a utilidade da arquitetura de troca de mensagens que havia sido projetada, preparada para acomodar sem grande dificuldade adições e remoções de mensagens. As mensagens são listadas a seguir.
 
@@ -285,7 +285,7 @@ Além dos itens listados acima, os arquivos de agentes policiais possuem uma inf
 Vale citar que existe um arquivo por agente e que o nome do arquivo é sempre formado pela seguinte regra: \verb!a! + \verb!tipo-do-agente! + \verb!id-do-agente.txt!
 
 Os \emph{tipos de estímulos, tipos de reações, lugares passíveis de assalto, dados de capangas,} e \emph{ações da polícia} são arquivos de interface, lidos por ambos os programas na decodificação de mensagens trocadas. Optou-se por essa solução para que a comunicação se desse pelo envio de inteiros, indicando qual a linha do arquivo de interface
-em que a mensagem está contida. Com isso o processo de alteração do protocolo em seus estágios iniciais de desenvolvimento foi simplificado, uma vez que sua própria especificação atua como um tipo de documentação; além disso, a mudança das mensagens do protocolo passou a ser feita pela mudança de algumas linhas em um arquivo de configuração e em um mapa de strings a funções, o que facilitou a experimentação. Claramente, essa abordagem só é
+em que a mensagem está contida. Com isso o processo de alteração do protocolo em seus estágios iniciais de desenvolvimento foi simplificado, uma vez que sua própria especificação atua como um tipo de documentação. Além disso, a mudança das mensagens do protocolo passou a ser feita pela mudança de algumas linhas em um arquivo de configuração e em um mapa de strings a funções, o que facilitou a experimentação. Claramente, essa abordagem só é
 possível porque as mensagens são conhecidas \emph{a priori}.
 
 Para comunicar o estímulo que uma determinada fala no diálogo provoca
@@ -381,7 +381,7 @@ do texto por um texto parecido é empregado para enfatizar a palavra
 ``revolucionário'', que aparece sílaba por sílaba, a intervalos de
 $600$ milisegundos. A tela então escurece novamente, e prepara-se a
 exibição de uma tela preta com os dizeres ``Porém\ldots'', que então
-aparecem em umatransição de $500$ms. Por fim, após $4,5$ segundos a
+aparecem em uma transição de $500$ms. Por fim, após $4,5$ segundos a
 tela escurece novamente e a cena termina.
 
 \subsubsection{Script de diálogos}
@@ -389,7 +389,7 @@ Descrevemos a seguir a gramática da linguagem de especificação de diálogos.
 Os diálogos são criados através de uma linguagem de marcação muito parecida com a linguagem \emph{xml}. Todas as instruções são descritas no começo da linha na seguinte forma: \emph{$<$instrucao1 instrucao2 … instrucaoN$>$ texto}. Vale citar que uma fala pode não ser precedida por nenhuma instrução, representada por \emph{$<>$}, nesse caso a fala, seja ela do jogador ou do \npc{} é simplesmente apresentada. A marcação de fim do diálogo é feita através da sequência $<$/$>$.
 Cada diálogo é completamente escrito em um arquivo, sendo assim, quando o jogador inicia um diálogo, somente um arquivo é utilizado e neste arquivo, a primeira fala será sempre a do jogador.
 
-A grande funcionalidade da linguagem criada é que ela oferece, de forma simples opções de falas tanto para o jogador quanto para o \npc{}. Toda vez que for encontrada a sequência \emph{$<$opts$>$} significa que foi aberta uma parte do diálogo é possível ao jogador ou ao \npc{} escolher mais de uma fala. As opções são listadas ao lado da sequência \emph{$<$op$>$}, e ao final da lista de opções deve existir a sequência de fechamento \emph{$<$/opts$>$}.
+A grande funcionalidade da linguagem criada é que ela oferece, de forma simples, opções de falas tanto para o jogador quanto para o \npc{}. Toda vez que for encontrada a sequência \emph{$<$opts$>$} significa que foi aberta uma parte do diálogo, e é possível ao jogador ou ao \npc{} escolher mais de uma fala. As opções são listadas ao lado da sequência \emph{$<$op$>$}, e ao final da lista de opções deve existir a sequência de fechamento \emph{$<$/opts$>$}.
 
 Outro aspecto interessante da linguagem desenvolvida é a existência de desvios no rumo do diálogo, o desenvolvedor pode dividir o arquivo em blocos de um mesmo diálogo separados por \emph{labels}, como por exemplo, \emph{$<$label sucesso$>$ . . . $<$/$>$} e desviar o diálogo para este bloco através de uma instrução do tipo \emph{$<$goto=sucesso$>$} onde \emph{``sucesso’’} é um label associado a um bloco do diálogo que só será acessado se o jogador ou o \npc{} selecionar uma fala que contenha a instrução descrita acima.
 
@@ -402,7 +402,7 @@ O comando para ligar/desligar é da forma \emph{$<$SWITCHON=x$>$} para ativar qu
 O último comando que deve ser apresentado é o comando \emph{$<$only=DadoCapanga$>$texto} onde a variável \emph{DadoCapanga} representa algum atributo descrito no arquivo de modelo do capanga em questão. Desta forma, a fala em questão só estará disponível para o jogador se a condição do comando for verdadeira.
 
 A seguir apresentamos um exemplo de um texto de diálogo entre o jogador e um \npc{}. Neste caso, se o jogador tiver sucesso ele destrava um item, ou até mesmo ganha este item, senão não terá acesso ao item e pode até mesmo ter o nível de suspeita de seu capanga incrementado.
-Para facilitar o entendimento, as linhas azuis representam as falas disponíveis ao jogador e as linhas pretas as falas disponíveis ao \npc{}.
+%Para facilitar o entendimento, as linhas azuis representam as falas disponíveis ao jogador e as linhas pretas as falas disponíveis ao \npc{}.
 
 {\footnotesize
 \begin{verbatim}

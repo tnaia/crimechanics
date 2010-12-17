@@ -4,7 +4,7 @@
   <opts>
     <op> Bom dia.
     <op> Olá.
-    <op goto=rabugento rabugento color=yello> Bom dia pra quem?!
+    <op goto=rabugento rabugento color=yellow> Bom dia pra quem?!
     <op goto=rabugento rabugento color=yellow> Hmpf, o que o senhor quer?
     <op apressado> Desculpe, estou sem tempo para conversar.
     </>

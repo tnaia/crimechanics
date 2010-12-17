@@ -21,7 +21,7 @@ modelo de inteligência na lógica de jogos, é preciso ter em mente que
 isso não significa que se queira abrir mão do design dessa
 experiência. De fato, parte da complexidade da incorporação de
 inteligência artificial a jogos advém da necessidade de identificar
-que aspectos da dinâmica da inteligência devem ser coergidos, moldados
+que aspectos da dinâmica da inteligência devem ser coagidos, moldados
 ou mesmo eliminados, em prol de atributos como a jogabilidade e mesmo
 adaptação às limitações e anseios dos jogadores.
 
@@ -30,7 +30,7 @@ por vezes potencialmente limitante, como será visto adiante ---
 restritivo de expressão dos agentes que controlam o diálogo com
 \npc{}s.
 
-O modelo implementado tem por ideia central que os diálogos são
+O modelo implementado tem por ideia central que diálogos são
 interações de \emph{estímulo e reação} do agente inteligente pelo
 jogador. Os estímulos estão associados ao que o jogador opta por
 dizer, e as reações às opções de fala do \npc. 
@@ -58,9 +58,9 @@ proibitiva do uso da técnica.
 
 \subsection{Licença e implicações}
 
-Desde o princípio fez-se a opção por desenvolver um projeto que se adaptasse à filosofia dos softwares livres, de código aberto. Essa característica teve consequências importantes e decisivas no encaminhamento do projeto durante toda a sua evolução. 
+Desde o princípio fez-se a opção por desenvolver um projeto que seguisse a filosofia do softwares livre, de código aberto. Essa característica teve consequências importantes e decisivas no encaminhamento do projeto durante toda a sua evolução. 
 
-Apesar da severidade que as restrições impostas por uma licensa livre ao projeto, deve-se frisar que essa escolha se apresentou certa para o grupo. Não só é inegável o caráter inerentemente livre da produção acadêmica de universidades públicas, meio em que se insere este projeto, como é preciso que se diga que há uma janela de oportunidade na atual carência, no universo dos softwares livres, de projetos de jogos. Essa carência, note-se, vem sendo paulatinamente alvo de estudos e experimentações no mercado, fato que se observa pela progressão do número de títulos que vêm sendo portados para sistemas livres.
+Apesar da severidade que as restrições impostas por uma licensa livre ao projeto, deve-se frisar que essa escolha se apresentou certa para o grupo. Não só é inegável o caráter inerentemente livre da produção acadêmica de universidades públicas, meio em que se insere este projeto, como é preciso que se diga que há uma janela de oportunidade na atual carência, no universo dos softwares livres, de projetos de jogos comerciais. Essa carência, note-se, vem sendo paulatinamente alvo de estudos e experimentações no mercado, fato que se observa pela progressão do número de títulos que vêm sendo portados para sistemas livres.
 
 Há duas consequências de grande impacto prático na condução do projeto de um jogo livre,  a saber a restrição no uso de software de terceiros e de conteúdo midiático que pode ser aproveitado. Como será discutido adiante (seção~\ref{sec:tradeoffs}), essa opção reduziu a gama de arcabouços de tecnologia que puderam ser aproveitados, e impôs ao projeto a responsabilidade pela criação de parte da arte do jogo --- uma carga de trabalho não desprezível dado escopo e recursos disponíveis.  
 
@@ -68,7 +68,7 @@ Há duas consequências de grande impacto prático na condução do projeto de u
 
 Uma das primeiras decisões que foram tomadas na definição das condições de contorno do projeto foi que a linguagem empregada para desenvolvimento do software deveria refletir algum padrão solidamente estabelecido na indústria. Optou-se por C++, uma linguagem que goza de grande popularidade na idústria com títulos conhecidos como \emph{Doom} e \emph{Age of Empires}.
 
-Outra decisão de impacto foi a escolha de engines. À partir de uma primeira lista, compilada por meio de pesquisas em fóruns de discussão sobre desenvolvimento de jogos, construiu-se uma matriz de decisão em que foram eliminadas as opções que não apresentavam licensas livres, portáveis e que não possuíssem interface com C++. Por fim escolheu-se empregar o Simple DirectMedia Layer (SDL), linguagem de interface portável com dispositivos de media e periféricos\footnote{Como um adendo, citamos dois títulos conhecidos que usam SDL em pelo menos uma versão: \emph{World of Goo} e \emph{Doom 3}.}.
+Outra decisão de impacto foi a escolha de engines. À partir de uma primeira lista, compilada por meio de pesquisas em fóruns de discussão sobre desenvolvimento de jogos, construiu-se uma matriz de decisão em que foram eliminadas as opções que não apresentavam licensas livres, portáveis e que não possuíssem interface com C++. Por fim escolheu-se empregar o Simple DirectMedia Layer (SDL), linguagem de interface portável com dispositivos de media e periféricos\footnote{Como um adendo, citamos dois títulos conhecidos que usam SDL em pelo menos uma versão: \emph{World of Goo} e partes de \emph{Doom 3}.}.
 
 O uso da ferramenta Jason, para a criação dos agentes, se deve principalmente ao fato de que o projeto nasceu motivado pela tese de doutorado~\cite{tese_roberto} de um dos orientadores do grupo que, no desenvolvimento de seu projeto, utilizou a ferramenta. Além disso, como esta ferramenta é baseada em Java, parte do projeto foi desenvolvida utilizando essa linguagem.
 
@@ -84,7 +84,7 @@ Conforme o modelo de desenvolvimento adotado pela indústria, os requisitos do s
 É importante citar que a grande maioria dos requisitos funcionais do software são regras do jogo e estão descritos no documento de game design. Dentre os outros requisitos funcionais temos:
 \begin{itemize}
 \item O software deve fazer e administrar a comunicação entre os módulos implementados em C++ e Java.
-\item O diálogo entre o usuário e um \npc{} não pode parecer determinístico.
+\item a seleção dos diálogos entre o usuário e um \npc{} não pode parecer determinística.
 \end{itemize}
 
 Os requisitos não-funcionais levantados foram os seguintes:

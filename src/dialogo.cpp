@@ -364,6 +364,17 @@ vector<struct Token> * tokenize_file( string nome_arq )
   return v;
 }
 
+
+void fooComToken( string, struct Token &, string, void * )
+{
+  cout << "chamada fooComToken" << endl;
+}
+
+void fooSemToken( string, string, void * )
+{
+  cout << "chamada fooSemToken" << endl;
+}
+
 int main(int argc, char ** argv ) {
   if( argc != 2 )
     {
@@ -396,6 +407,109 @@ int main(int argc, char ** argv ) {
   tipos[ BACKGROUND_COLOR ] = "background-color";
   for( unsigned int i = 0; i < v->size(); ++i )
     cout << tipos[ (*v)[i].tipo ] << "\t\t" << (*v)[i].valor << endl;
+
+  SimuladorAutomato sm;
+  sm.add_auto_transition( "009", "010", fooSemToken );
+
+  sm.add_transition( "000", LANGLE, "001", fooComToken );
+
+  sm.add_transition( "001", SWITCHON, "002", fooComToken );
+  sm.add_transition( "001", SWITCHOFF, "002", fooComToken );
+  sm.add_transition( "001", ONLY, "002", fooComToken );
+  sm.add_transition( "001", SIMPLE_WORD, "003", fooComToken );
+  sm.add_transition( "001", RANGLE, "004", fooComToken );
+  sm.add_transition( "001", OPTS, "005", fooComToken );
+  sm.add_transition( "001", BACKGROUND, "006", fooComToken );
+  sm.add_transition( "001", LABEL, "006", fooComToken );
+  sm.add_transition( "001", FADEIN, "006", fooComToken );
+  sm.add_transition( "001", GOTO, "006", fooComToken );
+  sm.add_transition( "001", COLOR, "006", fooComToken );
+  sm.add_transition( "001", WAIT, "006", fooComToken );
+  sm.add_transition( "001", BACKGROUND_COLOR, "006", fooComToken );
+  sm.add_transition( "001", FADEIN, "006", fooComToken );
+  sm.add_transition( "001", SLASH, "007", fooComToken );
+
+  sm.add_transition( "002", EQUALS, "008", fooComToken );
+
+  sm.add_transition( "003", SWITCHON, "002", fooComToken );
+  sm.add_transition( "003", SWITCHOFF, "002", fooComToken );
+  sm.add_transition( "003", ONLY, "002", fooComToken );
+  sm.add_transition( "003", SIMPLE_WORD, "003", fooComToken );
+  sm.add_transition( "003", RANGLE, "004", fooComToken );
+
+  sm.add_transition( "004", TEXT, "000", fooComToken );
+
+  sm.add_transition( "005", RANGLE, "009", fooComToken );
+
+  sm.add_transition( "010", LANGLE, "011", fooComToken );
+
+  sm.add_transition( "011", SLASH, "012", fooComToken );
+
+  sm.add_transition( "012", OPTS, "007", fooComToken );
+
+  sm.add_transition( "007", RANGLE, "000", fooComToken );
+
+  sm.add_transition( "008", SIMPLE_WORD, "003", fooComToken );
+
+  sm.add_transition( "006", EQUALS, "013", fooComToken );
+
+  sm.add_transition( "013", SIMPLE_WORD, "014", fooComToken );
+
+  sm.add_transition( "014", SIMPLE_WORD, "014", fooComToken );
+  sm.add_transition( "014", SWITCHON, "015", fooComToken );
+  sm.add_transition( "014", SWITCHOFF, "015", fooComToken );
+  sm.add_transition( "014", ONLY, "015", fooComToken );
+  sm.add_transition( "014", RANGLE, "016", fooComToken );
+
+  sm.add_transition( "016", TEXT, "010", fooComToken );
+
+
+  /*
+  sm.add_transition( "001", RANGLE, "000", fooComToken );
+  sm.add_transition( "001", SIMPLE_WORD, "001", fooComToken );
+  sm.add_transition( "001", SWITCHON, "002", fooComToken ); 
+  sm.add_transition( "001", SWITCHOFF, "002", fooComToken ); 
+  sm.add_transition( "001", ONLY, "002", fooComToken ); 
+  sm.add_transition( "001", OPTS, "004", fooComToken );
+  sm.add_transition( "001", BACKGROUND, "010", fooComToken );
+  sm.add_transition( "001", LABEL, "010", fooComToken );
+  sm.add_transition( "001", GOTO, "010", fooComToken );
+  sm.add_transition( "001", COLOR, "010", fooComToken );
+  sm.add_transition( "001", WAIT, "010", fooComToken );
+  sm.add_transition( "001", BACKGROUND_COLOR, "010", fooComToken );
+  sm.add_transition( "001", FADEIN, "010", fooComToken );
+  sm.add_transition( "001", FADEOUT, "010", fooComToken );
+
+  sm.add_transition( "002", EQUALS, "003", fooComToken );
+
+  sm.add_transition( "003", SIMPLE_WORD, "001", fooComToken );
+  
+  sm.add_transition( "004", RANGLE, "005", fooComToken );
+
+  sm.add_transition( "006", LANGLE, "007", fooComToken );
+
+  sm.add_transition( "007", SLASH, "008", fooComToken );
+
+  sm.add_transition( "008", OPTS, "009", fooComToken );
+
+  sm.add_transition( "009", RANGLE, "000", fooComToken );
+
+  sm.add_transition( "010", EQUALS, "011", fooComToken );
+
+  sm.add_transition( "011", SIMPLE_WORD, "012", fooComToken );
+
+  sm.add_transition( "012", SIMPLE_WORD, "012", fooComToken );
+  sm.add_transition( "012", SWITCHON, "013", fooComToken );
+  sm.add_transition( "012", SWITCHOFF, "013", fooComToken );
+  sm.add_transition( "012", ONLY, "013", fooComToken );
+  sm.add_transition( "012", RANGLE, "014", fooComToken );
+
+  sm.add_transition( "013", EQUALS, "011", fooComToken );
+  */
+  sm.set_as_accepting( "000" );
+  sm.set_as_accepting( "016" );
+
+
   delete v;
   return 0;
 }
