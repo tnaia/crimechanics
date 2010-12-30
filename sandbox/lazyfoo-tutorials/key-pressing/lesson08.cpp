@@ -108,10 +108,10 @@ bool init()
 bool load_files()
 {
     //Load the background image
-    background = load_image( "../../media/background.png" );
+    background = load_image( "../../media/background.bmp" );
 
     //Open the font
-    font = TTF_OpenFont( "../../media/lazy.ttf", 72 );
+    font = TTF_OpenFont( "../../../media/fonts/Cash_Font_by_despicablehero.ttf", 72 );
 
     //If there was a problem in loading the background
     if( background == NULL )
@@ -172,7 +172,8 @@ int main( int argc, char* args[] )
     rightMessage = TTF_RenderText_Solid( font, "Right was pressed", textColor );
 
     //Apply the background
-    apply_surface( 0, 0, background, screen );
+    //apply_surface( 0, 0, background, screen );
+    SDL_FillRect( screen, &screen->clip_rect, SDL_MapRGB( screen->format, 0xF0, 0xc0, 0xcF ) );
 
     //While the user hasn't quit
     while( quit == false )
@@ -212,8 +213,8 @@ int main( int argc, char* args[] )
         if( message != NULL )
         {
             //Apply the background to the screen
-            apply_surface( 0, 0, background, screen );
-
+            //apply_surface( 0, 0, background, screen );
+	    SDL_FillRect( screen, &screen->clip_rect, SDL_MapRGB( screen->format, 0xF0, 0xc0, 0xcF ) );
             //Apply the message centered on the screen
             apply_surface( ( SCREEN_WIDTH - message->w ) / 2, ( SCREEN_HEIGHT - message->h ) / 2, message, screen );
 
