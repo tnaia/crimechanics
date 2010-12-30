@@ -228,7 +228,7 @@ bool load_files()
 {
   //Load the backgroung image
 
-  background = load_image( "../../media/background.png" );
+  background = load_image( "../../media/background.bmp" );
 
   //Open the font
   font = TTF_OpenFont( "../../../media/fonts/Cash_Font_by_despicablehero.ttf", 24 );
@@ -342,7 +342,8 @@ int main( int argc, char* argv[] )
 	}
 
       //Apply the background
-      apply_surface( 0, 0, background, screen );
+      SDL_FillRect( screen, &screen->clip_rect, SDL_MapRGB( screen->format, 0xFF, 0xFF, 0xFF ) );
+      //apply_surface( 0, 0, background, screen );
 
       //Apply the messages
       apply_surface( ( SCREEN_WIDTH - startStop->w ) / 2, 200, startStop, screen);
